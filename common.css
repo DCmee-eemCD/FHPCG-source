@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   COMMON.CSS BY EUPHAUSIA SUPERBA, C. E. SHANNON & GEM DɛN — refactored
+   ========================================================================== */
+
+/* ==========================================================================
+   0. ROOT VARIABLES
+   ========================================================================== */
+:root {
+    --bg-main: #171613;
+    --bg-panel: #201F1B;
+    --text-main: #E7E6DD;
+    --text-strong: #FAFAF7;
+    --border: #8C8A7E;
+    --accent: #ED3761;
+    --accent-hover: #FF5075;
+    --neon-red: #E20000;
+    --neon-red-glow: #FF2E2E;
+    --radius: 3px;
+}
+
+/* ==========================================================================
+   1. FONTS
+   ========================================================================== */
+@font-face {
+    font-family: 'Jujutsu Kaisen';
+    src: url('https://cdn.jsdelivr.net/gh/DCmee-eemCD/FHPCG-font@main/SJ%20Jujutsu%20Kaisen.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.inter-content {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Tên wiki trên header */
+.fandom-community-header__title,
+.fandom-community-header__title a,
+.fandom-community-header__community-name-wrapper a {
+    font-family: 'Jujutsu Kaisen' !important;
+    font-weight: medium;
+    font-size: 40px !important;
+    letter-spacing: 1px !important;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.67);
+    color: #FFFFFF !important;
+    display: inline-block !important;
+    transform-origin: left center !important;
+    transition: transform 0.15s ease-out, color 0.15s ease-out !important;
+}
+
+.fandom-community-header__title a:hover,
+.fandom-community-header__community-name-wrapper a:hover,
+.fandom-community-header__title:hover {
+    color: #FFFFFF !important;
+    transform: scale(1.08) !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 5px !important;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.67) !important;
+}
+
+h1, h2 .firstHeading {
+    font-family: 'Jujutsu Kaisen', sans-serif !important;
+}
+
+.fhp-custom-gallery .wikia-gallery-item .lightbox-caption {
+    font-family: 'Jujutsu Kaisen', sans-serif !important;
+    font-size: 30px !important;
+    letter-spacing: 1px !important;
+}
+
+.page-header__title {
+    font-size: 60px !important;
+}
+
+/* ==========================================================================
+   2. NỀN BÀI VIẾT & MÀU CHỮ
+   ========================================================================== */
+.page__main,
+.page-content,
+.mw-parser-output,
+.portable-infobox,
+.wikitable {
+    background-color: var(--bg-main) !important;
+    color: var(--text-main);
+}
+
+.mw-parser-output h1,
+.mw-parser-output h2,
+.mw-parser-output h3,
+.mw-parser-output h4,
+.mw-parser-output h5,
+.mw-parser-output h6 {
+    color: var(--text-strong) !important;
+    border-bottom-color: var(--border);
+}
+
+/* Title to trên cùng mỗi trang */
+.page-header__title {
+    color: var(--text-strong) !important;
+    border-bottom-color: var(--border);
+}
+
+/* ==========================================================================
+   3. LINKS (bài viết, infobox, wikitable, footer) — merged, glow áp dụng chung
+   ========================================================================== */
+.mw-parser-output a,
+.portable-infobox a,
+.wikitable a,
+.page-footer a,
+.license-description a {
+    color: var(--accent) !important;
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(237, 55, 97, 0.55), 0 0 6px rgba(237, 55, 97, 0.3);
+    transition: all 0.15s ease-in-out;
+}
+
+.mw-parser-output a:hover,
+.portable-infobox a:hover,
+.wikitable a:hover,
+.page-footer a:hover,
+.license-description a:hover {
+    color: var(--accent-hover) !important;
+    text-decoration: underline;
+    text-shadow: none !important;
+}
+
+/* ==========================================================================
+   4. PORTABLE INFOBOX
+   ========================================================================== */
+
+.portable-infobox {
+    background-color: var(--bg-panel) !important;
+    border: 2px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.3) !important; */
+    color: var(--text-main);
+    font-size: 15px !important;
+}
+
+.portable-infobox .pi-header,
+.portable-infobox .pi-title {
+    font-family: 'Jujutsu Kaisen', sans-serif !important;
+    letter-spacing: 1px !important;
+    background-color: var(--border) !important;
+    color: #171613 !important;
+    font-weight: 700;
+    font-size: 20px !important;
+    text-transform: uppercase;
+    padding: 6px 10px;
+}
+
+.portable-infobox .pi-data,
+.portable-infobox .pi-group {
+    border-bottom: 1px solid rgba(140, 138, 126, 0.25);
+}
+
+.portable-infobox .pi-data-label {
+    color: var(--text-strong);
+    font-weight: 600;
+    font-size: 15px !important;
+}
+.portable-infobox .pi-data-value {
+    font-size: 15px !important;
+}
+
+/* ==========================================================================
+   5. CẢNH BÁO SPOILER (Neon Red)
+   ========================================================================== */
+.spoiler-text {
+    background-color: #0A0A0A;
+    color: var(--neon-red) !important;
+    padding: 2px 6px;
+    border-radius: var(--radius);
+    border: 1px solid var(--neon-red);
+    font-weight: bold;
+    text-shadow:
+        0 0 2px var(--neon-red),
+        0 0 5px var(--neon-red),
+        0 0 10px var(--neon-red),
+        0 0 15px var(--neon-red-glow);
+    box-shadow: inset 0 0 5px rgba(226, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.spoiler-text:hover {
+    box-shadow:
+        0 0 8px rgba(226, 0, 0, 0.6),
+        inset 0 0 8px rgba(226, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   6. TABBER & WIKITABLE
+   ========================================================================== */
+.wds-tabs {
+    border-bottom: 2px solid var(--border) !important;
+}
+
+.wds-tabs__tab.is-selected {
+    color: var(--accent) !important;
+    border-bottom-color: var(--accent) !important;
+}
+
+.wikitable {
+    background-color: var(--bg-panel) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-main) !important;
+    border-radius: var(--radius);
+}
+
+.wikitable th {
+    background-color: var(--border) !important;
+    color: #171613 !important;
+}
+
+/* ==========================================================================
+   7. SCROLLBAR
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* ==========================================================================
+   8. NÚT ĐIỀU HƯỚNG BÀI VIẾT (Edit, Save, Menu)
+   ========================================================================== */
+.page-header__actions .wds-button,
+.page-header__actions .wds-button:hover,
+.page-header__actions a {
+    color: var(--text-main) !important;
+    font-weight: 700 !important;
+}
+
+.page-header__actions svg,
+.page-header__action-button svg {
+    fill: var(--text-main) !important;
+    color: var(--text-main) !important;
+}
+
+.page-header__actions .wds-button:hover,
+.page-header__action-button:hover svg {
+    color: var(--text-strong) !important;
+    fill: var(--text-strong) !important;
+}
+
+/* ==========================================================================
+   9. ẨN CATEGORIES Ở CUỐI TRANG
+   ========================================================================== */
+.page-footer__categories {
+    display: none !important;
+}
+
+/* ==========================================================================
+   10. GALLERY MAIN PAGE (scale ảnh + đổ bóng + bay lên)
+   ========================================================================== */
+.fhp-custom-gallery,
+.fhp-custom-gallery ul.gallery,
+.fhp-custom-gallery .gallerybox,
+.fhp-custom-gallery .wikia-gallery-item,
+.fhp-custom-gallery .gallerybox > div,
+.fhp-custom-gallery .thumb {
+    overflow: visible !important;
+}
+
+.fhp-custom-gallery .wikia-gallery-item,
+.fhp-custom-gallery .gallerybox {
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.fhp-custom-gallery .wikia-gallery-item:hover,
+.fhp-custom-gallery .gallerybox:hover {
+    transform: translateY(-4px) !important;
+    z-index: 99 !important;
+}
+
+.fhp-custom-gallery .thumb,
+.fhp-custom-gallery .thumbinner,
+.fhp-custom-gallery .gallerybox .thumb {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+}
+
+.fhp-custom-gallery .thumb img,
+.fhp-custom-gallery .wikia-gallery-item .thumb img {
+    width: 125px !important;
+    height: 125px !important;
+    object-fit: contain;
+    border-radius: var(--radius) !important;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.55)) !important;
+    display: block;
+    margin: 10px auto !important;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.25s ease !important;
+}
+
+.fhp-custom-gallery .wikia-gallery-item:hover .thumb img,
+.fhp-custom-gallery .gallerybox:hover .thumb img {
+    transform: scale(1.14) !important;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6)) !important;
+}
+
+/* ==========================================================================
+   10.1 GALLERY 3x4 (grid 3 cột, viền sáng thay drop-shadow)
+   ========================================================================== */
+.fhp-gallery-3x4,
+.fhp-gallery-3x4 ul.gallery,
+.fhp-gallery-3x4 .gallerybox,
+.fhp-gallery-3x4 .wikia-gallery-item,
+.fhp-gallery-3x4 .gallerybox > div,
+.fhp-gallery-3x4 .thumb {
+    overflow: visible !important;
+}
+
+/* Ép khung thành lưới 3 cột, item tự xuống hàng (12 ảnh = 4 hàng) */
+.fhp-gallery-3x4 ul.gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+}
+
+.fhp-gallery-3x4 .wikia-gallery-item,
+.fhp-gallery-3x4 .gallerybox {
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.fhp-gallery-3x4 .wikia-gallery-item:hover,
+.fhp-gallery-3x4 .gallerybox:hover {
+    transform: translateY(-4px) !important;
+    z-index: 99 !important;
+}
+
+.fhp-gallery-3x4 .thumb,
+.fhp-gallery-3x4 .thumbinner,
+.fhp-gallery-3x4 .gallerybox .thumb {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+}
+
+/* Viền sáng mỏng 3px thay cho drop-shadow của bản cũ (đổi từ #313131 vì chìm trên nền tối) */
+.fhp-gallery-3x4 .thumb img,
+.fhp-gallery-3x4 .wikia-gallery-item .thumb img {
+    width: 125px !important;
+    height: 125px !important;
+    object-fit: contain;
+    border-radius: var(--radius) !important;
+    border: 3px solid var(--border) !important;
+    filter: none !important;
+    display: block;
+    margin: 10px auto !important;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.25s ease !important;
+}
+
+.fhp-gallery-3x4 .wikia-gallery-item:hover .thumb img,
+.fhp-gallery-3x4 .gallerybox:hover .thumb img {
+    transform: scale(1.14) !important;
+    border-color: var(--accent) !important;
+}
+
+.fhp-gallery-3x4 .wikia-gallery-item .lightbox-caption {
+    font-family: 'Jujutsu Kaisen', sans-serif !important;
+    font-size: 30px !important;
+    letter-spacing: 1px !important;
+}
+
+/* ==========================================================================
+   10.2 NÚT "CREATE PAGE" (hình chữ nhật, dùng cho preload+category theo nhóm)
+   ========================================================================== */
+.fhp-create-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: var(--accent);
+    color: #FFFFFF !important;
+    font-weight: 700;
+    font-size: 14px;
+    text-shadow: none !important;
+    text-decoration: none !important;
+    border: 2px solid var(--text-strong);
+    border-radius: 0 !important; /* hình chữ nhật, không bo góc */
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.fhp-create-btn:hover {
+    background-color: var(--accent-hover);
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+/* ==========================================================================
+   11. HEADER / LOGO
+   ========================================================================== */
+.fandom-community-header,
+.fandom-community-header *,
+.fandom-sticky-header,
+.fandom-sticky-header * {
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.fandom-community-header ::before,
+.fandom-community-header ::after,
+.fandom-sticky-header ::before,
+.fandom-sticky-header ::after {
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    content: none !important;
+}
+
+.main-page-tag-container,
+.page__main,
+.resizable-container {
+    border-top: none !important;
+}
+
+.fandom-community-header__image img {
+    transform: scale(1.2) !important;
+    transform-origin: center center !important;
+    transition: transform 0.15s ease-out !important;
+}
+
+.fandom-community-header__image:hover img {
+    transform: scale(1.32) !important;
+}
+
+/* ==========================================================================
+   12. TRANG CHỦ
+   ========================================================================== */
+.rootpage-FHP_Colony_Guide_Wiki #firstHeading {
+    display: none;
+}
+
+/* ==========================================================================
+   13. BORDER-RADIUS 3PX (page, right rail, recent images)
+   ========================================================================== */
+.page__main,
+.page-content,
+.mw-parser-output,
+.resizable-container,
+.main-page-tag-container {
+    border-radius: var(--radius) !important;
+}
+.right-rail-wrapper,
+.page__right-rail,
+aside.page__right-rail,
+.rail-module {
+    border-radius: var(--radius) !important;
+    overflow: hidden !important;
+}
+.right-rail-wrapper *,
+.page__right-rail *,
+aside.page__right-rail * {
+    border-radius: var(--radius) !important;
+}
+.recent-images,
+.recent-images__item,
+.recent-images__image,
+.recent-images__image img,
+.recent-images__slide {
+    border-radius: var(--radius) !important;
+}
+
+/* ==========================================================================
+   14. NÚT EXPAND/COLLAPSE (mw-collapsible)
+   ========================================================================== */
+.mw-collapsible-toggle {
+    color: var(--accent) !important;
+    font-weight: 600;
+}
+.mw-collapsible-toggle:hover {
+    color: var(--accent-hover) !important;
+}
+
+/* ==========================================================================
+   15. NÚT TÊN TÀI LIỆU (button-style, click full vùng)
+   ========================================================================== */
+.fhp-entry-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4px 0;
+}
+
+.fhp-entry-btn a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 14px;
+    background-color: #2A2620;
+    color: #ECE6D6 !important;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: left;
+    text-shadow: none !important;
+    text-decoration: none !important;
+    border: 2px solid var(--text-strong);
+    border-radius: 0 !important;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.fhp-entry-btn a:hover {
+    background-color: #3A352C;
+    transform: translateX(3px);
+}
+
+/* ==========================================================================
+   16. DÒNG KẺ NGANG (<hr> / "----")
+   ========================================================================== */
+.mw-parser-output hr {
+    height: 2px !important;
+    background-color: var(--border) !important;
+    border: none !important;
+    margin: 20px 0 !important;
+}
