@@ -25,7 +25,7 @@
    ========================================================================== */
 @font-face {
     font-family: 'Jujutsu Kaisen';
-    src: url('https://cdn.jsdelivr.net/gh/DCmee-eemCD/FHPCG-font@main/SJ%20Jujutsu%20Kaisen.woff2') format('woff2');
+    src: url('https://cdn.jsdelivr.net/gh/DCmee-eemCD/FHPCG-source@main/font/SJ%20Jujutsu%20Kaisen.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -482,14 +482,56 @@ aside.page__right-rail * {
 }
 
 /* ==========================================================================
-   14. NÚT EXPAND/COLLAPSE (mw-collapsible)
+   14. NÚT EXPAND/COLLAPSE HÌNH MŨI TÊN (Modern Chevron Arrow)
    ========================================================================== */
-.mw-collapsible-toggle {
-    color: var(--accent) !important;
-    font-weight: 600;
+.mw-collapsible {
+    position: relative;
 }
-.mw-collapsible-toggle:hover {
+
+/* Ẩn chữ [Expand]/[Collapse] mặc định */
+.mw-collapsible-toggle {
+    float: right !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    color: transparent !important;
+    cursor: pointer !important;
+    user-select: none;
+    padding: 2px 6px !important;
+}
+
+.mw-collapsible-toggle a {
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
+/* Tạo mũi tên Chevron bằng ::after */
+.mw-collapsible-toggle::after {
+    content: '❯'; /* Ký tự chevron góc nhọn */
+    display: inline-block;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: var(--accent) !important;
+    text-shadow: 0 0 3px rgba(237, 55, 97, 0.55), 0 0 6px rgba(237, 55, 97, 0.3);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s ease-in-out;
+    transform-origin: center center;
+}
+
+/* Bảng ĐANG MỞ -> Mũi tên chỉ LÊN (xoay -90 độ) */
+.mw-collapsible-toggle::after {
+    transform: rotate(-90deg);
+}
+
+/* Bảng ĐANG ĐÓNG (mw-collapsed) -> Mũi tên chỉ XUỐNG (xoay 90 độ) */
+.mw-collapsible-toggle.mw-collapsible-toggle-collapsed::after,
+.mw-collapsed .mw-collapsible-toggle::after {
+    transform: rotate(90deg);
+}
+
+/* Hover effect */
+.mw-collapsible-toggle:hover::after {
     color: var(--accent-hover) !important;
+    text-shadow: 0 0 8px rgba(255, 80, 117, 0.7);
 }
 
 /* ==========================================================================
