@@ -1,0 +1,109 @@
+<includeonly>
+<infobox>
+  <title source="title1" style="font-family: 'Jujutsu Kaisen', sans-serif;">
+    <default>{{PAGENAME}}</default>
+  </title>
+  <image source="image1">
+    <caption source="caption-image1"/>
+  </image>
+  <group>
+    <header source="header1" style="font-family: 'Jujutsu Kaisen', sans-serif;">Information</header>
+    <data source="Name">
+      <label>Tên</label>
+    </data>
+    <data source="Gender">
+      <label>Giới Tính</label>
+    </data>
+    <data source="Technique">
+      <label>Thuật thức</label>
+    </data>
+    <data source="Grade">
+      <label>Cấp Độ</label>
+    </data>
+    <data source="Status">
+      <label>Tình trạng</label>
+    </data>
+  </group>
+</infobox>
+</includeonly>
+<noinclude>
+Ví dụ cách dùng:
+{{Character2
+  | title1 = Unknow
+  | image1 = Amogus.png
+  | caption-image1 = Unknow
+  | header1 = Unknow
+  | Name = Unknow
+  | Gender = Unknow
+  | Technique = Unknow
+  | Grade = Unknow
+  | Status = Unknow}}
+
+<pre>
+{{Character2
+  | title1 = 
+  | image1 = 
+  | caption-image1 = 
+  | header1 = 
+  | Name = 
+  | Gender = 
+  | Technique = 
+  | Grade = 
+  | Status = 
+}}
+</pre>
+
+<templatedata>
+{
+  "params": {
+    "title1": {
+      "label": "Tiêu đề",
+      "type": "string",
+      "suggested": true
+    },
+    "image1": {
+      "label": "Hình ảnh",
+      "type": "wiki-file-name",
+      "suggested": true
+    },
+    "caption-image1": {
+      "label": "Chú thích ảnh",
+      "type": "string",
+      "suggested": false
+    },
+    "header1": {
+      "label": "Tiêu đề nhóm",
+      "type": "string",
+      "suggested": false,
+      "default": "Information"
+    },
+    "Name": {
+      "label": "Tên",
+      "type": "string",
+      "suggested": true
+    },
+    "Gender": {
+      "label": "Giới tính",
+      "type": "string",
+      "suggested": true
+    },
+    "Technique": {
+      "label": "Thuật thức",
+      "type": "string",
+      "suggested": true
+    },
+    "Grade": {
+      "label": "Cấp độ",
+      "type": "string",
+      "suggested": true
+    },
+    "Status": {
+      "label": "Tình trạng",
+      "type": "string",
+      "suggested": true
+    }
+  },
+  "format": "block"
+}
+</templatedata>
+</noinclude>
