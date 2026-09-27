@@ -1,0 +1,76 @@
+<noinclude>
+Template dùng để dựng bảng danh sách tài liệu theo phân cấp. 
+Cách dùng:
+<pre>
+{{DocsList
+|dac-cap = 
+|cap-1 = 
+|tien-cap-1 = 
+|cap-2 = 
+|tien-cap-2 = 
+|cap-3 = 
+|cap-4 = 
+}}
+</pre>
+
+
+</noinclude>
+<includeonly>
+<div class="inter-content">
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%; border-collapse:collapse;"
+! style="border:2px solid #524a37; background:#b5a98b; text-align:left; padding:8px;" | Đặc Cấp
+|-
+|
+{{{dac-cap|:''chưa có tài liệu''}}}
+|}
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%; border-collapse:collapse;"
+! style="border:2px solid #524a37; background:#b5a98b; text-align:left; padding:8px;" | Cấp 1
+|-
+|
+{{{cap-1|:''chưa có tài liệu''}}}
+|}
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%; border-collapse:collapse;"
+! style="border:2px solid #524a37; background:#b5a98b; text-align:left; padding:8px;" | Tiền Cấp 1
+|-
+|
+{{{tien-cap-1|:''chưa có tài liệu''}}}
+|}
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%; border-collapse:collapse;"
+! style="border:2px solid #524a37; background:#b5a98b; text-align:left; padding:8px;" | Cấp 2
+|-
+|
+{{{cap-2|:''chưa có tài liệu''}}}
+|}
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%; border-collapse:collapse;"
+! style="border:2px solid #524a37; background:#b5a98b; text-align:left; padding:8px;" | Tiền Cấp 2
+|-
+|
+{{{tien-cap-2|:''chưa có tài liệu''}}}
+|}
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%; border-collapse:collapse;"
+! style="border:2px solid #524a37; background:#b5a98b; text-align:left; padding:8px;" | Cấp 3
+|-
+|
+{{{cap-3|:''chưa có tài liệu''}}}
+|}
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%; border-collapse:collapse;"
+! style="border:2px solid #524a37; background:#b5a98b; text-align:left; padding:8px;" | Cấp 4
+|-
+|
+{{{cap-4|:''chưa có tài liệu''}}}
+|}
+</div>
+</includeonly>
+
+
+Example:
+{{DocsList
+|dac-cap = 
+<div class="fhp-entry-btn">[[Luong|CSR-001 ⋅ V. T. Lương]]</div>
+|cap-1 = 
+|tien-cap-1 = 
+|cap-2 = 
+|tien-cap-2 = 
+|cap-3 = 
+|cap-4 = 
+}}
