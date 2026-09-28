@@ -1,0 +1,56 @@
+{{DISPLAYTITLE:<span style="color: #ffffff;">'''V. T. Lương'''</span>}}
+<div class="inter-content">
+{{Character2
+  | title1 = V. T. Lương
+  | image1 = L.png
+  | header1 = Unknow
+  | Name = V. T. Lương
+  | Gender = Nam
+  | Technique = Chú Ngôn • Dẫn Lực Thao Thuật • Ẩn Khí
+  | Grade = Đặc Cấp
+  | Status = Còn hoạt động}}
+</div>
+<div class="inter-content">
+'''V. T. Lương''' là Chú thuật sư mạnh nhất trong FHP Colony. Anh ấy là một [[Chú Thuật Sư]] [[Grade|Đặc Cấp]]. V. T. Lương là một trong những Chú thuật sư nổi tiếng nhất và là người hiếm hoi sở hữu được 3 thuật thức trở lên.
+
+==Ngoại Hình==
+
+V. T. Lương mang ngoại hình của một người đàn ông trưởng thành ngoài 20, chiều cao trung bình và hơi mũm mĩm, trông thường rất thân thiện trong những lúc bình thường. Lương có một chiếc đầu hơi hói và mắt nâu/đen và luôn luôn đeo một cặp kính gọng đen.
+
+Trong đa số thòi gian, Lương mặc một bộ trang phục gồm áo sơ mi đen và quần dài đen hoặc là một bộ đồng phục của FHP Colony, chúng ta cũng có thể bắt gặp Lương mặc những bộ trang phục có màu xanh hoặc trắng xong một số trường hợp hiếm hoi.
+
+==Tính Cách==
+
+Lương là một người nghiêm khắc nhưng rất vui vẻ với học sinh trong những lúc thoải mái ''(chắc vậy)'', nhưng trong một số trường hợp cụ thể, V. T. Lương là một người tương đối đáng sợ và rất nghiêm khắc, thường gây ấn tượng xấu/đáng sợ cho [[Chú Nguyền Sư]] mới (không phải là luôn luôn vậy) nhưng anh ấy là một người rất quan tâm tới những học sinh của mình.
+
+Trong những lúc thực thi nhiệm vụ của công việc của mình, Lương thường rất dễ dàng hoàn thành trong thời gian không quá dài và không quá tốn sức. Anh ấy sẽ thường sử dụng 2 thuật thức chính đó là Chú Ngôn và Dẫn Lực Thao Thuật, và thời gian thực thi nhiệm vụ thường là vào Trang Ngọ Thời của mỗi ngày.
+
+Đôi chút khác biệt nhẹ so với lời truyện miệng hoặc vẻ ngoài, V. T. Lương thật sự là một người vui tính và quan tâm đến học sinh của mình ''(chắc vậy)''. Được ghi nhận anh có quan hệ rất tốt với nhiều học sinh.
+
+==Thuật Thức==
+
+'''Overview'''
+'''Sức mạnh chú thuật tổng thể''': Trong số tất cả Chú thuật sư ở FHP Colony, V. T. Lương là thuật sư Special Grade đuy nhất, điều này có thể coi như rằng anh ấy thực sự là Chú thuật sư mạnh nhất trong tất cả.
+
+'''Sức mạnh thể chất''': Lương là một người sở hữu sức mạnh thể chất rất lớn, thân hình to lớn của anh ấy nói lên tất cả, thường hay được gọi đến giúp đỡ trong các trường hợp cần sức người hoặc xử lý những cuộc giao tranh ở mức độ Semi-Grade 1 trở lên. Mặc dù chưa có thông tin xác thực nhưng theo quan sát, Lương mặc dù có vẻ không có hoặc có rất ít khả năng võ thuật nhưng anh ấy lại thể hiện rất tốt ở sức mạnh cơ bắp thuần và có thể áp đảo được phần lớn mọi người.
+
+==Chú Thuật==
+
+'''Chú Lực'''
+*'''Trữ lượng chú lực''': V. T. Lương được coi là Chú thuật sư mạnh nhất FHP Colony, từ đó ta cũng nhận ra rằng anh ấy có một lượng trữ lượng chú lực cục khổng lồ và có thể khiến mọi người xung quanh nhận ra ngay sự bất thường của không khí khi ở gần nếu Lương không sử dụng Dấu Khí.
+
+*'''Kiểm soát chú lực:''' Hiện tại chưa có thông tin gì về khả năng kiểm soát chú lực của Lương.
+
+*'''Đầu ra chú lực:''' Bên cạnh trữ lượng lớn, Lương còn có một lượng đầu ra chú lực cực kinh hoàng khiến mọi thuật thức của anh ấy được đẩy sức mạnh lên mức tối đa.
+
+'''Thuật Thức'''
+*'''Chú Ngôn''': Giúp Lương truyền chú lực vào lời nói tạo ra một mệnh lệnh tuyệt đối, Lương có khả năng kiểm soát rất tốt thuật thức này.
+
+*'''Dẫn Lực Thao Thuật''': Thuật thức giúp V. T. Lương kiểm soát lực hẫp dãn của vạn vật quanh bản thânh ở bán kính nhỏ, một cú vung tay có thể giúp anh ấy định hịnh lại cả một hành lang, thường được sử dụng kết hợp với Chú Ngôn.
+
+*'''Ẩn Khí''': Đây là thuật thức mới được Lương phát triển ra và mới được ghi nhận trong thời gian gần đây, thuật thức này giúp anh ấy có thể kiểm soát và giấu đi chú lực quanh người đến mức gần như tàng hình, tiệm cận mức độ tàng hình của Thiên Dữ Chú Phược.
+
+{{Discord}}
+
+[[Category:Sorcerer]]
+[[Category:Male]]
