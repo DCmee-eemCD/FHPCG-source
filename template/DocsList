@@ -12,11 +12,7 @@ Cách dùng:
 |cap-4 = 
 }}
 </pre>
-
-
-</noinclude>
-<includeonly>
-<div class="inter-content">
+</noinclude><includeonly><div class="inter-content">
 {| class="wikitable mw-collapsible mw-collapsed" style="width:100%; border-collapse:collapse;"
 ! style="border:2px solid #524a37; background:#b5a98b; text-align:left; padding:8px;" | Đặc Cấp
 |-
@@ -59,10 +55,7 @@ Cách dùng:
 |
 {{{cap-4|:''chưa có tài liệu''}}}
 |}
-</div>
-</includeonly>
-
-
+</div></includeonly><noinclude>
 Example:
 {{DocsList
 |dac-cap = 
@@ -74,3 +67,4 @@ Example:
 |cap-3 = 
 |cap-4 = 
 }}
+</noinclude>
