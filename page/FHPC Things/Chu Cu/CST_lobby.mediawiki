@@ -1,0 +1,47 @@
+<div class="inter-content">
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+'''Chú Cụ''' là các vật phẩm/công cụ mang chú lực phục vụ cho các chú thuật sư.
+</div>
+
+------
+
+{{DocsList
+|dac-cap = 
+|cap-1 = 
+|tien-cap-1 = 
+|cap-2 = 
+|tien-cap-2 = 
+|cap-3 = 
+|cap-4 = 
+}}
+
+-------------------------------
+
+
+<div class="inter-content">
+= <center><span style="text-align: center; font-weight: light bold; font-size: 200%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: whtie;">Bonus</span></center> =
+
+
+<div style="text-align: center; margin: 20px 0;">
+<span style="display: inline-flex; align-items: center; width: 100%;">
+<span style="flex-grow: 1; height: 2px; background: purple; margin-right: 15px;"></span>
+<span style="font-family: 'Jujutsu Kaisen'; font-size: 400%; text-shadow: 0 0 10px #592899; color: #c25ce0; ; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text; -webkit-text-fill-color: #9017d1;">Chú Vật</span>
+<span style="flex-grow: 1; height: 2px; background: purple; margin-left: 15px;"></span>
+</span>
+</div>
+<div class="inter-content">
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+'''Chú Vật''' là những vật thể/đồ vật mang chú lực. 
+</div>
+</div>
+{{DocsList
+|dac-cap = 
+|cap-1 = 
+|tien-cap-1 = 
+|cap-2 = 
+|tien-cap-2 = 
+|cap-3 = 
+|cap-4 = 
+}}
+
+{{Discord}}
