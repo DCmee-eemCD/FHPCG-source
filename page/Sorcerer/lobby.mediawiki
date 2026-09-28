@@ -1,0 +1,19 @@
+{{DISPLAYTITLE:<span style="text-shadow: 0 0 10px #e04f4f; color: #e02222;">'''Chú Thuật Sư'''</span>}}
+<div class="inter-content">
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+'''Chú Thuật Sư''' là những người quản lý/phục phụ  tại '''FHP Colony''', thường có thuật thức mạnh hơn các '''[[Chú Nguyền Sư]]'''. Họ có trách nghiệm hỗ trợ/trực tiếp đào tạo những Chú Nguyền Sư trong colony.
+</div>
+
+-------------------------------
+{{DocsList
+|dac-cap = 
+<div class="fhp-entry-btn">[[Luong|CSR-001 ⋅ V. T. Lương]]</div>
+|cap-1 = 
+|tien-cap-1 = 
+|cap-2 = 
+|tien-cap-2 = 
+|cap-3 = 
+|cap-4 = 
+}}
+
+{{Discord}}
