@@ -1,0 +1,8 @@
+{{DISPLAYTITLE:<span style="color: #ff1500;">'''Incidents'''</span>}}
+<div class="inter-content" style="display: flex; flex-direction: column; gap: 12px; max-width: 100%;"><div style="border: 2px solid #524a37; 
+
+background: #a89d8d; border-radius: 3px; padding: 6px 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); color: #2c2517; font-size: 18px">
+: ''chưa có tài liệu''
+</div></div>
+
+{{Discord}}
