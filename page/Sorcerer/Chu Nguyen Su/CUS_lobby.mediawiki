@@ -1,0 +1,73 @@
+{{DISPLAYTITLE:<span style="text-shadow: 0 0 10px #6ea6e6; color: #4a8ad4;">'''Chú Nguyền Sư'''</span>}}
+<div class="inter-content">
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+'''Chú Nguyền Sư '''là những người tham gia/bước vào '''FHP Colony''', thường là có thuật thức kém hơn những '''[[Chú Thuật Sư]]''' ở trong colony. Những Chú Nguyền Sư ở đây sẽ được đào tạo những kỹ năng cũng như kiến thức cơ bản (và cũng có thể là vài thứ không cần thiết) phục vụ cho sau này.
+</div>
+</div>
+
+-------------------------------
+
+{{DocsList
+|dac-cap = 
+|cap-1 = 
+|tien-cap-1 = 
+|cap-2 = 
+|tien-cap-2 = 
+|cap-3 = 
+|cap-4 = 
+}}
+
+-------------------------------
+
+
+<div class="inter-content">
+= <center><span style="text-align: center; font-weight: light bold; font-size: 200%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Bonus</span></center> =
+
+
+<div style="text-align: center; margin: 20px 0;">
+<span style="display: inline-flex; align-items: center; width: 100%;">
+<span style="flex-grow: 1; height: 2px; background: purple; margin-right: 15px;"></span>
+<span style="font-family: 'Jujutsu Kaisen'; font-size: 400%; text-shadow: 0 0 10px #592899; color: #c25ce0; ; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text; -webkit-text-fill-color: #140738;">Nguyền Hồn</span>
+<span style="flex-grow: 1; height: 2px; background: purple; margin-left: 15px;"></span>
+</span>
+</div>
+<div class="inter-content">
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+'''Nguyền Hồn''' là những thực thể sinh ra từ những cảm xúc tiêu cực của loài người.
+</div>
+</div>
+
+{{DocsList
+|dac-cap = 
+|cap-1 = 
+|tien-cap-1 = 
+|cap-2 = 
+|tien-cap-2 = 
+|cap-3 = 
+|cap-4 = 
+}}
+
+<div style="text-align: center; margin: 20px 0;">
+<span style="display: inline-flex; align-items: center; width: 100%;">
+<span style="flex-grow: 1; height: 2px; background: pink; margin-right: 15px;"></span>
+<span style="font-family: 'Jujutsu Kaisen'; font-size: 400%; text-shadow: 0 0 10px #cf78c6; color: #e241e85; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text; -webkit-text-fill-color: #40063f;">Thức Thần</span>
+<span style="flex-grow: 1; height: 2px; background: pink; margin-left: 15px;"></span>
+</span>
+</div>
+<div class="inter-content">
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+'''Thức Thần''' là những nguyền hồn phục vụ cho người sử dụng thuật thức.
+</div>
+</div>
+{{DocsList
+|dac-cap = 
+|cap-1 = 
+|tien-cap-1 = 
+|cap-2 = 
+|tien-cap-2 = 
+|cap-3 = 
+|cap-4 = 
+}}
+</div>
+
+{{Discord}}
