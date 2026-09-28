@@ -482,13 +482,12 @@ aside.page__right-rail * {
 }
 
 /* ==========================================================================
-   14. NÚT EXPAND/COLLAPSE HÌNH MŨI TÊN (Modern Chevron Arrow)
+   14. NÚT EXPAND/COLLAPSE SVG MŨI TÊN (To & Cân đối)
    ========================================================================== */
 .mw-collapsible {
     position: relative;
 }
 
-/* Ẩn chữ [Expand]/[Collapse] mặc định */
 .mw-collapsible-toggle {
     float: right !important;
     font-size: 0 !important;
@@ -496,7 +495,10 @@ aside.page__right-rail * {
     color: transparent !important;
     cursor: pointer !important;
     user-select: none;
-    padding: 2px 6px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .mw-collapsible-toggle a {
@@ -504,34 +506,34 @@ aside.page__right-rail * {
     color: transparent !important;
 }
 
-/* Tạo mũi tên Chevron bằng ::after */
+/* Dùng icon SVG mũi tên v chỉ xuống - Tăng kích thước ở đây */
 .mw-collapsible-toggle::after {
-    content: '❯'; /* Ký tự chevron góc nhọn */
+    content: '';
     display: inline-block;
-    font-family: 'Inter', sans-serif !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    color: var(--accent) !important;
-    text-shadow: 0 0 3px rgba(237, 55, 97, 0.55), 0 0 6px rgba(237, 55, 97, 0.3);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s ease-in-out;
+    width: 26px; /* Tăng kích thước rộng (gốc là 16px) */
+    height: 26px; /* Tăng kích thước cao (gốc là 16px) */
+    background-color: var(--accent);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E") no-repeat center / contain;
+    filter: drop-shadow(0 0 4px rgba(237, 55, 97, 0.6));
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s ease, filter 0.15s ease;
     transform-origin: center center;
 }
 
-/* Bảng ĐANG MỞ -> Mũi tên chỉ LÊN (xoay -90 độ) */
+/* Bảng ĐANG MỞ -> Xoay 180 độ chỉ lên */
 .mw-collapsible-toggle::after {
-    transform: rotate(-90deg);
+    transform: rotate(180deg);
 }
 
-/* Bảng ĐANG ĐÓNG (mw-collapsed) -> Mũi tên chỉ XUỐNG (xoay 90 độ) */
+/* Bảng ĐANG ĐÓNG -> Xoay 0 độ chỉ xuống */
 .mw-collapsible-toggle.mw-collapsible-toggle-collapsed::after,
 .mw-collapsed .mw-collapsible-toggle::after {
-    transform: rotate(90deg);
+    transform: rotate(0deg);
 }
 
-/* Hover effect */
 .mw-collapsible-toggle:hover::after {
-    color: var(--accent-hover) !important;
-    text-shadow: 0 0 8px rgba(255, 80, 117, 0.7);
+    background-color: var(--accent-hover);
+    filter: drop-shadow(0 0 8px rgba(255, 80, 117, 0.95));
 }
 
 /* ==========================================================================
