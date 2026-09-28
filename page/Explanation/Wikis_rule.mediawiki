@@ -1,0 +1,20 @@
+<span style="text-align: center; font-weight: bold; font-size: 140%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">The developers don't have much time to design a rules page...</span> 
+---------------------------
+
+
+{| style="background: #1e1e1e; border: 1px solid #ffffff26; border-radius: 8px; filter: drop-shadow(0 10px 15px #00000066); border-collapse: collapse; border-spacing: 0; margin: 20px auto; display: table;" | style="border: none; padding: 15px; text-align: center;" |
+[[File:RRRRR.png|thumb|731x731px|center]]
+[[File:LuaFl.png|thumb|center|732x732px]]
+[[File:Qdxp.png|thumb|center|1032x1032px]]
+|}
+
+'''Lưu ý:'''
+Wiki chỉ được tạo ra với mục đích giải trí, không cổ súy bất kỳ hành động tiêu cực/không lạnh mạnh nào, không cố ý làm ảnh hưởng xấu đến danh dự bất cứ ai, đối xử công bằng với tất cả mọi người.
+
+---------------------------
+
+Không có Discord nhưng vẫn cần gửi support ticket?
+
+Liên hệ (Facebook): [https://www.facebook.com/FHPCGpeak/ FHPC Guide's Offical Fanpage]
+
+{{Discord}}
