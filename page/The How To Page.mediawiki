@@ -1,0 +1,9 @@
+<div class="inter-content" style="display: flex; flex-direction: column; gap: 12px; max-width: 100%;"><div class="inter-content" style="display: flex; flex-direction: column; gap: 12px; max-width: 100%;">
+=== This page have some tutorials that you may need! ===
+{{TheDocsWithNoGrp
+| t1 = <div class="fhp-entry-btn">[[How to play games|TRA-001 ⋅ How to play games]]</div>
+| t2 = <div class="fhp-entry-btn">[[How to paste texts on FlipClassroom|TRA-002 ⋅ How to paste texts on FlipClassroom]]</div>
+}}
+
+{{Discord}}
+*''Trang này được hỗ trợ bởi thầy Dũng IP (không phải Dũng IT)''
