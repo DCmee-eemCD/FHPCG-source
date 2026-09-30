@@ -1,0 +1,22 @@
+<noinclude>
+Template hiển thị danh sách tài liệu/hướng dẫn.
+
+Cách sử dụng:
+<pre>
+{{TheDocsWithNoGrp
+| <div class="fhp-entry-btn">[[TenTrang|Mã - Tên hiển thị]]</div>
+}}
+</pre>
+</noinclude><includeonly><div class="inter-content" style="display: flex; flex-direction: column; gap: 12px; max-width: 100%;">
+<div style="border: 2px solid #524a37; background: #302a26; border-radius: 3px; padding: 12px 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+{{{1|''Chưa có tài liệu''}}}
+</div>
+</div></includeonly><noinclude>
+Ví dụ khi có dữ liệu:
+{{TheDocsWithNoGrp
+| <div class="fhp-entry-btn">[[How to play games|TRA-001 ⋅ How to play games]]</div>
+}}
+
+Ví dụ khi để trống:
+{{TheDocsWithNoGrp}}
+</noinclude>
