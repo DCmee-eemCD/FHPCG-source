@@ -1,0 +1,59 @@
+
+= <span style="text-align: center; font-weight: light bold; font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">We will update when the F colony fixed our lastest way to bypass their firewall.</span> =
+<center><center></center></center>
+
+------------------
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Cách 1: (Unstable)</span> =
+<center><center></center></center>
+<div class="inter-content">
+'''Bước 1:'''
+*Tải AmneziaWG:
+::Chúng ta nên tải qua repo chính thức trên github: https://github.com/amnezia-vpn/amneziawg-windows-client/releases/tag/3.1.0
+[[File:Amneziawg.png|thumb|center|309x309px]]
+
+'''Bước 2:'''
+*Lấy WARP config file:
+::Vào trang https://warp-generator.vercel.app/ và bấm '''Generate'''.
+[[File:76.png|thumb|center|326x326px]]
+::Sau khi đã generate xong thì bấm '''Download config''' để lấy file confis.
+
+'''Bước 3:'''
+*Import WARP config file vào AmneziaWG:
+::Mở AmneziaWG, click '''Import tunnel(s) from file''', chọn file .conf vừa lấy được để import.
+{| style="background:transparent; border-collapse:collapse;"
+| style="border:none;" | [[File:Ag.png|thumb|center|400px]]
+| style="border:none;" | [[File:Ag2.png|thumb|center|400px]]
+|}
+::Bấm '''Active''' sau khi đã hoàn thành.
+
+
+
+'''LƯU Ý:'''
+*Trong phần tunnel edit phải đảm bảo Jc, Jmin, Jmax, H1, H2, H3 và H4 phải đúng như này:
+[[File:Ag3.png|thumb|center|345x345px]]
+
+*Trong trường hợp không hiệu quả...
+**Đối với người dùng phổ thông, ta có thể sử dụng v2rayN hoặc v2rayA/NekoBox for Windows.
+**Đối với người dùng có kiến thức và kĩ năng, nên sử dụng Xray-core hoặc Sing-box, đây là cách hiệu quả nhất hiện tại của wiki.
+
+------------------
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Cách 2:</span> =
+<center><center></center></center>
+
+Thật ra nếu ai dùng VPN khác ngoài WARP/1.1.1.1 thì cứ dùng Stealth protocol là đc (recommend port 443).
+
+Recommend TorGuard, Astrill VPN, PrivateVPN / Surfshark.
+
+And btw ts can help when u cant open any website idk
+
+----------------------------
+
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Cách 3:</span> =
+<center><center></center></center>
+Trong trường hợp Stealth protocol ko thể handshake ở mọi port thì có thể sử dụng WSTunnel port 443, 8080, 587,  hoặc port 8443.
+
+Recommend TorGuard, Astrill VPN, PrivateVPN / Surfshark.
+
+And btw ts can help when u cant open any website idk
+</div>
+{{Discord}}
