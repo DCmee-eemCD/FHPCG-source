@@ -7,7 +7,7 @@
 -------------------------------
 {{DocsList
 |dac-cap = 
-<div class="fhp-entry-btn">[[Luong|CSR-001 ⋅ V. T. Lương]]</div>
+<div class="fhp-entry-btn">[[CSR-001|CSR-001 ⋅ V. T. Lương]]</div>
 |cap-1 = 
 |tien-cap-1 = 
 |cap-2 = 
