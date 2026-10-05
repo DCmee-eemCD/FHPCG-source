@@ -1,0 +1,29 @@
+
+= <span style="text-align: center; font-weight: light bold; color: #FFFFFF, font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">We will update when the F colony fixed our lastest way to bypass their anti-pasting.</span> =
+<center><center></center></center>
+----
+
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Chrome:</span> =
+<div class="inter-content">
+'''Bước 1:'''
+
+* Mở inspect:
+
+:: Chúng ta bấm '''F12''' trên bàn phím.
+
+[[File:F12rvcs.png|center|thumb|825x825px]]'''Bước 2:'''
+
+* Mở '''Console Tab (Ctrl + Shift + J) trong Inspect'''
+** Paste đoạn lệnh này:
+
+<pre>
+['copy', 'cut', 'paste', 'contextmenu', 'selectstart', 'dragstart'].forEach(e => {
+window.addEventListener(e, ev => ev.stopImmediatePropagation(), true);
+document.addEventListener(e, ev => ev.stopImmediatePropagation(), true);
+});
+</pre>
+
+* ''(Nhập lệnh '''"allow pasting"''' trong trường hợp không thể paste)''
+
+[[File:AlswayYou.png|center|thumb|776x776px]]'''LƯU Ý:''' Nah, ez ez
+----''Các brower khác sẽ được làm sau''{{Discord}}</div>
