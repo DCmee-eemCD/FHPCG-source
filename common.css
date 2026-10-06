@@ -76,14 +76,36 @@ h1, h2 .firstHeading {
 }
 
 /* ==========================================================================
-   2. NỀN BÀI VIẾT & MÀU CHỮ
+   2. NỀN BÀI VIẾT & MÀU CHỮ (FIX LỖI TRÀN DẢI MỜ & CHỒNG LỚP)
    ========================================================================== */
-.page__main,
+
+/* 1. Reset các khung container cha để KHÔNG bị tạo dải mờ từ đỉnh xuống cuối */
+.resizable-container,
+.main-page-tag-container {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* 2. Chỉ áp dụng Nền mờ 80% + Blur lên đúng KHUNG CHÍNH chứa nội dung */
+.page__main {
+    background-color: rgba(23, 22, 19, 0.8) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
+    color: var(--text-main);
+}
+
+/* 3. Đảm bảo các phần tử con bên trong giữ màu chữ chuẩn và nền trong suốt */
 .page-content,
-.mw-parser-output,
+.mw-parser-output {
+    background: transparent !important;
+    color: var(--text-main);
+}
+
+/* 4. Giữ nền đục cho Infobox & Wikitable để không bị đè rối chữ */
 .portable-infobox,
 .wikitable {
-    background-color: var(--bg-main) !important;
+    background-color: var(--bg-panel) !important;
     color: var(--text-main);
 }
 
@@ -461,17 +483,13 @@ h1, h2 .firstHeading {
 .main-page-tag-container {
     border-radius: var(--radius) !important;
 }
-.right-rail-wrapper,
-.page__right-rail,
-aside.page__right-rail,
-.rail-module {
-    border-radius: var(--radius) !important;
-    overflow: hidden !important;
-}
+
 .right-rail-wrapper *,
 .page__right-rail *,
 aside.page__right-rail * {
     border-radius: var(--radius) !important;
+
+	
 }
 .recent-images,
 .recent-images__item,
@@ -576,4 +594,136 @@ aside.page__right-rail * {
     background-color: var(--border) !important;
     border: none !important;
     margin: 20px 0 !important;
+}
+
+/* ==========================================================================
+   17. MAIN PAGE: 2 KHỐI TRẮNG
+   ========================================================================== */
+.fhp-block {
+    position: relative;
+    overflow: hidden;
+    background: #fffffa;
+    box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    border: 13px solid #ffffff;
+    border-radius: 3px;
+    padding: 20px;
+    color: #000000;
+    margin-bottom: 22px;
+}
+
+/* ảnh nền mờ của khối đầu */
+.fhp-block-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0.4; /* chỉnh độ mờ ở đây */
+    z-index: 0;
+    pointer-events: none;
+}
+.fhp-block-bg figure,
+.fhp-block-bg a,
+.fhp-block-bg span,
+.fhp-block-bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    object-fit: cover;
+}
+
+.fhp-block-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.fhp-hero-title {
+    font-family: 'Jujutsu Kaisen', sans-serif;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.fhp-hero-version {
+    font-size: 15px;
+    font-weight: 600;
+}
+.fhp-hero-tagline {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+.fhp-hero-stats {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.fhp-hero-note {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+/* chữ Navigation làm heading của khối 2 (không còn ô riêng) */
+.fhp-nav-title {
+    font-family: 'Jujutsu Kaisen', sans-serif;
+    font-size: 52px;
+    letter-spacing: 1px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+/* khối trắng thứ 3 = nguyên khối là 1 cái nút */
+.fhp-bigbtn {
+    margin-bottom: 22px;
+}
+.mw-parser-output .fhp-bigbtn a {
+    display: block;
+    background: #fffffa;
+    box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    border: 13px solid #ffffff;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000 !important;
+    text-shadow: none !important;
+    text-decoration: none !important;
+    transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+.mw-parser-output .fhp-bigbtn a:hover {
+    background: #ffffff;
+    color: var(--accent) !important;
+    transform: translateY(-3px);
+    text-decoration: none !important;
+}
+
+/* khối Navigation: padding mỏng hơn + nút to hơn */
+.fhp-block-nav {
+    padding: 6px;
+}
+
+/* ép mọi lớp bọc cùng kích thước, bỏ viền/nền */
+/* khối Navigation: padding mỏng hơn + nút to hơn */
+.fhp-block-nav {
+    padding: 6px;
+}
+
+.fhp-block-nav .fhp-custom-gallery .thumb img,
+.fhp-block-nav .fhp-custom-gallery .wikia-gallery-item .thumb img {
+    width: 170px !important;
+    height: 170px !important;
+    margin: 6px auto !important;
+}
+
+.fhp-block-nav .fhp-custom-gallery .wikia-gallery-item,
+.fhp-block-nav .fhp-custom-gallery .gallerybox {
+    width: 190px !important;
+    margin: 4px !important;
+}
+
+.fhp-block-nav .fhp-custom-gallery .lightbox-caption {
+    font-size: 24px !important;
 }
