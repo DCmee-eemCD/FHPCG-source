@@ -905,4 +905,5 @@ aside.page__right-rail * {
     text-align: left;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
     pointer-events: none;
+    font-family: 'Inter';
 }
