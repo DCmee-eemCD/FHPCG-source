@@ -1007,7 +1007,6 @@ aside.page__right-rail * {
     max-width: 88%;               /* trước là 100%, giảm thì nút nhỏ hơn */
 }
 
-/* 1 nút nhân vật */
 .fhp-char {
     position: relative;
     isolation: isolate;
@@ -1015,9 +1014,30 @@ aside.page__right-rail * {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+/* hover: phóng to */
 .fhp-char:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+    transform: scale(1.07);
+    z-index: 5;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* nút bên PHẢI nhích sang phải (không tính nút đầu hàng kế tiếp) */
+.fhp-char:hover + .fhp-char:not(:nth-child(4n+1)) {
+    transform: translateX(12px);
+}
+
+/* nút bên TRÁI nhích sang trái (không tính nút cuối hàng trước) */
+.fhp-char:not(:nth-child(4n)):has(+ .fhp-char:hover) {
+    transform: translateX(-12px);
+}
+
+/* màn nhỏ 2 cột: đổi 4n thành 2n */
+@media (max-width: 700px) {
+    .fhp-char:hover + .fhp-char:not(:nth-child(4n+1)) { transform: none; }
+    .fhp-char:not(:nth-child(4n)):has(+ .fhp-char:hover) { transform: none; }
+    .fhp-char:hover + .fhp-char:not(:nth-child(2n+1)) { transform: translateX(10px); }
+    .fhp-char:not(:nth-child(2n)):has(+ .fhp-char:hover) { transform: translateX(-10px); }
 }
 
 /* ảnh 41:45 */
