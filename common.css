@@ -802,20 +802,35 @@ aside.page__right-rail * {
 
 /* khối Canon: mỗi nút là 1 thẻ, ảnh làm nền, tỉ lệ 3:1 */
 .fhp-card {
-    min-height: 0;
     position: relative;
     overflow: hidden;
+    min-height: 0;
     aspect-ratio: 3 / 1;
-    margin: 0 0 26px 0;
+    margin: 0 0 28px 0;
     border-radius: 3px;
     background: #171613;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* lớp phủ tối nhẹ (dưới chữ, trên ảnh) */
+.fhp-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: #000000;
+    opacity: 0.12;              /* độ tối ban đầu, giữ dưới 0.15 */
+    pointer-events: none;
+    transition: opacity 0.25s ease;
 }
 
 .fhp-card:hover {
-    transform: translateY(-3px);
+    transform: scale(1.03);     /* phóng to nhẹ */
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+.fhp-card:hover::after {
+    opacity: 0;                 /* hover thì hết tối, ảnh sáng lên */
 }
 
 /* ảnh nền: khoá khung, ảnh luôn lấp đầy và không tràn */
@@ -857,10 +872,7 @@ aside.page__right-rail * {
 /* tên page: chữ to, góc trên trái, viền trắng */
 .fhp-card-title {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     z-index: 1;
     padding: 10px 18px;
     text-align: left;
@@ -869,24 +881,36 @@ aside.page__right-rail * {
     line-height: 1.1;
     letter-spacing: 1px;
     -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
 }
 
 .mw-parser-output .fhp-card-title a {
     color: #ffffff !important;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7) !important;
     text-decoration: none !important;
     font-weight: normal;
+    text-shadow:
+        0 0 4px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 36px rgba(255, 255, 255, 0.5) !important;
+    transition: text-shadow 0.25s ease;
 }
 
-.mw-parser-output .fhp-card-title a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
+.mw-parser-output .fhp-card-title a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: normal;
+    text-shadow:
+        0 0 4px rgba(255, 255, 255, 0.6),
+        0 0 10px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.25) !important;
+    transition: text-shadow 0.25s ease;
+}
+/* hover: glow mạnh hơn một chút */
+.fhp-card:hover .fhp-card-title a {
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.8),
+        0 0 14px rgba(255, 255, 255, 0.55),
+        0 0 28px rgba(255, 255, 255, 0.35) !important;
 }
 
 /* description: căn trái, không nền, chữ trắng */
@@ -907,3 +931,16 @@ aside.page__right-rail * {
     pointer-events: none;
     font-family: 'Inter';
 }
+
+  .fhp-card::after {
+      background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.12) 45%, rgba(0,0,0,0.12) 100%);
+      opacity: 1;
+  }
+  .fhp-card:hover::after { opacity: 0.4; }
+
+  @media (max-width: 700px) {
+      .fhp-card-title { font-size: 30px; }
+      .fhp-card-desc { top: 52px; font-size: 12px; max-width: 55%; }
+      .fhp-nav-title { font-size: 36px; }
+      .fhp-hero-title { font-size: 32px; }
+  }
