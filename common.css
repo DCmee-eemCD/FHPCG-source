@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* ==========================================================================
    COMMON.CSS BY EUPHAUSIA SUPERBA, C. E. SHANNON & GEM DɛN — refactored
@@ -949,3 +948,13 @@ aside.page__right-rail * {
       .fhp-nav-title { font-size: 36px; }
       .fhp-hero-title { font-size: 32px; }
   }
+
+/* Canon: thẻ chẵn (2, 4, 6...) căn phải, thẻ lẻ (1, 3, 5...) giữ căn trái */
+.fhp-block-canon > .fhp-card:nth-child(odd) .fhp-card-title {
+    text-align: right;
+}
+.fhp-block-canon > .fhp-card:nth-child(odd) .fhp-card-desc {
+    left: auto;
+    right: 18px;
+    text-align: right;
+}
