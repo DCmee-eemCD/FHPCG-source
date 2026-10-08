@@ -30,8 +30,8 @@
 <div class="fhp-cat-grid">
 
 <div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 1|Placeholder 1]]</div>
+<div class="fhp-char-img">[[File:Fuhkunahw.png|400px|link=Fuhkunah|alt=]]</div>
+<div class="fhp-char-name">[[Fuhkunah|Fuhkunah]]</div>
 </div>
 
 <div class="fhp-char">
