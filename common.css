@@ -810,6 +810,11 @@ aside.page__right-rail * {
     border-radius: 3px;
     background: #171613;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    /* chống nháy: giữ thẻ trên layer GPU riêng */
+    isolation: isolate;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -826,7 +831,7 @@ aside.page__right-rail * {
 }
 
 .fhp-card:hover {
-    transform: scale(1.03);     /* phóng to nhẹ */
+    transform: translateZ(0) scale(1.03);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
 }
 .fhp-card:hover::after {
