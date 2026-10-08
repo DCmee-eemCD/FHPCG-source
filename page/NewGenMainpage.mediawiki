@@ -1,0 +1,61 @@
+<div class="fhp-block">
+<div class="fhp-block-bg">[[File:Fhpc_pic 2.png.png|link=|alt=]]</div>
+<div class="fhp-block-content">
+<div class="fhp-hero-title">Welcome To FHP Colony Guide!</div>
+<div class="fhp-hero-version">Wiki: version Rel-0.1.0 • Discord Server: update 20</div>
+<div class="fhp-hero-tagline">A guide for sorcerers in FHP Colony, made by '''F Colony Guide™'''!</div>
+<div class="fhp-hero-stats">We got {{NUMBEROFEDITS}} edits, {{NUMBEROFARTICLES}} articles, and {{NUMBEROFFILES}} files</div>
+<div class="fhp-hero-note">For mobile user: ts looks MUCH MUCH MUCH better on PC!</div>
+</div>
+</div>
+
+<div class="fhp-block fhp-block-nav">
+<div class="fhp-nav-title">Navigation</div>
+<div class="fhp-custom-gallery">
+<gallery position="center" captionalign="center" navigation="true" captiontextcolor="#121214" bordercolor="transparent" captionposition="below" orientation="none" widths="170">
+MrL.png|'''Chú Thuật Sư'''|link=Chú Thuật Sư
+Fuhkunah.png|'''Chú Nguyền Sư'''|link=Chú Nguyền Sư
+Monkejaku.png|'''Incidents'''|link=Incidents
+JoGOAT.png|'''Barriers'''|link=Barriers
+TheHoSi.png|'''Chú Cụ'''|link=Chú Cụ
+Amen.gif|'''How to'''|link=The How To Page
+Scroll emoji.png|'''Wiki rules'''|link=Wiki Rules
+Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY37
+</gallery>
+</div>
+</div>
+
+<div class="fhp-block fhp-block-canon">
+<div class="fhp-nav-title">Canon</div>
+
+<div class="fhp-card">
+<div class="fhp-card-bg">[[File:cCard-1.png|link=Canon Characters|alt=]]</div>
+<div class="fhp-card-title">[[Canon Characters|Characters]]</div>
+<div class="fhp-card-desc">Những nhân vật hiện có trong '''lore (cannon) của wiki''', bao gồm đủ '''Chú Thuật Sư, Chú Nguyền Sư, Nguyền Hồn, ...''' (không bao gồm quần chúng).
+
+
+Tất cả đều có '''đóng góp/liên quan''' đến cốt truyện thuộc canon của wiki.
+</div>
+</div>
+
+<div class="fhp-card">
+<div class="fhp-card-bg">[[File:Placeholder3-1.png|link=|alt=]]</div>
+<div class="fhp-card-title">[[Ten trang 2|Placeholder 2]]</div>
+<div class="fhp-card-desc">Mô tả ngắn của nút này.</div>
+</div>
+
+<div class="fhp-card">
+<div class="fhp-card-bg">[[File:Placeholder3-1.png|link=|alt=]]</div>
+<div class="fhp-card-title">[[Ten trang 3|Placeholder 3]]</div>
+<div class="fhp-card-desc">Mô tả ngắn của nút này.</div>
+</div>
+
+<div class="fhp-card">
+<div class="fhp-card-bg">[[File:Placeholder3-1.png|link=|alt=]]</div>
+<div class="fhp-card-title">[[Ten trang 4|Placeholder 4]]</div>
+<div class="fhp-card-desc">Mô tả ngắn của nút này.</div>
+</div>
+
+</div>
+
+<div class="fhp-bigbtn">[[Wiki's Languague|Don't understand? Read Wiki's Languague.]]</div>
