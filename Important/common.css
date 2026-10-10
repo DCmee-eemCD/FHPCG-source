@@ -2,6 +2,30 @@
 
 /* ==========================================================================
    COMMON.CSS BY EUPHAUSIA SUPERBA, C. E. SHANNON & GEM DɛN — refactored
+
+   MỤC LỤC
+    0. Root variables
+    1. Fonts
+    2. Nền bài viết & màu chữ
+    3. Links
+    4. Portable infobox
+    5. Spoiler (neon red)
+    6. Tabber & wikitable
+    7. Scrollbar
+    8. Nút điều hướng bài viết
+    9. Ẩn categories
+   10. Gallery (main page, 3x4, nút Create Page)
+   11. Header / logo
+   12. Trang chủ
+   13. Border-radius 3px
+   14. Nút expand/collapse
+   15. Nút tên tài liệu
+   16. Đường kẻ ngang
+   17. Khối trắng dùng chung
+   18. Main page (hero, navigation, lưu ý, canon, nút lớn)
+   19. Trang Characters
+   20. Right rail
+   21. Responsive (mobile)
    ========================================================================== */
 
 /* ==========================================================================
@@ -20,12 +44,18 @@
     --neon-red: #E20000;
     --neon-red-glow: #FF2E2E;
 
+    /* Khối trắng (main page, trang Characters) */
+    --paper: #fffffa;
+    --paper-border: 13px solid #ffffff;
+    --paper-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+
     /* Kích thước / hiệu ứng */
     --radius: 3px;
     --ease-pop: cubic-bezier(0.2, 0.8, 0.2, 1);
 
     /* Font */
     --font-jjk: 'Jujutsu Kaisen', sans-serif;
+    --font-body: 'Inter', sans-serif;
 }
 
 /* ==========================================================================
@@ -40,14 +70,14 @@
 }
 
 .inter-content {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
 }
 
 /* Tên wiki trên header */
 .fandom-community-header__title,
 .fandom-community-header__title a,
 .fandom-community-header__community-name-wrapper a {
-    font-family: 'Jujutsu Kaisen' !important;
+    font-family: var(--font-jjk) !important;
     font-weight: medium;
     font-size: 40px !important;
     letter-spacing: 1px !important;
@@ -69,7 +99,8 @@
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.67) !important;
 }
 
-h1, h2 .firstHeading {
+h1,
+h2 .firstHeading {
     font-family: var(--font-jjk) !important;
 }
 
@@ -82,10 +113,10 @@ h1, h2 .firstHeading {
 }
 
 /* ==========================================================================
-   2. NỀN BÀI VIẾT & MÀU CHỮ (FIX LỖI TRÀN DẢI MỜ & CHỒNG LỚP)
+   2. NỀN BÀI VIẾT & MÀU CHỮ
    ========================================================================== */
 
-/* 1. Reset các khung container cha để KHÔNG bị tạo dải mờ từ đỉnh xuống cuối */
+/* Container cha: trong suốt, không blur (tránh dải mờ chạy từ đỉnh xuống cuối) */
 .resizable-container,
 .main-page-tag-container {
     background: transparent !important;
@@ -93,7 +124,7 @@ h1, h2 .firstHeading {
     -webkit-backdrop-filter: none !important;
 }
 
-/* 2. Chỉ áp dụng Nền mờ 80% + Blur lên đúng KHUNG CHÍNH chứa nội dung */
+/* Chỉ khung chính có nền mờ 67% + blur */
 .page__main {
     background-color: rgba(23, 22, 19, 0.67) !important;
     -webkit-backdrop-filter: blur(12px) !important;
@@ -101,17 +132,10 @@ h1, h2 .firstHeading {
     color: var(--text-main);
 }
 
-/* 3. Đảm bảo các phần tử con bên trong giữ màu chữ chuẩn và nền trong suốt */
+/* Nội dung bên trong: nền trong suốt, màu chữ chuẩn */
 .page-content,
 .mw-parser-output {
     background: transparent !important;
-    color: var(--text-main);
-}
-
-/* 4. Giữ nền đục cho Infobox & Wikitable để không bị đè rối chữ */
-.portable-infobox,
-.wikitable {
-    background-color: var(--bg-panel) !important;
     color: var(--text-main);
 }
 
@@ -133,7 +157,7 @@ h1, h2 .firstHeading {
 }
 
 /* ==========================================================================
-   3. LINKS (bài viết, infobox, wikitable, footer) — merged, glow áp dụng chung
+   3. LINKS (bài viết, infobox, wikitable, footer) — glow áp dụng chung
    ========================================================================== */
 .mw-parser-output a,
 .portable-infobox a,
@@ -164,7 +188,6 @@ h1, h2 .firstHeading {
     background-color: var(--bg-panel) !important;
     border: 2px solid var(--border) !important;
     border-radius: var(--radius) !important;
-    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.3) !important; */
     color: var(--text-main);
     font-size: 15px !important;
 }
@@ -296,8 +319,10 @@ h1, h2 .firstHeading {
 }
 
 /* ==========================================================================
-   10. GALLERY MAIN PAGE (scale ảnh + đổ bóng + bay lên)
+   10. GALLERY
    ========================================================================== */
+
+/* --- 10.0 Gallery chung (class fhp-custom-gallery): phóng to + đổ bóng + bay lên --- */
 .fhp-custom-gallery,
 .fhp-custom-gallery ul.gallery,
 .fhp-custom-gallery .gallerybox,
@@ -346,9 +371,7 @@ h1, h2 .firstHeading {
     filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.35)) !important;
 }
 
-/* ==========================================================================
-   10.1 GALLERY 3x4 (grid 3 cột, viền sáng thay drop-shadow)
-   ========================================================================== */
+/* --- 10.1 Gallery 3x4: lưới 3 cột, viền sáng thay drop-shadow --- */
 .fhp-gallery-3x4,
 .fhp-gallery-3x4 ul.gallery,
 .fhp-gallery-3x4 .gallerybox,
@@ -358,7 +381,6 @@ h1, h2 .firstHeading {
     overflow: visible !important;
 }
 
-/* Ép khung thành lưới 3 cột, item tự xuống hàng (12 ảnh = 4 hàng) */
 .fhp-gallery-3x4 ul.gallery {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
@@ -386,7 +408,6 @@ h1, h2 .firstHeading {
     box-shadow: none !important;
 }
 
-/* Viền sáng mỏng 3px thay cho drop-shadow của bản cũ (đổi từ #313131 vì chìm trên nền tối) */
 .fhp-gallery-3x4 .thumb img,
 .fhp-gallery-3x4 .wikia-gallery-item .thumb img {
     width: 125px !important;
@@ -406,9 +427,7 @@ h1, h2 .firstHeading {
     border-color: var(--accent) !important;
 }
 
-/* ==========================================================================
-   10.2 NÚT "CREATE PAGE" (hình chữ nhật, dùng cho preload+category theo nhóm)
-   ========================================================================== */
+/* --- 10.2 Nút "Create Page" (hình chữ nhật) --- */
 .fhp-create-btn {
     display: inline-block;
     padding: 6px 14px;
@@ -419,7 +438,7 @@ h1, h2 .firstHeading {
     text-shadow: none !important;
     text-decoration: none !important;
     border: 2px solid var(--text-strong);
-    border-radius: 0 !important; /* hình chữ nhật, không bo góc */
+    border-radius: 0 !important;
     transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
@@ -481,16 +500,9 @@ h1, h2 .firstHeading {
 .page-content,
 .mw-parser-output,
 .resizable-container,
-.main-page-tag-container {
-    border-radius: var(--radius) !important;
-}
-
+.main-page-tag-container,
 .right-rail-wrapper *,
 .page__right-rail *,
-aside.page__right-rail * {
-    border-radius: var(--radius) !important;
-}
-
 .recent-images,
 .recent-images__item,
 .recent-images__image,
@@ -500,7 +512,7 @@ aside.page__right-rail * {
 }
 
 /* ==========================================================================
-   14. NÚT EXPAND/COLLAPSE SVG MŨI TÊN (To & Cân đối)
+   14. NÚT EXPAND/COLLAPSE (mũi tên SVG)
    ========================================================================== */
 .mw-collapsible {
     position: relative;
@@ -524,26 +536,22 @@ aside.page__right-rail * {
     color: transparent !important;
 }
 
-/* Dùng icon SVG mũi tên v chỉ xuống - Tăng kích thước ở đây */
+/* Mũi tên: đang MỞ = xoay 180° (chỉ lên) */
 .mw-collapsible-toggle::after {
     content: '';
     display: inline-block;
-    width: 26px; /* Tăng kích thước rộng (gốc là 16px) */
-    height: 26px; /* Tăng kích thước cao (gốc là 16px) */
+    width: 26px;
+    height: 26px;
     background-color: var(--accent);
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E") no-repeat center / contain;
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E") no-repeat center / contain;
     filter: drop-shadow(0 0 4px rgba(237, 55, 97, 0.6));
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s ease, filter 0.15s ease;
-    transform-origin: center center;
-}
-
-/* Bảng ĐANG MỞ -> Xoay 180 độ chỉ lên */
-.mw-collapsible-toggle::after {
     transform: rotate(180deg);
+    transform-origin: center center;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.15s ease, filter 0.15s ease;
 }
 
-/* Bảng ĐANG ĐÓNG -> Xoay 0 độ chỉ xuống */
+/* Đang ĐÓNG = xoay 0° (chỉ xuống) */
 .mw-collapsible-toggle.mw-collapsible-toggle-collapsed::after,
 .mw-collapsed .mw-collapsible-toggle::after {
     transform: rotate(0deg);
@@ -587,7 +595,7 @@ aside.page__right-rail * {
 }
 
 /* ==========================================================================
-   16. DÒNG KẺ NGANG (<hr> / "----")
+   16. ĐƯỜNG KẺ NGANG (<hr> / "----")
    ========================================================================== */
 .mw-parser-output hr {
     height: 2px !important;
@@ -597,51 +605,85 @@ aside.page__right-rail * {
 }
 
 /* ==========================================================================
-   17. MAIN PAGE: CÁC KHỐI TRẮNG
+   17. KHỐI TRẮNG DÙNG CHUNG
+   (main page, trang Characters, nút lớn "Don't understand?")
    ========================================================================== */
+.fhp-block,
+.fhp-cat,
+.mw-parser-output .fhp-bigbtn a {
+    background: var(--paper);
+    box-shadow: var(--paper-shadow);
+    border: var(--paper-border);
+    border-radius: var(--radius);
+    color: #000000;
+}
+
+/* Ảnh lấp đầy khung, không tràn (nền hero, nền thẻ Canon, ảnh nhân vật) */
+.fhp-block-bg figure,
+.fhp-block-bg a,
+.fhp-block-bg span,
+.fhp-card-bg figure,
+.fhp-card-bg a,
+.fhp-card-bg span,
+.fhp-char-img figure,
+.fhp-char-img a,
+.fhp-char-img span {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.fhp-block-bg img,
+.fhp-card-bg img,
+.fhp-char-img img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    object-fit: cover !important;
+}
+
+/* ==========================================================================
+   18. MAIN PAGE
+   ========================================================================== */
+
+/* --- 18.1 Khối trắng cơ bản --- */
 .fhp-block {
     position: relative;
     overflow: hidden;
-    background: #fffffa;
-    box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
-    border: 13px solid #ffffff;
-    border-radius: 3px;
     padding: 20px;
-    color: #000000;
     margin-bottom: 22px;
 }
 
-/* khối Navigation, Canon: padding rộng hơn để chữ không sát viền */
+/* Navigation: padding rộng hơn để chữ không sát viền */
 .fhp-block-nav {
     padding: 18px 20px 10px 20px;
 }
 
-/* khối Canon: padding ngang rộng hơn để thẻ xa viền hơn (tăng thì thẻ nhỏ lại) */
+/* Canon: padding ngang rộng hơn (tăng thì thẻ nhỏ lại) */
 .fhp-block-canon {
     padding: 18px 32px 10px 32px;
 }
 
-/* ảnh nền mờ của khối đầu */
+/* --- 18.2 Hero (khối đầu, ảnh nền mờ) --- */
 .fhp-block-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.3; /* chỉnh độ mờ ở đây */
+    opacity: 0.3;                 /* độ mờ ảnh nền */
     z-index: 0;
     pointer-events: none;
-}
-
-.fhp-block-bg figure,
-.fhp-block-bg a,
-.fhp-block-bg span,
-.fhp-block-bg img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    object-fit: cover;
 }
 
 .fhp-block-content {
@@ -651,7 +693,7 @@ aside.page__right-rail * {
 }
 
 .fhp-hero-title {
-    font-family: 'Jujutsu Kaisen', sans-serif;
+    font-family: var(--font-jjk);
     font-size: 48px;
     line-height: 1.1;
     letter-spacing: 1px;
@@ -682,9 +724,9 @@ aside.page__right-rail * {
     opacity: 0.75;
 }
 
-/* chữ Navigation làm heading của khối 2 */
+/* --- 18.3 Tiêu đề khối (Navigation, ...) --- */
 .fhp-nav-title {
-    font-family: 'Jujutsu Kaisen', sans-serif;
+    font-family: var(--font-jjk);
     font-size: 52px;
     letter-spacing: 1px;
     color: #000000;
@@ -693,10 +735,19 @@ aside.page__right-rail * {
     -webkit-text-stroke: 0.5px #000000;
 }
 
-/* gallery trong khối Navigation: mỗi nút là 1 khuôn cố định 190px */
+/* --- 18.4 Gallery trong khối Navigation: mỗi nút là 1 khuôn cố định 190px ---
+   Ảnh 150px + 20px mỗi bên cho shadow. Đổi cỡ nút thì giữ: khung = ảnh + 40px,
+   chiều cao khung = ảnh + 20px. */
+.fhp-block-nav .wikia-gallery,
+.fhp-block-nav .wikia-gallery-row {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
 .fhp-block-nav .wikia-gallery-item {
     width: 190px !important;
-    margin: 0 14px 32px 14px !important;  /* ngang 14px mỗi bên, dưới 18px */
+    margin: 0 14px 32px 14px !important;   /* ngang 14px mỗi bên, dưới 32px */
     padding: 0 !important;
     overflow: visible !important;
     text-align: center !important;
@@ -708,10 +759,10 @@ aside.page__right-rail * {
 .fhp-block-nav .wikia-gallery-item .gallery-image-wrapper a {
     display: block !important;
     position: relative !important;
-    top: 0 !important;
+    top: 0 !important;                     /* chặn Fandom tự đẩy ảnh (gif bị tụt) */
     bottom: auto !important;
     width: 190px !important;
-    height: 170px !important;     /* ảnh 150 + 10px trên + 10px dưới cho shadow */
+    height: 170px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     overflow: visible !important;
@@ -746,24 +797,179 @@ aside.page__right-rail * {
     line-height: 1.2 !important;
 }
 
-.fhp-block-nav .wikia-gallery,
-.fhp-block-nav .wikia-gallery-row {
-    border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
+/* --- 18.5 Hàng: Navigation 2/3 bên trái, Lưu ý + Official links chồng dọc 1/3 bên phải --- */
+.fhp-row {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
 }
 
-/* khối trắng thứ 3 = nguyên khối là 1 cái nút */
+.fhp-row > .fhp-block {
+    margin-bottom: 0 !important;
+    min-width: 0;
+    width: auto !important;
+}
+
+.fhp-row > .fhp-block-nav {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.fhp-row > .fhp-note {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.fhp-row > .fhp-links {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.fhp-note-title {
+    font-family: var(--font-jjk);
+    font-size: 40px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px #000000;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+/* --- 18.6 Khối Canon: mỗi nút là 1 thẻ, ảnh làm nền, tỉ lệ 3:1 --- */
+.fhp-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 0;
+    aspect-ratio: 3 / 1;
+    margin: 0 0 28px 0;
+    border-radius: var(--radius);
+    background: var(--bg-main);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    /* chống nháy: giữ thẻ trên layer GPU riêng */
+    isolation: isolate;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fhp-card:hover {
+    transform: translateZ(0) scale(1.03);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Lớp phủ gradient: tối bên trái (thẻ chữ căn trái), hover thì nhạt đi */
+.fhp-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.12) 45%, rgba(0, 0, 0, 0.12) 100%);
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.fhp-card:hover::after {
+    opacity: 0.4;
+}
+
+/* Ảnh nền */
+.fhp-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Tên page: chữ to, góc trên trái, glow nhẹ */
+.fhp-card-title {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+    padding: 10px 18px;
+    text-align: left;
+    font-family: var(--font-jjk);
+    font-size: 59px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.mw-parser-output .fhp-card-title a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-weight: normal;
+    text-shadow:
+        0 0 4px rgba(255, 255, 255, 0.6),
+        0 0 10px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.25) !important;
+    transition: text-shadow 0.25s ease;
+}
+
+.fhp-card:hover .fhp-card-title a {
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.8),
+        0 0 14px rgba(255, 255, 255, 0.55),
+        0 0 28px rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Description: dưới tên, không nền, chữ trắng, tối đa 1/3 chiều dài thẻ */
+.fhp-card-desc {
+    position: absolute;
+    left: 18px;
+    top: 86px;                   /* chỉnh khoảng cách tới tên ở đây */
+    z-index: 1;
+    max-width: 33%;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.3;
+    text-align: left;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+}
+
+/* Đoạn văn trong desc: cùng line-height với đoạn đầu */
+.fhp-card-desc p {
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+    font-size: inherit !important;
+}
+
+.fhp-card-desc p:first-child {
+    margin-top: 0 !important;
+}
+
+/* So le: thẻ 2, 4, 6... (con "odd" vì chữ Canon là con số 1) căn phải + gradient tối bên phải */
+.fhp-block-canon > .fhp-card:nth-child(odd) .fhp-card-title {
+    text-align: right;
+}
+
+.fhp-block-canon > .fhp-card:nth-child(odd) .fhp-card-desc {
+    left: auto;
+    right: 18px;
+    text-align: right;
+}
+
+.fhp-block-canon > .fhp-card:nth-child(odd)::after {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.12) 45%, rgba(0, 0, 0, 0.12) 100%);
+}
+
+/* --- 18.7 Khối trắng cuối = nguyên khối là 1 cái nút --- */
 .fhp-bigbtn {
     margin-bottom: 22px;
 }
 
 .mw-parser-output .fhp-bigbtn a {
     display: block;
-    background: #fffffa;
-    box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
-    border: 13px solid #ffffff;
-    border-radius: 3px;
     padding: 20px;
     text-align: center;
     font-size: 20px;
@@ -781,412 +987,163 @@ aside.page__right-rail * {
     text-decoration: none !important;
 }
 
-/* chặn Fandom tự đẩy ảnh xuống để căn giữa dọc (gif bị tụt) */
-.fhp-block-nav .wikia-gallery-item .thumb,
-.fhp-block-nav .wikia-gallery-item .thumbinner,
-.fhp-block-nav .wikia-gallery-item .gallery-image-wrapper,
-.fhp-block-nav .wikia-gallery-item .gallery-image-wrapper a,
-.fhp-block-nav .wikia-gallery-item .thumb img {
-    top: 0 !important;
-    bottom: auto !important;
-    margin-top: 10px !important;
-    vertical-align: top !important;;
-}
-
-.fhp-block-nav .wikia-gallery-item .thumb,
-.fhp-block-nav .wikia-gallery-item .thumbinner,
-.fhp-block-nav .wikia-gallery-item .gallery-image-wrapper,
-.fhp-block-nav .wikia-gallery-item .gallery-image-wrapper a {
-    margin-top: 0 !important;
-}
-
-/* khối Canon: mỗi nút là 1 thẻ, ảnh làm nền, tỉ lệ 3:1 */
-.fhp-card {
-    position: relative;
-    overflow: hidden;
-    min-height: 0;
-    aspect-ratio: 3 / 1;
-    margin: 0 0 28px 0;
-    border-radius: 3px;
-    background: #171613;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-    /* chống nháy: giữ thẻ trên layer GPU riêng */
-    isolation: isolate;
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* lớp phủ tối nhẹ (dưới chữ, trên ảnh) */
-.fhp-card::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 0;
-    background: #000000;
-    opacity: 0.12;              /* độ tối ban đầu, giữ dưới 0.15 */
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-}
-
-.fhp-card:hover {
-    transform: translateZ(0) scale(1.03);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
-}
-.fhp-card:hover::after {
-    opacity: 0;                 /* hover thì hết tối, ảnh sáng lên */
-}
-
-/* ảnh nền: khoá khung, ảnh luôn lấp đầy và không tràn */
-.fhp-card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.fhp-card-bg figure,
-.fhp-card-bg a,
-.fhp-card-bg span {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-}
-
-.fhp-card-bg img {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    margin: 0 !important;
-    object-fit: cover !important;
-}
-
-/* tên page: chữ to, góc trên trái, viền trắng */
-.fhp-card-title {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 1;
-    padding: 10px 18px;
-    text-align: left;
-    font-family: 'Jujutsu Kaisen', sans-serif;
-    font-size: 59px;
-    line-height: 1.1;
-    letter-spacing: 1px;
-    -webkit-text-stroke: 1px #ffffff;
-}
-
-.mw-parser-output .fhp-card-title a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-weight: normal;
-    text-shadow:
-        0 0 4px #ffffff,
-        0 0 10px #ffffff,
-        0 0 20px rgba(255, 255, 255, 0.8),
-        0 0 36px rgba(255, 255, 255, 0.5) !important;
-    transition: text-shadow 0.25s ease;
-}
-
-.mw-parser-output .fhp-card-title a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-weight: normal;
-    text-shadow:
-        0 0 4px rgba(255, 255, 255, 0.6),
-        0 0 10px rgba(255, 255, 255, 0.4),
-        0 0 20px rgba(255, 255, 255, 0.25) !important;
-    transition: text-shadow 0.25s ease;
-}
-/* hover: glow mạnh hơn một chút */
-.fhp-card:hover .fhp-card-title a {
-    text-shadow:
-        0 0 6px rgba(255, 255, 255, 0.8),
-        0 0 14px rgba(255, 255, 255, 0.55),
-        0 0 28px rgba(255, 255, 255, 0.35) !important;
-}
-
-/* description: căn trái, không nền, chữ trắng */
-.fhp-card-desc {
-    position: absolute;
-    left: 18px;
-    top: 86px;               /* ngay dưới tên: padding 10 + chữ ~65 */
-    z-index: 1;
-    max-width: 33%;
-    padding: 0;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 17px;
-    line-height: 1.3;
-    text-align: left;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
-    pointer-events: none;
-    font-family: 'Inter';
-}
-
-  .fhp-card::after {
-      background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.12) 45%, rgba(0,0,0,0.12) 100%);
-      opacity: 1;
-  }
-  .fhp-card:hover::after { opacity: 0.4; }
-
-  @media (max-width: 700px) {
-      .fhp-card-title { font-size: 30px; }
-      .fhp-card-desc { top: 52px; font-size: 12px; max-width: 55%; }
-      .fhp-nav-title { font-size: 36px; }
-      .fhp-hero-title { font-size: 32px; }
-  }
-
-/* Canon: thẻ chẵn (2, 4, 6...) căn phải, thẻ lẻ (1, 3, 5...) giữ căn trái */
-.fhp-block-canon > .fhp-card:nth-child(odd) .fhp-card-title {
-    text-align: right;
-}
-.fhp-block-canon > .fhp-card:nth-child(odd) .fhp-card-desc {
-    left: auto;
-    right: 18px;
-    text-align: right;
-}
-
-/* gradient so le: thẻ 1,3,5 tối bên trái; thẻ 2,4,6 tối bên phải */
-.fhp-block-canon > .fhp-card:nth-child(odd)::after {
-    background: linear-gradient(270deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.12) 45%, rgba(0,0,0,0.12) 100%);
-}
-
-/* hàng: Navigation 2/3 bên trái, 2 khối chồng dọc 1/3 bên phải */
-.fhp-row {
-    display: grid !important;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 22px;
-    margin-bottom: 22px;
-}
-.fhp-row > .fhp-block {
-    margin-bottom: 0 !important;
-    min-width: 0;
-    width: auto !important;
-}
-.fhp-row > .fhp-block-nav {
-    grid-column: 1;
-    grid-row: 1 / span 2;      /* cao bằng cả 2 khối bên phải */
-}
-.fhp-row > .fhp-note {
-    grid-column: 2;
-    grid-row: 1;
-}
-.fhp-row > .fhp-links {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-@media (max-width: 700px) {
-    .fhp-row { grid-template-columns: 1fr; grid-template-rows: auto; }
-    .fhp-row > .fhp-block-nav,
-    .fhp-row > .fhp-note,
-    .fhp-row > .fhp-links { grid-column: 1; grid-row: auto; }
-}
-
-.fhp-note-title {
-    font-family: 'Jujutsu Kaisen', sans-serif;
-    font-size: 40px;
-    letter-spacing: 1px;
-    -webkit-text-stroke: 0.5px #000000;
-    margin-bottom: 10px;
-    color: #ED3761;
-}
-
-/* đoạn văn trong desc: ép cùng line-height với đoạn đầu */
-.fhp-card-desc p {
-    margin: 8px 0 0 0 !important;
-    padding: 0 !important;
-    line-height: 1.3 !important;
-    font-size: inherit !important;
-}
-.fhp-card-desc p:first-child {
-    margin-top: 0 !important;
-}
-
 /* ==========================================================================
-   18. TRANG CHARACTERS: BẢNG PHÂN LOẠI + NÚT NHÂN VẬT
+   19. TRANG CHARACTERS: BẢNG PHÂN LOẠI + NÚT NHÂN VẬT
    ========================================================================== */
+
+/* Bảng phân loại (không để overflow:hidden, nếu không ô phân loại bị cắt) */
 .fhp-cat {
-    position: relative;               /* không để overflow:hidden, nếu không ô phân loại bị cắt */
-    background: #fffffa;
-    box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
-    border: 13px solid #ffffff;
-    border-radius: 3px;
+    position: relative;
     padding: 44px 24px 10px 24px;     /* chừa chỗ phía trên cho ô phân loại */
-    margin: 70px 0 70px 0;          /* chừa chỗ cho ô phân loại thò ra ngoài */
-    color: #000000;
+    margin: 70px 0 70px 0;            /* trên/dưới: khoảng cách giữa các bảng */
 }
 
-/* ô phân loại: nằm giữa cạnh trên cùng */
+/* Ô phân loại: giữa cạnh trên cùng */
 .fhp-cat-label {
     position: absolute;
-    top: -13px;                       /* = độ dày viền, nên nằm đúng ngay cạnh trên */
+    top: -13px;                       /* = độ dày viền bảng */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     padding: 6px 28px;
-    background: #fffffa;
+    background: var(--paper);
     border: 4px solid #ffffff;
-    border-radius: 3px;
+    border-radius: var(--radius);
     box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.25);
-    font-family: 'Jujutsu Kaisen', sans-serif;
+    font-family: var(--font-jjk);
     font-size: 30px;
     letter-spacing: 1px;
     white-space: nowrap;
     color: #000000;
 }
 
-/* lưới 4 cột */
+/* Lưới 4 cột: gap = dọc ngang, max-width giảm thì nút nhỏ lại */
 .fhp-cat-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px 60px;
     margin: 0 auto 18px auto;
-    max-width: 88%;               /* trước là 100%, giảm thì nút nhỏ hơn */
+    max-width: 88%;
 }
 
+/* Nút nhân vật */
 .fhp-char {
     position: relative;
     isolation: isolate;
-    border-radius: 3px;
+    border-radius: var(--radius);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* hover: phóng to */
+/* Hover: phóng to, hai nút kề bên (cùng hàng) nhích ra */
 .fhp-char:hover {
     transform: scale(1.07);
     z-index: 5;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
-/* nút bên PHẢI nhích sang phải (không tính nút đầu hàng kế tiếp) */
 .fhp-char:hover + .fhp-char:not(:nth-child(4n+1)) {
     transform: translateX(12px);
 }
 
-/* nút bên TRÁI nhích sang trái (không tính nút cuối hàng trước) */
 .fhp-char:not(:nth-child(4n)):has(+ .fhp-char:hover) {
     transform: translateX(-12px);
 }
 
-/* màn nhỏ 2 cột: đổi 4n thành 2n */
-@media (max-width: 700px) {
-    .fhp-char:hover + .fhp-char:not(:nth-child(4n+1)) { transform: none; }
-    .fhp-char:not(:nth-child(4n)):has(+ .fhp-char:hover) { transform: none; }
-    .fhp-char:hover + .fhp-char:not(:nth-child(2n+1)) { transform: translateX(10px); }
-    .fhp-char:not(:nth-child(2n)):has(+ .fhp-char:hover) { transform: translateX(-10px); }
-}
-
-/* ảnh 41:45 */
+/* Ảnh 41:45 */
 .fhp-char-img {
     position: relative;
     aspect-ratio: 41 / 45;
     overflow: hidden;
-    background: #171613;
-    border-radius: 3px 3px 0 0;
-}
-.fhp-char-img figure,
-.fhp-char-img a,
-.fhp-char-img span {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-}
-.fhp-char-img img {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    margin: 0 !important;
-    object-fit: cover !important;
+    background: var(--bg-main);
+    border-radius: var(--radius) var(--radius) 0 0;
 }
 
-/* ô tên dưới ảnh */
+/* Ô tên dưới ảnh */
 .fhp-char-name {
     background: #ffffff;
-    border-radius: 0 0 3px 3px;
+    border-radius: 0 0 var(--radius) var(--radius);
     padding: 8px 6px;
     text-align: center;
-    font-family: 'Jujutsu Kaisen', sans-serif;
+    font-family: var(--font-jjk);
     font-size: 20px;
     line-height: 1.2;
 }
+
 .mw-parser-output .fhp-char-name a {
     color: #000000 !important;
     text-shadow: none !important;
     text-decoration: none !important;
     font-weight: normal;
 }
-/* vùng bấm phủ cả nút */
+
+/* Vùng bấm phủ cả nút */
 .mw-parser-output .fhp-char-name a::after {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 2;
 }
+
 .mw-parser-output .fhp-char:hover .fhp-char-name a {
     color: var(--accent) !important;
 }
 
-/* màn nhỏ: 2 cột */
-@media (max-width: 700px) {
-    .fhp-cat-grid { grid-template-columns: repeat(2, 1fr); }
-    .fhp-cat-label { font-size: 22px; padding: 4px 18px; }
-}
-
 /* ==========================================================================
-   19. RIGHT RAIL: GHI CHÚ CỐ ĐỊNH (chữ thuần, CSS only)
+   20. RIGHT RAIL
    ========================================================================== */
+
+/* Ghi chú cố định ở đầu rail (chữ thuần, CSS only).
+   \0000a0 = dấu cách cứng, vì Fandom cắt dấu cách sau dấu phẩy trong content. */
 .page__right-rail > .right-rail-wrapper > :first-child::before {
     content: "LƯU Ý:\A • Tutor của wiki chỉ là tài liệu kĩ thuật,\0000a0làm theo với mục đích khai thác,\0000a0trục lợi hay gian lận thì wiki sẽ không chịu trách nhiệm.\A • Mọi nhân vật,\0000a0sự kiện và địa điểm trong wiki là hư cấu,\0000a0nếu có sự tương đồng,\0000a0đó có thể chỉ là trùng hợp hoặc lấy cảm hứng.\A • Mọi nội dung đều được viết với góc nhìn khách quan,\0000a0không thể hiện quan điểm,\0000a0phán xét hay bôi nhọ bất kỳ ai,\0000a0nếu thấy bản thân bị ảnh hưởng,\0000a0hãy gửi ticket trong server Discord chính thức hoặc liên hệ fanpage Facebook chính thức của wiki.";
     display: block;
     white-space: pre-wrap;
-    margin-bottom: 16px;
-    font-family: 'Inter', sans-serif;
-    color: var(--text-main);
+    font-family: var(--font-body);
     font-size: 15px;
     line-height: 1.5;
     text-align: left;
-    padding-bottom: 14px;                       /* khoảng cách từ chữ tới đường kẻ */
-    margin-bottom: 16px;                        /* khoảng cách từ đường kẻ tới module bên dưới */
-    border-bottom: 1px solid rgba(231, 230, 221, 0.2); 
-}
-.page__right-rail > .right-rail-wrapper > :first-child::before {
+    color: var(--text-main);
     word-spacing: 0.15em;
     letter-spacing: 0.01em;
     font-kerning: none;
+    padding-bottom: 14px;                               /* chữ -> đường kẻ */
+    margin-bottom: 16px;                                /* đường kẻ -> module bên dưới */
+    border-bottom: 1px solid rgba(231, 230, 221, 0.2);  /* đường kẻ mỏng */
+}
+
+/* Rộng thêm 1/4 (310px -> 388px), chỉ khi rail đang mở */
+.page__right-rail:not(.is-rail-hidden) {
+    width: 388px !important;
+    flex: 0 0 388px !important;
+}
+
+.page__right-rail:not(.is-rail-hidden) .right-rail-wrapper {
+    width: 100% !important;
 }
 
 /* ==========================================================================
-   20. RIGHT RAIL: RỘNG THÊM 1/4 (chỉ khi đang mở)
+   21. RESPONSIVE (mobile) — gom hết vào đây, đặt cuối file để thắng rule gốc
    ========================================================================== */
-.page__right-rail:not(.is-rail-hidden) {
-    width: 388px !important;       /* 310px x 1.25 */
-    flex: 0 0 388px !important;
-}
-.page__right-rail:not(.is-rail-hidden) .right-rail-wrapper {
-    width: 100% !important;
+@media (max-width: 700px) {
+    /* Main page */
+    .fhp-hero-title { font-size: 32px; }
+    .fhp-nav-title { font-size: 36px; }
+
+    .fhp-card-title { font-size: 30px; }
+    .fhp-card-desc { top: 52px; font-size: 12px; max-width: 55%; }
+
+    .fhp-row { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .fhp-row > .fhp-block-nav,
+    .fhp-row > .fhp-note,
+    .fhp-row > .fhp-links { grid-column: 1; grid-row: auto; }
+
+    /* Trang Characters: 2 cột */
+    .fhp-cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .fhp-cat-label { font-size: 22px; padding: 4px 18px; }
+
+    .fhp-char:hover + .fhp-char:not(:nth-child(4n+1)) { transform: none; }
+    .fhp-char:not(:nth-child(4n)):has(+ .fhp-char:hover) { transform: none; }
+    .fhp-char:hover + .fhp-char:not(:nth-child(2n+1)) { transform: translateX(10px); }
+    .fhp-char:not(:nth-child(2n)):has(+ .fhp-char:hover) { transform: translateX(-10px); }
 }
