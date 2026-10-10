@@ -2,7 +2,7 @@
 <div class="fhp-block-bg">[[File:Fhpc_pic 2.png.png|link=|alt=]]</div>
 <div class="fhp-block-content">
 <div class="fhp-hero-title">Welcome To FHP Colony Guide!</div>
-<div class="fhp-hero-version">Wiki: version Rel-0.1.0 • Discord Server: update 20</div>
+<div class="fhp-hero-version">Wiki version: Rel-0.1.0 • Discord Server: update 20</div>
 <div class="fhp-hero-tagline">A guide for sorcerers in FHP Colony, made by '''F Colony Guide™'''!</div>
 <div class="fhp-hero-stats">We got {{NUMBEROFEDITS}} edits, {{NUMBEROFARTICLES}} articles, and {{NUMBEROFFILES}} files</div>
 <div class="fhp-hero-note">For mobile user: ts looks MUCH MUCH MUCH better on PC!</div>
@@ -26,13 +26,14 @@ Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY
 </div>
 </div>
 
+<div class="inter-content">
 <div class="fhp-block fhp-note">
 <div class="fhp-note-title">LƯU Ý</div>
 * Tutor của wiki '''chỉ là tài liệu kĩ thuật''', làm theo với mục đích khai thác, trục lợi hay gian lận thì '''wiki sẽ không chịu trách nhiệm'''.
 * Mọi nhân vật, sự kiện và địa điểm trong wiki là '''hư cấu''', nếu có sự tương đồng, đó có thể chỉ là '''trùng hợp''' hoặc '''lấy cảm hứng'''.
 * Mọi nội dung đều được viết với góc nhìn '''khách quan''', không thể hiện quan điểm, phán xét hay bôi nhọ bất kỳ ai, nếu thấy bản thân bị ảnh hưởng, hãy '''gửi ticket trong server Discord chính thức''' hoặc liên hệ '''fanpage Facebook chính thức''' của wiki.
 </div>
-
+</div>
 <div class="fhp-block fhp-note fhp-links">
 <div class="fhp-note-title">Official links</div>
 * '''Facebook fanpage:''' 
@@ -41,7 +42,7 @@ Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY
 </div>
 
 </div>
-
+<div class="inter-content">
 <div class="fhp-block fhp-block-canon">
 <div class="fhp-nav-title">Canon</div>
 
@@ -76,6 +77,7 @@ Những người sử dụng được chú thuật gọi là '''"Chú thuật s�
 <div class="fhp-card-desc">Mô tả ngắn của nút này.</div>
 </div>
 
+</div>
 </div>
 
 <div class="fhp-bigbtn">[[Wiki's Languague|Don't understand? Read Wiki's Languague.]]</div>
