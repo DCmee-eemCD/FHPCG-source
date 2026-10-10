@@ -31,6 +31,7 @@ Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY
 <div class="fhp-note-title">LƯU Ý</div>
 * Tutor của wiki '''chỉ là tài liệu kĩ thuật''', làm theo với mục đích khai thác, trục lợi hay gian lận thì '''wiki sẽ không chịu trách nhiệm'''.
 * Mọi nhân vật, sự kiện và địa điểm trong wiki là '''hư cấu''', nếu có sự tương đồng, đó có thể chỉ là '''trùng hợp''' hoặc '''lấy cảm hứng'''.
+* Wiki chỉ là một dự án của '''F Colony Guider™''' với mục đích '''giải trí''' và toàn bộ nội dung chỉ ở '''vũ trụ giả tưởng riêng''', '''không đại diện''' cho bất kỳ '''nhóm hay tổ chức nào'''.
 * Mọi nội dung đều được viết với góc nhìn '''khách quan''', không thể hiện quan điểm, phán xét hay bôi nhọ bất kỳ ai, nếu thấy bản thân bị ảnh hưởng, hãy '''gửi ticket trong server Discord chính thức''' hoặc liên hệ '''fanpage Facebook chính thức''' của wiki.
 </div>
 </div>
