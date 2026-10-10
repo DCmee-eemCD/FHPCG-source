@@ -1017,13 +1017,25 @@ h2 .firstHeading {
     color: #000000;
 }
 
-/* Lưới 4 cột: gap = dọc ngang, max-width giảm thì nút nhỏ lại */
+/* Lưới nút: tối đa 4 nút/hàng, hàng thiếu nút tự căn giữa */
 .fhp-cat-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px 60px;
+    --gap-x: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px var(--gap-x);
     margin: 0 auto 18px auto;
     max-width: 88%;
+}
+
+.fhp-cat-grid > .fhp-char {
+    flex: 0 0 calc((100% - 3 * var(--gap-x)) / 4);   /* 4 nút/hàng */
+    min-width: 0;
+}
+
+/* ẩn thẻ rỗng Fandom tự chèn (p, br...) để không làm lệch căn giữa */
+.fhp-cat-grid > :not(.fhp-char) {
+    display: none !important;
 }
 
 /* Nút nhân vật */
