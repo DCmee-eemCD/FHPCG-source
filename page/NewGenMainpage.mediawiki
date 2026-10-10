@@ -8,6 +8,7 @@
 <div class="fhp-hero-note">For mobile user: ts looks MUCH MUCH MUCH better on PC!</div>
 </div>
 </div>
+<div class="fhp-row">
 
 <div class="fhp-block fhp-block-nav">
 <div class="fhp-nav-title">Navigation</div>
@@ -25,6 +26,22 @@ Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY
 </div>
 </div>
 
+<div class="fhp-block fhp-note">
+<div class="fhp-note-title">LƯU Ý</div>
+* Tutor của wiki '''chỉ là tài liệu kĩ thuật''', làm theo với mục đích khai thác, trục lợi hay gian lận thì '''wiki sẽ không chịu trách nhiệm'''.
+* Mọi nhân vật, sự kiện và địa điểm trong wiki là '''hư cấu''', nếu có sự tương đồng, đó có thể chỉ là '''trùng hợp''' hoặc '''lấy cảm hứng'''.
+* Mọi nội dung đều được viết với góc nhìn '''khách quan''', không thể hiện quan điểm, phán xét hay bôi nhọ bất kỳ ai, nếu thấy bản thân bị ảnh hưởng, hãy '''gửi ticket trong server Discord chính thức''' hoặc liên hệ '''fanpage Facebook chính thức''' của wiki.
+</div>
+
+<div class="fhp-block fhp-note fhp-links">
+<div class="fhp-note-title">Official links</div>
+* '''Facebook fanpage:''' 
+* '''Youtube channel:''' 
+* '''Discord server:''' 
+</div>
+
+</div>
+
 <div class="fhp-block fhp-block-canon">
 <div class="fhp-nav-title">Canon</div>
 
@@ -34,14 +51,17 @@ Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY
 <div class="fhp-card-desc">Những nhân vật hiện có trong '''lore (cannon) của wiki''', bao gồm đủ '''Chú Thuật Sư, Chú Nguyền Sư, Nguyền Hồn, ...''' (không bao gồm quần chúng).
 
 
-Tất cả đều có '''đóng góp/liên quan''' đến cốt truyện thuộc canon của wiki.
+Tất cả những nhân vật có tài liệu tại đây đều có '''đóng góp/liên quan''' đến cốt truyện thuộc canon của wiki.
 </div>
 </div>
 
 <div class="fhp-card">
-<div class="fhp-card-bg">[[File:Placeholder3-1.png|link=|alt=]]</div>
-<div class="fhp-card-title">[[Ten trang 2|Placeholder 2]]</div>
-<div class="fhp-card-desc">Mô tả ngắn của nút này.</div>
+<div class="fhp-card-bg">[[File:Banner_4_peak.png|link=|alt=]]</div>
+<div class="fhp-card-title">[[Jujutsu|Jujutsu]]</div>
+<div class="fhp-card-desc">'''"Chú thuật"''' là một cụm từ dùng chung bao gồm tất cả các '''kỹ thuật ma pháp''' liên quan đến '''lời nguyền''' (như thuật thức, thức thần, chú vật, chú cụ, ...). Nó cũng thường được sử dụng làm tiền tố cho phần lớn các thuật ngữ trong xã hội chú thuật.
+
+Những người sử dụng được chú thuật gọi là '''"Chú thuật sư"''' (hay '''"Thuật sư"'''). Mỗi chú thuật sư đều có các thuật thức đặc trưng theo bản thân người sử dụng.
+</div>
 </div>
 
 <div class="fhp-card">
