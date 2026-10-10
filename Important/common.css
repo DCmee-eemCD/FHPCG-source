@@ -672,6 +672,8 @@ h2 .firstHeading {
 /* Canon: padding ngang rộng hơn (tăng thì thẻ nhỏ lại) */
 .fhp-block-canon {
     padding: 18px 32px 10px 32px;
+    background: rgba(0, 0, 0, 0.55);   /* độ đen: tăng thì tối hơn, giảm thì trong hơn */
+    box-shadow: none;                  /* bỏ bóng trong màu xám của khối trắng */
 }
 
 /* --- 18.2 Hero (khối đầu, ảnh nền mờ) --- */
@@ -987,6 +989,12 @@ h2 .firstHeading {
     text-decoration: none !important;
 }
 
+/* chữ "Canon" đổi sang trắng */
+.fhp-block-canon .fhp-nav-title {
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px #ffffff;
+}
+
 /* ==========================================================================
    19. TRANG CHARACTERS: BẢNG PHÂN LOẠI + NÚT NHÂN VẬT
    ========================================================================== */
@@ -996,6 +1004,8 @@ h2 .firstHeading {
     position: relative;
     padding: 44px 24px 10px 24px;     /* chừa chỗ phía trên cho ô phân loại */
     margin: 70px 0 70px 0;            /* trên/dưới: khoảng cách giữa các bảng */
+    background: rgba(0, 0, 0, 0.55);   /* độ đen: tăng thì tối hơn, giảm thì trong hơn */
+    box-shadow: none;                  /* bỏ bóng trong màu xám của khối trắng */
 }
 
 /* Ô phân loại: giữa cạnh trên cùng */
@@ -1036,6 +1046,18 @@ h2 .firstHeading {
 /* ẩn thẻ rỗng Fandom tự chèn (p, br...) để không làm lệch căn giữa */
 .fhp-cat-grid > :not(.fhp-char) {
     display: none !important;
+}
+
+/* bảng không có nút nào: hiện "Chưa có tài liệu" */
+.fhp-cat-grid:not(:has(.fhp-char))::before {
+    content: "Chưa có tài liệu";
+    flex: 1 1 100%;
+    padding: 6px 0 22px 0;
+    text-align: center;
+    font-family: var(--font-jjk);
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* Nút nhân vật */
