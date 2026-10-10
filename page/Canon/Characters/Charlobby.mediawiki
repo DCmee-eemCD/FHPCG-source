@@ -1,3 +1,8 @@
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+Những nhân vật hiện có trong '''lore (cannon) của wiki''', bao gồm đủ '''Chú Thuật Sư, Chú Nguyền Sư, Nguyền Hồn, ...''' (không bao gồm quần chúng).
+Tất cả những nhân vật có tài liệu tại đây đều có '''đóng góp/liên quan''' đến cốt truyện thuộc canon của wiki.
+</div>
+
 <div class="fhp-cat">
 <div class="fhp-cat-label">Chú Thuật Sư</div>
 <div class="fhp-cat-grid">
@@ -20,6 +25,16 @@
 <div class="fhp-char">
 <div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
 <div class="fhp-char-name">[[Ten trang 4|Placeholder 4]]</div>
+</div>
+
+<div class="fhp-char">
+<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
+<div class="fhp-char-name">[[Ten trang 5|Placeholder 5]]</div>
+</div>
+
+<div class="fhp-char">
+<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
+<div class="fhp-char-name">[[Ten trang 6|Placeholder 6]]</div>
 </div>
 
 </div>
@@ -66,42 +81,12 @@
 <div class="fhp-char-name">[[Ten trang 2|Placeholder 2]]</div>
 </div>
 
-<div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 3|Placeholder 3]]</div>
-</div>
-
-<div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 4|Placeholder 4]]</div>
-</div>
-
 </div>
 </div>
 
 <div class="fhp-cat">
 <div class="fhp-cat-label">Thức Thần</div>
 <div class="fhp-cat-grid">
-
-<div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 1|Placeholder 1]]</div>
-</div>
-
-<div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 2|Placeholder 2]]</div>
-</div>
-
-<div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 3|Placeholder 3]]</div>
-</div>
-
-<div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 4|Placeholder 4]]</div>
-</div>
 
 </div>
 </div>
