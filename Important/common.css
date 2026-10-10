@@ -1130,7 +1130,7 @@ h2 .firstHeading {
 /* Ghi chú cố định ở đầu rail (chữ thuần, CSS only).
    \0000a0 = dấu cách cứng, vì Fandom cắt dấu cách sau dấu phẩy trong content. */
 .page__right-rail > .right-rail-wrapper > :first-child::before {
-    content: "LƯU Ý:\A • Tutor của wiki chỉ là tài liệu kĩ thuật,\0000a0làm theo với mục đích khai thác,\0000a0trục lợi hay gian lận thì wiki sẽ không chịu trách nhiệm.\A • Mọi nhân vật,\0000a0sự kiện và địa điểm trong wiki là hư cấu,\0000a0nếu có sự tương đồng,\0000a0đó có thể chỉ là trùng hợp hoặc lấy cảm hứng.\A • Mọi nội dung đều được viết với góc nhìn khách quan,\0000a0không thể hiện quan điểm,\0000a0phán xét hay bôi nhọ bất kỳ ai,\0000a0nếu thấy bản thân bị ảnh hưởng,\0000a0hãy gửi ticket trong server Discord chính thức hoặc liên hệ fanpage Facebook chính thức của wiki.";
+    content: "LƯU Ý:\A • Tutor của wiki chỉ là tài liệu kĩ thuật,\0000a0làm theo với mục đích khai thác,\0000a0trục lợi hay gian lận thì wiki sẽ không chịu trách nhiệm.\A • Wiki chỉ là một dự án của F Colony Guider™ với mục đích giải trí và toàn bộ nội dung chỉ ở vũ trụ giả tưởng riêng,\0000a0không đại diện cho bất kỳ nhóm hay tổ chức nào.\A • Mọi nhân vật,\0000a0sự kiện và địa điểm trong wiki là hư cấu,\0000a0nếu có sự tương đồng,\0000a0đó có thể chỉ là trùng hợp hoặc lấy cảm hứng.\A • Mọi nội dung đều được viết với góc nhìn khách quan,\0000a0không thể hiện quan điểm,\0000a0phán xét hay bôi nhọ bất kỳ ai,\0000a0nếu thấy bản thân bị ảnh hưởng,\0000a0hãy gửi ticket trong server Discord chính thức hoặc liên hệ fanpage Facebook chính thức của wiki.";
     display: block;
     white-space: pre-wrap;
     font-family: var(--font-body);
