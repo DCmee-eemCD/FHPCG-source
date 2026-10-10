@@ -669,11 +669,16 @@ h2 .firstHeading {
     padding: 18px 20px 10px 20px;
 }
 
-/* Canon: padding ngang rộng hơn (tăng thì thẻ nhỏ lại) */
+/* Canon: viền trắng giữ nguyên, lòng đen trong suốt, padding ngang rộng hơn (tăng thì thẻ nhỏ lại) */
 .fhp-block-canon {
     padding: 18px 32px 10px 32px;
     background: rgba(0, 0, 0, 0.55);   /* độ đen: tăng thì tối hơn, giảm thì trong hơn */
     box-shadow: none;                  /* bỏ bóng trong màu xám của khối trắng */
+}
+
+.fhp-block-canon .fhp-nav-title {
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px #ffffff;
 }
 
 /* --- 18.2 Hero (khối đầu, ảnh nền mờ) --- */
@@ -703,10 +708,7 @@ h2 .firstHeading {
     margin-bottom: 10px;
     -webkit-text-stroke: 0.5px #000000;
 }
-/* bỏ margin của mọi khối trắng bên trong hàng, kể cả khối nằm trong thẻ bọc */
-.fhp-row .fhp-block {
-    margin-bottom: 0 !important;
-}
+
 .fhp-hero-version {
     font-size: 15px;
     font-weight: 600;
@@ -729,7 +731,7 @@ h2 .firstHeading {
     opacity: 0.75;
 }
 
-/* --- 18.3 Tiêu đề khối (Navigation, ...) --- */
+/* --- 18.3 Tiêu đề khối (Navigation, Canon...) --- */
 .fhp-nav-title {
     font-family: var(--font-jjk);
     font-size: 52px;
@@ -807,14 +809,18 @@ h2 .firstHeading {
     display: grid !important;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto 1fr;
-    gap: 22px;
+    gap: 22px;                         /* dọc = ngang, đồng đều với các khối khác */
     margin-bottom: 22px;
 }
 
 .fhp-row > .fhp-block {
-    margin-bottom: 0 !important;
     min-width: 0;
     width: auto !important;
+}
+
+/* Bỏ margin-bottom của mọi khối trắng trong hàng, kể cả khối Fandom bọc trong thẻ khác */
+.fhp-row .fhp-block {
+    margin-bottom: 0 !important;
 }
 
 .fhp-row > .fhp-block-nav {
@@ -839,16 +845,6 @@ h2 .firstHeading {
     -webkit-text-stroke: 0.5px #000000;
     margin-bottom: 10px;
     color: var(--accent);
-}
-
-.fhp-row > .fhp-note,
-.fhp-row > .fhp-links {
-    margin: 0 !important;
-}
-
-/* bỏ margin của mọi khối trắng bên trong hàng, kể cả khối nằm trong thẻ bọc */
-.fhp-row .fhp-block {
-    margin-bottom: 0 !important;
 }
 
 /* --- 18.6 Khối Canon: mỗi nút là 1 thẻ, ảnh làm nền, tỉ lệ 3:1 --- */
@@ -1002,23 +998,18 @@ h2 .firstHeading {
     text-decoration: none !important;
 }
 
-/* chữ "Canon" đổi sang trắng */
-.fhp-block-canon .fhp-nav-title {
-    color: #ffffff;
-    -webkit-text-stroke: 0.5px #ffffff;
-}
-
 /* ==========================================================================
    19. TRANG CHARACTERS: BẢNG PHÂN LOẠI + NÚT NHÂN VẬT
    ========================================================================== */
 
-/* Bảng phân loại (không để overflow:hidden, nếu không ô phân loại bị cắt) */
+/* Bảng phân loại: viền trắng giữ nguyên, lòng đen trong suốt
+   (không để overflow:hidden, nếu không ô phân loại bị cắt) */
 .fhp-cat {
     position: relative;
     padding: 44px 24px 10px 24px;     /* chừa chỗ phía trên cho ô phân loại */
     margin: 70px 0 70px 0;            /* trên/dưới: khoảng cách giữa các bảng */
-    background: rgba(0, 0, 0, 0.55);   /* độ đen: tăng thì tối hơn, giảm thì trong hơn */
-    box-shadow: none;                  /* bỏ bóng trong màu xám của khối trắng */
+    background: rgba(0, 0, 0, 0.55);  /* độ đen: tăng thì tối hơn, giảm thì trong hơn */
+    box-shadow: none;                 /* bỏ bóng trong màu xám của khối trắng */
 }
 
 /* Ô phân loại: giữa cạnh trên cùng */
@@ -1056,12 +1047,12 @@ h2 .firstHeading {
     min-width: 0;
 }
 
-/* ẩn thẻ rỗng Fandom tự chèn (p, br...) để không làm lệch căn giữa */
+/* Ẩn thẻ rỗng Fandom tự chèn (p, br...) để không làm lệch căn giữa */
 .fhp-cat-grid > :not(.fhp-char) {
     display: none !important;
 }
 
-/* bảng không có nút nào: hiện "Chưa có tài liệu" */
+/* Bảng không có nút nào: hiện "Chưa có tài liệu" */
 .fhp-cat-grid:not(:has(.fhp-char))::before {
     content: "Chưa có tài liệu";
     flex: 1 1 100%;
@@ -1185,8 +1176,9 @@ h2 .firstHeading {
     .fhp-row > .fhp-note,
     .fhp-row > .fhp-links { grid-column: 1; grid-row: auto; }
 
-    /* Trang Characters: 2 cột */
-    .fhp-cat-grid { grid-template-columns: repeat(2, 1fr); }
+    /* Trang Characters: 2 nút/hàng (lưới dùng flex nên chỉnh flex-basis, không dùng grid-template-columns) */
+    .fhp-cat-grid { --gap-x: 30px; }
+    .fhp-cat-grid > .fhp-char { flex-basis: calc((100% - var(--gap-x)) / 2); }
     .fhp-cat-label { font-size: 22px; padding: 4px 18px; }
 
     .fhp-char:hover + .fhp-char:not(:nth-child(4n+1)) { transform: none; }
