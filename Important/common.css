@@ -1007,6 +1007,17 @@ aside.page__right-rail * {
     color: #ED3761;
 }
 
+/* đoạn văn trong desc: ép cùng line-height với đoạn đầu */
+.fhp-card-desc p {
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+    line-height: 1.3 !important;
+    font-size: inherit !important;
+}
+.fhp-card-desc p:first-child {
+    margin-top: 0 !important;
+}
+
 /* ==========================================================================
    18. TRANG CHARACTERS: BẢNG PHÂN LOẠI + NÚT NHÂN VẬT
    ========================================================================== */
