@@ -965,6 +965,48 @@ aside.page__right-rail * {
     background: linear-gradient(270deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.12) 45%, rgba(0,0,0,0.12) 100%);
 }
 
+/* hàng: Navigation 2/3 bên trái, 2 khối chồng dọc 1/3 bên phải */
+.fhp-row {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+.fhp-row > .fhp-block {
+    margin-bottom: 0 !important;
+    min-width: 0;
+    width: auto !important;
+}
+.fhp-row > .fhp-block-nav {
+    grid-column: 1;
+    grid-row: 1 / span 2;      /* cao bằng cả 2 khối bên phải */
+}
+.fhp-row > .fhp-note {
+    grid-column: 2;
+    grid-row: 1;
+}
+.fhp-row > .fhp-links {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+@media (max-width: 700px) {
+    .fhp-row { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .fhp-row > .fhp-block-nav,
+    .fhp-row > .fhp-note,
+    .fhp-row > .fhp-links { grid-column: 1; grid-row: auto; }
+}
+
+.fhp-note-title {
+    font-family: 'Jujutsu Kaisen', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px #000000;
+    margin-bottom: 10px;
+    color: #ED3761;
+}
+
 /* ==========================================================================
    18. TRANG CHARACTERS: BẢNG PHÂN LOẠI + NÚT NHÂN VẬT
    ========================================================================== */
@@ -1102,4 +1144,38 @@ aside.page__right-rail * {
 @media (max-width: 700px) {
     .fhp-cat-grid { grid-template-columns: repeat(2, 1fr); }
     .fhp-cat-label { font-size: 22px; padding: 4px 18px; }
+}
+
+/* ==========================================================================
+   19. RIGHT RAIL: GHI CHÚ CỐ ĐỊNH (chữ thuần, CSS only)
+   ========================================================================== */
+.page__right-rail > .right-rail-wrapper > :first-child::before {
+    content: "LƯU Ý:\A • Tutor của wiki chỉ là tài liệu kĩ thuật,\0000a0làm theo với mục đích khai thác,\0000a0trục lợi hay gian lận thì wiki sẽ không chịu trách nhiệm.\A • Mọi nhân vật,\0000a0sự kiện và địa điểm trong wiki là hư cấu,\0000a0nếu có sự tương đồng,\0000a0đó có thể chỉ là trùng hợp hoặc lấy cảm hứng.\A • Mọi nội dung đều được viết với góc nhìn khách quan,\0000a0không thể hiện quan điểm,\0000a0phán xét hay bôi nhọ bất kỳ ai,\0000a0nếu thấy bản thân bị ảnh hưởng,\0000a0hãy gửi ticket trong server Discord chính thức hoặc liên hệ fanpage Facebook chính thức của wiki.";
+    display: block;
+    white-space: pre-wrap;
+    margin-bottom: 16px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+    padding-bottom: 14px;                       /* khoảng cách từ chữ tới đường kẻ */
+    margin-bottom: 16px;                        /* khoảng cách từ đường kẻ tới module bên dưới */
+    border-bottom: 1px solid rgba(231, 230, 221, 0.2); 
+}
+.page__right-rail > .right-rail-wrapper > :first-child::before {
+    word-spacing: 0.15em;
+    letter-spacing: 0.01em;
+    font-kerning: none;
+}
+
+/* ==========================================================================
+   20. RIGHT RAIL: RỘNG THÊM 1/4 (chỉ khi đang mở)
+   ========================================================================== */
+.page__right-rail:not(.is-rail-hidden) {
+    width: 388px !important;       /* 310px x 1.25 */
+    flex: 0 0 388px !important;
+}
+.page__right-rail:not(.is-rail-hidden) .right-rail-wrapper {
+    width: 100% !important;
 }
