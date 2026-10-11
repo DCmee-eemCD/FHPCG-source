@@ -3,7 +3,7 @@
 <div class="fhp-block-content">
 <div class="fhp-hero-title">Welcome To FHP Colony Guide!</div>
 <div class="fhp-hero-version">Wiki version: Rel-0.1.0 • Discord Server: update 20</div>
-<div class="fhp-hero-tagline">A guide for sorcerers in FHP Colony, made by '''F Colony Guide™'''!</div>
+<div class="fhp-hero-tagline">A guide for sorcerers in FHP Colony, made by '''F Colony Guider™'''!</div>
 <div class="fhp-hero-stats">We got {{NUMBEROFEDITS}} edits, {{NUMBEROFARTICLES}} articles, and {{NUMBEROFFILES}} files</div>
 <div class="fhp-hero-note">For mobile user: ts looks MUCH MUCH MUCH better on PC!</div>
 </div>
@@ -58,7 +58,7 @@ Tất cả những nhân vật có tài liệu tại đây đều có '''đóng 
 </div>
 
 <div class="fhp-card">
-<div class="fhp-card-bg">[[File:Banner_4_peak.png|link=|alt=]]</div>
+<div class="fhp-card-bg">[[File:Banner_4_peak.png|link=Jujutsu|alt=]]</div>
 <div class="fhp-card-title">[[Jujutsu|Jujutsu]]</div>
 <div class="fhp-card-desc">'''"Chú thuật"''' là một cụm từ dùng chung bao gồm tất cả các '''kỹ thuật ma pháp''' liên quan đến '''lời nguyền''' (như thuật thức, thức thần, chú vật, chú cụ, ...). Nó cũng thường được sử dụng làm tiền tố cho phần lớn các thuật ngữ trong xã hội chú thuật.
 
@@ -67,18 +67,37 @@ Những người sử dụng được chú thuật gọi là '''"Chú thuật s�
 </div>
 
 <div class="fhp-card">
-<div class="fhp-card-bg">[[File:Placeholder3-1.png|link=|alt=]]</div>
-<div class="fhp-card-title">[[Ten trang 3|Placeholder 3]]</div>
-<div class="fhp-card-desc">Mô tả ngắn của nút này.</div>
+<div class="fhp-card-bg">[[File:Banner 5 saf.png|link=Story Arcs|alt=]]</div>
+<div class="fhp-card-title">[[Story Arcs|Story Arcs]]</div>
+<div class="fhp-card-desc">'''Các '''sự kiện/sự cố lớn''' diễn ra tại '''FHP Colony''' gây '''chấn động''' hoặc '''ảnh hưởng lớn''' vô cùng.
+Đây là '''những gì xảy ra''', sẽ là sân khấu của''' các nhân vật, thế lực và phe phái.'''
+</div>
 </div>
 
 <div class="fhp-card">
-<div class="fhp-card-bg">[[File:Placeholder3-1.png|link=|alt=]]</div>
-<div class="fhp-card-title">[[Ten trang 4|Placeholder 4]]</div>
-<div class="fhp-card-desc">Mô tả ngắn của nút này.</div>
+<div class="fhp-card-bg">[[File:Banner 6.png|link=Lores|alt=]]</div>
+<div class="fhp-card-title">[[Lores|Lores]]</div>
+<div class="fhp-card-desc">Lịch sử và bối cảnh''' của '''vũ trụ FHP Colony''' như lị'''ch sử hình thành, thế giới hiện tại, ...'''
+Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế giới này'''.
+</div>
 </div>
 
 </div>
 </div>
 
 <div class="fhp-bigbtn">[[Wiki's Languague|Don't understand? Read Wiki's Languague.]]</div>
+
+<div class="fhp-logrow">
+<div class="fhp-block fhp-log">
+<div class="fhp-log-title">Wiki Update</div>
+
+== '''Rel 0.1.0'''  ==
+(ngày/tháng/năm) Placeholder
+</div>
+<div class="fhp-block fhp-log">
+<div class="fhp-log-title">Server Update</div>
+
+== '''Update 21''' ==
+(ngày/tháng/năm) Placeholder 
+</div>
+</div>
