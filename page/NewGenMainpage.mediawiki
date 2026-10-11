@@ -48,10 +48,9 @@ Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY
 <div class="fhp-nav-title">Canon</div>
 
 <div class="fhp-card">
-<div class="fhp-card-bg">[[File:cCard-1.png|link=Canon Characters|alt=]]</div>
+<div class="fhp-card-bg">[[File:cCard-1.png|link=Canon Characters|alt=Canon Characters]]</div>
 <div class="fhp-card-title">[[Canon Characters|Characters]]</div>
 <div class="fhp-card-desc">Những nhân vật hiện có trong '''lore (cannon) của wiki''', bao gồm đủ '''Chú Thuật Sư, Chú Nguyền Sư, Nguyền Hồn, ...''' (không bao gồm quần chúng).
-
 
 Tất cả những nhân vật có tài liệu tại đây đều có '''đóng góp/liên quan''' đến cốt truyện thuộc canon của wiki.
 </div>
@@ -70,6 +69,7 @@ Những người sử dụng được chú thuật gọi là '''"Chú thuật s�
 <div class="fhp-card-bg">[[File:Banner 5 saf.png|link=Story Arcs|alt=]]</div>
 <div class="fhp-card-title">[[Story Arcs|Story Arcs]]</div>
 <div class="fhp-card-desc">'''Các '''sự kiện/sự cố lớn''' diễn ra tại '''FHP Colony''' gây '''chấn động''' hoặc '''ảnh hưởng lớn''' vô cùng.
+
 Đây là '''những gì xảy ra''', sẽ là sân khấu của''' các nhân vật, thế lực và phe phái.'''
 </div>
 </div>
@@ -78,6 +78,7 @@ Những người sử dụng được chú thuật gọi là '''"Chú thuật s�
 <div class="fhp-card-bg">[[File:Banner 6.png|link=Lores|alt=]]</div>
 <div class="fhp-card-title">[[Lores|Lores]]</div>
 <div class="fhp-card-desc">Lịch sử và bối cảnh''' của '''vũ trụ FHP Colony''' như lị'''ch sử hình thành, thế giới hiện tại, ...'''
+
 Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế giới này'''.
 </div>
 </div>
