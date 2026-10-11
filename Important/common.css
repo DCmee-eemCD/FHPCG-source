@@ -998,6 +998,46 @@ h2 .firstHeading {
     text-decoration: none !important;
 }
 
+/* --- 18.8 Bảng Update: 2 bảng trắng đứng cạnh nhau (Wiki Update | Server Update) --- */
+.fhp-logrow {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.fhp-logrow .fhp-block {
+    margin-bottom: 0 !important;
+    min-width: 0;
+    padding: 18px 20px 14px 20px;
+}
+
+/* ẩn thẻ rỗng Fandom tự chèn giữa 2 bảng */
+.fhp-logrow > br,
+.fhp-logrow > p:empty {
+    display: none !important;
+}
+
+.fhp-log-title {
+    font-family: var(--font-jjk);
+    font-size: 40px;
+    letter-spacing: 1px;
+    color: #000000;
+    -webkit-text-stroke: 0.5px #000000;
+    margin-bottom: 10px;
+}
+
+.fhp-log ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.fhp-log li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 /* ==========================================================================
    19. TRANG CHARACTERS: BẢNG PHÂN LOẠI + NÚT NHÂN VẬT
    ========================================================================== */
@@ -1186,3 +1226,5 @@ h2 .firstHeading {
     .fhp-char:hover + .fhp-char:not(:nth-child(2n+1)) { transform: translateX(10px); }
     .fhp-char:not(:nth-child(2n)):has(+ .fhp-char:hover) { transform: translateX(-10px); }
 }
+
+    .fhp-logrow { grid-template-columns: 1fr; }
