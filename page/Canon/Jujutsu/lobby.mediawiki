@@ -1,0 +1,20 @@
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+'''"Chú thuật"''' là một cụm từ dùng chung bao gồm tất cả các '''kỹ thuật ma pháp''' liên quan đến '''lời nguyền''' (như thuật thức, thức thần, chú vật, chú cụ, ...). Nó cũng thường được sử dụng làm tiền tố cho phần lớn các thuật ngữ trong xã hội chú thuật.
+Những người sử dụng được chú thuật gọi là '''"Chú thuật sư"''' (hay '''"Thuật sư"'''). Mỗi chú thuật sư đều có các thuật thức đặc trưng theo bản thân người sử dụng.
+</div>
+
+<div class="fhp-cat">
+<div class="fhp-cat-label">Thuật thức</div>
+<div class="fhp-cat-grid">
+
+</div>
+</div>
+
+<div class="fhp-cat">
+<div class="fhp-cat-label">Kỹ thuật</div>
+<div class="fhp-cat-grid">
+
+</div>
+</div>
+
+{{Discord}}
