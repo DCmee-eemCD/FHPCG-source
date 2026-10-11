@@ -1,0 +1,27 @@
+<div style="max-width: 80%; width: 100%; font-weight: bold">
+Lịch sử và bối cảnh''' của '''vũ trụ FHP Colony''' như lịch''' sử hình thành, thế giới hiện tại, ...'''
+Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế giới này'''.
+</div>
+
+<div class="fhp-cat">
+<div class="fhp-cat-label">Bối cảnh</div>
+<div class="fhp-cat-grid">
+
+</div>
+</div>
+
+<div class="fhp-cat">
+<div class="fhp-cat-label">Lịch Sử</div>
+<div class="fhp-cat-grid">
+
+</div>
+</div>
+
+<div class="fhp-cat">
+<div class="fhp-cat-label">Phe phái</div>
+<div class="fhp-cat-grid">
+
+</div>
+</div>
+
+{{Discord}}
