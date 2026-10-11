@@ -77,7 +77,7 @@ Những người sử dụng được chú thuật gọi là '''"Chú thuật s�
 <div class="fhp-card">
 <div class="fhp-card-bg">[[File:Banner 6.png|link=Lores|alt=]]</div>
 <div class="fhp-card-title">[[Lores|Lores]]</div>
-<div class="fhp-card-desc">Lịch sử và bối cảnh''' của '''vũ trụ FHP Colony''' như lị'''ch sử hình thành, thế giới hiện tại, ...'''
+<div class="fhp-card-desc">'''Lịch sử và bối cảnh''' của '''vũ trụ FHP Colony''' như '''lịch sử hình thành, thế giới hiện tại, ...'''
 
 Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế giới này'''.
 </div>
