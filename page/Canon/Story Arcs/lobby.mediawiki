@@ -4,14 +4,4 @@
 <div class="fhp-cat">
 <div class="fhp-cat-grid">
 
-<div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 1|Placeholder 1]]</div>
-</div>
-
-<div class="fhp-char">
-<div class="fhp-char-img">[[File:CPlacholder910.jpg|400px|link=|alt=]]</div>
-<div class="fhp-char-name">[[Ten trang 2|Placeholder 2]]</div>
-</div>
-
 </div>
