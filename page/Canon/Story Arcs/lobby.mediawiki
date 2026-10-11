@@ -1,5 +1,7 @@
+<div style="max-width: 80%; width: 100%; font-weight: bold">
 '''Các '''sự kiện/sự cố lớn''' diễn ra tại '''FHP Colony''' gây '''chấn động''' hoặc '''ảnh hưởng lớn''' vô cùng.
 Đây là '''những gì xảy ra''', sẽ là sân khấu của''' các nhân vật, thế lực và phe phái.'''
+</div>
 
 <div class="fhp-cat">
 <div class="fhp-cat-grid">
