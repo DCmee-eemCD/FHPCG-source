@@ -4,14 +4,14 @@ Những người sử dụng được chú thuật gọi là '''"Chú thuật s�
 </div>
 
 <div class="fhp-cat">
-<div class="fhp-cat-label">Thuật thức</div>
+<div class="fhp-cat-label">Thuật Thức</div>
 <div class="fhp-cat-grid">
 
 </div>
 </div>
 
 <div class="fhp-cat">
-<div class="fhp-cat-label">Kỹ thuật</div>
+<div class="fhp-cat-label">Kỹ Thuật</div>
 <div class="fhp-cat-grid">
 
 </div>
