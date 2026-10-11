@@ -4,7 +4,7 @@ Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế gi�
 </div>
 
 <div class="fhp-cat">
-<div class="fhp-cat-label">Bối cảnh</div>
+<div class="fhp-cat-label">Bối Cảnh</div>
 <div class="fhp-cat-grid">
 
 </div>
@@ -18,7 +18,7 @@ Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế gi�
 </div>
 
 <div class="fhp-cat">
-<div class="fhp-cat-label">Phe phái</div>
+<div class="fhp-cat-label">Phe Phái</div>
 <div class="fhp-cat-grid">
 
 </div>
