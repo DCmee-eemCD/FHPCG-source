@@ -5,8 +5,8 @@
 
 = <center><span style="text-align: center; font-weight: light bold; font-size: 200%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: black;">Welcome To FHP Colony Guide!</span></center> =
 <center><center>
-<center> Wiki: version xxx • Discord Server: update xxx</center>
-''A guide for sorcerers in FHP Colony, made by '''F Colony Guide™'''...theres [[How to play games|"how to play games"]] tutor too :D!''
+<center> Wiki: version Alp-0.8.0 • Discord Server: update 20</center>
+''A guide for sorcerers in FHP Colony, made by '''F Colony Guider™'''!''
 
 [[File:Fhpc_pic 2.png.png|775px|center]]</span>
 
@@ -32,12 +32,7 @@ Amen.gif|'''How to'''|link=The How To Page
 Scroll emoji.png|'''Wiki rules'''|link=Wiki Rules
 Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY37
 </gallery>
-
 ------------
-Don't understand? Read [[Wiki's Languague]].
-
-
-
-
+Don't understand? Read [[Wiki's Language]].
 
 |}
