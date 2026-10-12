@@ -1,5 +1,5 @@
 
-= <span style="text-align: center; font-weight: light bold; color: #FFFFFF, font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">We will update when the F colony fixed our lastest way to bypass their anti-pasting.</span> =
+= <span style="text-align: center; font-weight: light bold; color: #FFFFFF, font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">How to bypass anti-pasting in the flipped classroom</span> =
 <center><center></center></center>
 ----
 
@@ -26,4 +26,5 @@ document.addEventListener(e, ev => ev.stopImmediatePropagation(), true);
 * ''(Nhập lệnh '''"allow pasting"''' trong trường hợp không thể paste)''
 
 [[File:AlswayYou.png|center|thumb|776x776px]]'''LƯU Ý:''' Nah, ez ez
-----''Các brower khác sẽ được làm sau''{{Discord}}</div>
+----''Các brower khác sẽ được làm sau''</div>
+{{Discord}}
