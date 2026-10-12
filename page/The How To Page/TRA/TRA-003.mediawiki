@@ -1,0 +1,49 @@
+= <span style="text-align: center; font-weight: light bold; color: #FFFFFF, font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">How to bypass Azota's cheat-detector.</span> =
+<center><center></center></center>
+----
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Chrome:</span> =
+<div class="inter-content">
+'''Bước 1:'''
+
+* Mở inspect:
+
+:: Chúng ta bấm '''F12''' trên bàn phím. (ngay trước khi vào bài làm)
+
+[[File:Ugoootrd.png|center|thumb|825x825px]]'''Bước 2:'''
+
+* Mở '''Console Tab (Ctrl + Shift + J) trong Inspect'''
+** Paste đoạn lệnh này:
+<pre>
+function removeAllEventListeners(target, eventTypes) {
+    try {
+        eventTypes.forEach(eventType => {
+            const listeners = getEventListeners(target)[eventType];
+            if (listeners) {
+                listeners.forEach(listener => {
+                    target.removeEventListener(eventType, listener.listener);
+                });
+            }
+        });
+        console.log("Removed all - Done by NGUYEN HUYNH DANG NHUT");
+    } catch (error) {
+        console.error("An error occurred: Could not remove event listeners. Error details:", error);
+    }
+}
+
+const eventTypes = [
+    'beforeunload', 'blur', 'click', 'DOMContentLoaded', 'hashchange',
+    'keydown', 'load', 'locationchange', 'message', 'mousedown',
+    'orientationchange', 'popstate', 'resize', 'scroll', 'touchstart',
+    'visibilitychange'
+];
+
+// Remove event listeners from window and document
+removeAllEventListeners(window, eventTypes);
+removeAllEventListeners(document, eventTypes);
+</pre>
+
+* ''(Nhập lệnh '''"allow pasting"''' trong trường hợp không thể paste)''
+
+[[File:Thuit.png|center|thumb|776x776px]]'''LƯU Ý:''' Nah, ez ez
+----''Các brower khác sẽ được làm sau''</div>
+{{Discord}}
