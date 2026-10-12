@@ -1,5 +1,9 @@
 
-= <span style="text-align: center; font-weight: light bold; font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">We will update when the F colony fixed our lastest way to bypass their firewall.</span> =
+= <span style="text-align: center; font-weight: light bold; font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">How to bypass firewall</span> =
+<center><center></center></center>
+
+
+= <span style="text-align: center; font-weight: light bold; font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: red;">DISCLAIMER: MAINTENANCE UNTIL NOVEMBER!!!</span> =
 <center><center></center></center>
 ----
 
@@ -28,11 +32,14 @@
 
 [[File:76.png|center|thumb|326x326px]]
 
-:: Sau khi đã generate xong thì bấm '''Download config''' để lấy file confis.
+:: Sau khi đã generate xong thì bấm '''Download config''' để lấy file config.
+!
+p/s: Tại sao lại là config WARP? Config Windscribe, config Proton VPN, config blah blah blah được ko? '''KHÔNG!''' chỉ riêng config của WARP là hỗ trợ custom sâu (nếu bro có config nào khác custom sâu đc thì ok)
+
 
 '''Bước 3:'''
 
-* Import WARP config file vào AmneziaWG:
+* Import config file vào AmneziaWG:
 
 :: Mở AmneziaWG, click '''Import tunnel(s) from file''', chọn file .conf vừa lấy được để import.
 
@@ -47,11 +54,18 @@
 
 * Trong phần tunnel edit phải đảm bảo Jc, Jmin, Jmax, H1, H2, H3 và H4 phải đúng như này:
 
-[[File:Ag3.png|center|thumb|345x345px]]
+[[File:ThienTaiiiff.png|center|thumb|345x345px]]
 
-* Trong trường hợp không hiệu quả...
-** Đối với người dùng phổ thông, ta có thể sử dụng v2rayN hoặc v2rayA/NekoBox for Windows.
-** Đối với người dùng có kiến thức và kĩ năng, nên sử dụng Xray-core hoặc Sing-box, đây là cách hiệu quả nhất hiện tại của wiki.
+* Cho ai chưa có chuẩn như ảnh:
+<pre>
+Jc = 8
+Jmin = 64
+Jmax = 96
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+</pre>
 
 ----
 
@@ -69,4 +83,5 @@ And btw ts can help when u cant open any website idk
 Recommend TorGuard, Astrill VPN, PrivateVPN / Surfshark.
 
 And btw ts can help when u cant open any website idk
-</div>{{Discord}}
+</div>
+{{Discord}}
