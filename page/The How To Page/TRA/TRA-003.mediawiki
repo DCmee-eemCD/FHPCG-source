@@ -3,6 +3,8 @@
 ----
 = <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Chrome:</span> =
 <div class="inter-content">
+Special thanks to DangNhutNguyen (Github), [https://github.com/DangNhutNguyen/AZOTA-K12Online-Cheated Original page]
+
 '''Bước 1:'''
 
 * Mở inspect:
