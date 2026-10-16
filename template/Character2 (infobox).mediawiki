@@ -11,6 +11,12 @@
     <data source="Name">
       <label>Tên</label>
     </data>
+        <data source="Kanji">
+      <label>Kanji</label>
+    </data>
+        <data source="Romanji">
+      <label>Romanji</label>
+    </data>
     <data source="Gender">
       <label>Giới tính</label>
     </data>
@@ -20,17 +26,11 @@
     <data source="Grade">
       <label>Cấp độ</label>
     </data>
-    <data source="Status">
-      <label>Tình trạng</label>
-    </data>
         <data source="Domain">
       <label>Lãnh địa</label>
     </data>
-        <data source="Kanji">
-      <label>Kanji</label>
-    </data>
-        <data source="Romanji">
-      <label>Romanji</label>
+    <data source="Status">
+      <label>Tình trạng</label>
     </data>
   </group>
 </infobox>
