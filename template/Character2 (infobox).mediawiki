@@ -26,6 +26,12 @@
         <data source="Domain">
       <label>Lãnh địa</label>
     </data>
+        <data source="Kanji">
+      <label>Kanji</label>
+    </data>
+        <data source="Romanji">
+      <label>Romanji</label>
+    </data>
   </group>
 </infobox>
 </includeonly>
@@ -41,6 +47,7 @@ Ví dụ cách dùng:
   | Technique = Unknow
   | Grade = Unknow
   | Domain = Unknow
+  ...
   | Status = Unknow}}
 
 <pre>
@@ -50,6 +57,8 @@ Ví dụ cách dùng:
   | caption-image1 = 
   | header1 = 
   | Name = 
+  | Kanji =
+  | Romanji =
   | Gender = 
   | Technique = 
   | Grade = 
