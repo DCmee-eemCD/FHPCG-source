@@ -7,6 +7,11 @@ Những người sử dụng được chú thuật gọi là '''"Chú thuật s�
 <div class="fhp-cat-label">Thuật Thức</div>
 <div class="fhp-cat-grid">
 
+<div class="fhp-char">
+<div class="fhp-char-img">[[File:Chu Ngon.png|400px|link=Chú Ngôn|alt=]]</div>
+<div class="fhp-char-name">[[Chú Ngôn|Chú Ngôn]]</div>
+</div>
+
 </div>
 </div>
 
