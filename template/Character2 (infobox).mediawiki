@@ -12,16 +12,19 @@
       <label>Tên</label>
     </data>
     <data source="Gender">
-      <label>Giới Tính</label>
+      <label>Giới tính</label>
     </data>
     <data source="Technique">
       <label>Thuật thức</label>
     </data>
     <data source="Grade">
-      <label>Cấp Độ</label>
+      <label>Cấp độ</label>
     </data>
     <data source="Status">
       <label>Tình trạng</label>
+    </data>
+        <data source="Domain">
+      <label>Lãnh địa</label>
     </data>
   </group>
 </infobox>
@@ -37,6 +40,7 @@ Ví dụ cách dùng:
   | Gender = Unknow
   | Technique = Unknow
   | Grade = Unknow
+  | Domain = Unknow
   | Status = Unknow}}
 
 <pre>
@@ -49,6 +53,7 @@ Ví dụ cách dùng:
   | Gender = 
   | Technique = 
   | Grade = 
+  | Domain = Unknow
   | Status = 
 }}
 </pre>
