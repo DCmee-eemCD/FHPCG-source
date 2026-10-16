@@ -112,6 +112,11 @@ h2 .firstHeading {
     letter-spacing: 1px !important;
 }
 
+/* Đẩy chữ ruby text lên trên 2px */
+ruby rt {
+    transform: translateY(-2px);
+}
+
 /* ==========================================================================
    2. NỀN BÀI VIẾT & MÀU CHỮ
    ========================================================================== */
