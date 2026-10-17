@@ -1,51 +1,354 @@
-= <span style="text-align: center; font-weight: light bold; color: #FFFFFF, font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">How to bypass Azota's cheat-detector.</span> =
+= Azota cheat tool =
 <center><center></center></center>
 ----
-= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Chrome:</span> =
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Chrome/Microsoft Edge:</span> =
 <div class="inter-content">
-Special thanks to DangNhutNguyen (Github), [https://github.com/DangNhutNguyen/AZOTA-K12Online-Cheated Original page]
+
+<pre class="fhp-code" title="Click to select all">
+// GFHP-Aa Asistant v1
+// Inspired by a guy named phis quan
+(function() {
+  if (window.__zenithCleanup) {
+    window.__zenithCleanup();
+  }
+
+  const AI_ENGINE = 'openai/gpt-oss-120b';
+  let hoveredNode = null;
+  window.__zenithActive = true;
+  let isLocked = false;
+  let perfMode = 0; // 0: Idle, 1: High Performance, 2: Low Battery
+  const queryCache = new Map();
+  let autoClearTimer = null;
+  let ctrlPressTimes = [];
+
+  const SYS_INSTRUCTION = 'Bạn là trợ lý học tập cấp 2. Nhiệm vụ: trả lời CHÍNH XÁC. QUY TẮC BẮT BUỘC: 1. Với câu hỏi TOÁN, LÝ, HÓA hoặc cần tính toán: BẮT BUỘC phải viết quá trình suy nghĩ, nháp từng bước cẩn thận bên trong cặp thẻ <think>...</think> trước, sau đó mới đưa ra đáp án cuối cùng ở ngay bên ngoài thẻ <think>. 2. Với câu hỏi trắc nghiệm A/B/C/D: đọc kỹ, loại trừ rồi chọn đúng 1 chữ cái ở kết quả cuối. 3. Với câu hỏi kiến thức khác: trả lời đúng trọng tâm, ngắn gọn. 4. TUYỆT ĐỐI không dùng ký tự đặc biệt (*, #, -, markdown) ở phần đáp án cuối cùng.';
+
+  const getStoredKey = () => {
+    const raw = localStorage.getItem('zenith_secure_token');
+    if (!raw) return '';
+    try { return atob(raw); } catch { return raw; }
+  };
+  const setStoredKey = (val) => {
+    localStorage.setItem('zenith_secure_token', btoa(val));
+  };
+
+  const eventHandlers = [];
+  ['paste', 'drop', 'dragover', 'dragstart', 'contextmenu', 'selectstart'].forEach(evtType => {
+    const handler = e => { if (window.__zenithActive) e.stopImmediatePropagation(); };
+    document.addEventListener(evtType, handler, true);
+    window.addEventListener(evtType, handler, true);
+    eventHandlers.push({ type: evtType, handler });
+  });
+
+  const styleTag = document.createElement('style');
+  styleTag.innerHTML = `* { user-select: auto !important; -webkit-user-select: auto !important; }`;
+  document.head.appendChild(styleTag);
+
+  const intervalId = setInterval(() => {
+    if (!window.__zenithActive) return;
+    document.querySelectorAll('input, textarea, [contenteditable=true]').forEach(node => {
+      ['onpaste', 'oncopy', 'ondrop'].forEach(attr => node.removeAttribute(attr));
+      node.style.userSelect = 'auto';
+    });
+  }, 3000);
+
+  const hudContainer = document.createElement('div');
+  hudContainer.id = 'zenith-hud-container';
+  Object.assign(hudContainer.style, {
+    position: 'fixed',
+    bottom: '8px',
+    right: '8px',
+    minWidth: '85px',
+    maxWidth: '160px',
+    padding: '3px 6px',
+    background: 'rgba(15, 23, 42, 0.75)',
+    backdropFilter: 'blur(4px)',
+    border: '1px solid rgba(255, 255, 255, 0.08)',
+    borderRadius: '4px',
+    color: '#94a3b8',
+    fontFamily: 'monospace',
+    fontSize: '10px',
+    zIndex: '999999',
+    display: 'block',
+    lineHeight: '1.2',
+    opacity: '0.2',
+    transition: 'opacity 0.2s ease'
+  });
+
+  hudContainer.addEventListener('mouseenter', () => hudContainer.style.opacity = '1');
+  hudContainer.addEventListener('mouseleave', () => hudContainer.style.opacity = '0.2');
+
+  hudContainer.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span id="zenith-fps-label" style="font-weight: bold; color: #38bdf8; margin-right: 16px;">FPS: 60</span>
+      <span id="zenith-ping-label" style="font-size: 9px; color: #10b981;">112ms</span>
+    </div>
+    <div id="zenith-data-view" style="color: #f8fafc; font-size: 10px; margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Idle</div>
+    <div id="zenith-config-panel" style="display: none; margin-top: 4px; padding-top: 4px; border-top: 1px solid rgba(255,255,255,0.1);">
+      <input type="password" id="zenith-token-input" placeholder="API Key" style="width: 100%; box-sizing: border-box; background: #0f172a; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 9px; padding: 2px; border-radius: 2px; outline: none;" value="${getStoredKey()}">
+      <button id="zenith-commit-btn" style="width: 100%; margin-top: 3px; background: #0284c7; border: none; color: #fff; font-size: 9px; padding: 2px; border-radius: 2px; cursor: pointer; font-weight: bold;">Save</button>
+    </div>
+  `;
+  document.body.appendChild(hudContainer);
+
+  const perfInterval = setInterval(() => {
+    if (!window.__zenithActive) return;
+    const ping = 90 + Math.floor(Math.random() * 51);
+    let fps, modeText;
+
+    if (perfMode === 0) {
+      fps = 59 + Math.floor(Math.random() * 3);
+      modeText = 'Idle';
+    } else if (perfMode === 1) {
+      fps = 135 + Math.floor(Math.random() * 10);
+      modeText = 'High Performance';
+    } else {
+      fps = 22 + Math.floor(Math.random() * 9);
+      modeText = 'Low Battery';
+    }
+   
+    const fpsEl = document.getElementById('zenith-fps-label');
+    const pingEl = document.getElementById('zenith-ping-label');
+    const viewEl = document.getElementById('zenith-data-view');
+
+    if (fpsEl) fpsEl.innerText = `FPS: ${fps}`;
+    if (pingEl) pingEl.innerText = `${ping}ms`;
+
+    if (viewEl) {
+      const currentText = viewEl.innerText;
+      if (currentText === 'Idle' || currentText === 'High Performance' || currentText === 'Low Battery') {
+        viewEl.innerText = modeText;
+      }
+    }
+  }, 1000);
+
+  document.getElementById('zenith-commit-btn').addEventListener('click', ev => {
+    ev.stopPropagation();
+    const tokenVal = document.getElementById('zenith-token-input').value.trim();
+    if (tokenVal) {
+      setStoredKey(tokenVal);
+      const dataView = document.getElementById('zenith-data-view');
+      dataView.innerText = 'Key Saved!';
+      setTimeout(() => {
+        document.getElementById('zenith-config-panel').style.display = 'none';
+        const modes = ['Idle', 'High Performance', 'Low Battery'];
+        dataView.innerText = modes[perfMode];
+      }, 1000);
+    }
+  });
+
+  window._zenithController = new AbortController();
+  if (!window._zenithNativeFetch) window._zenithNativeFetch = window.fetch;
+
+  function simulateUserInput(elem, val) {
+    const prototypeRef = Object.getPrototypeOf(elem);
+    const nativeSetter = Object.getOwnPropertyDescriptor(prototypeRef, 'value')?.set;
+    if (nativeSetter) { nativeSetter.call(elem, val); } else { elem.value = val; }
+    elem.dispatchEvent(new Event('input', { bubbles: true }));
+    elem.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+
+  function scheduleAutoClear(viewNode) {
+    if (autoClearTimer) clearTimeout(autoClearTimer);
+    autoClearTimer = setTimeout(() => {
+      if (!window.__zenithActive) return;
+      const modes = ['Idle', 'High Performance', 'Low Battery'];
+      viewNode.innerHTML = modes[perfMode];
+    }, 2000);
+  }
+
+  async function fetchAIResponse(queryString, targetElement, maxAttempts = 4) {
+    if (!window.__zenithActive || isLocked) return;
+    const keyStr = getStoredKey();
+    const viewNode = document.getElementById('zenith-data-view');
+
+    if (!keyStr) {
+      viewNode.innerHTML = 'No Key (\\)';
+      return;
+    }
+
+    if (queryCache.has(queryString)) {
+      const cachedSolution = queryCache.get(queryString);
+      viewNode.innerHTML = cachedSolution;
+      if (targetElement) simulateUserInput(targetElement, cachedSolution);
+      scheduleAutoClear(viewNode);
+      return;
+    }
+
+    viewNode.innerHTML = '...';
+
+    for (let idx = 0; idx < maxAttempts; idx++) {
+      if (!window.__zenithActive || isLocked) return;
+      try {
+        const apiRes = await window._zenithNativeFetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + keyStr },
+          body: JSON.stringify({
+            model: AI_ENGINE,
+            messages: [{ role: 'system', content: SYS_INSTRUCTION }, { role: 'user', content: queryString }],
+            max_tokens: 683
+          }),
+          signal: window._zenithController.signal
+        });
+
+        if (apiRes.status === 429 || apiRes.status === 503) {
+          viewNode.innerHTML = '...';
+          await new Promise(res => setTimeout(res, 2000 * (idx + 1)));
+          continue;
+        }
+
+        if (!apiRes.ok) {
+          viewNode.innerHTML = `Err: ${apiRes.status}`;
+          return;
+        }
+
+        const payload = await apiRes.json();
+        let rawContent = '.';
+        if (payload?.choices?.[0]?.message?.content) {
+          rawContent = payload.choices[0].message.content;
+        }
+
+        let solution = rawContent.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+        if (!solution) solution = rawContent.trim();
+
+        queryCache.set(queryString, solution);
+        viewNode.innerHTML = solution;
+        scheduleAutoClear(viewNode);
+
+        if (targetElement) {
+          simulateUserInput(targetElement, solution);
+          setTimeout(() => {
+            if (!window.__zenithActive || isLocked) return;
+            const actionTriggers = Array.from(document.querySelectorAll('button, div[role="button"], span'));
+            const targetBtn = actionTriggers.find(btn => {
+              const val = btn.innerText?.toLowerCase().trim();
+              return val === 'submit' || val === 'gửi bài' || val === 'lưu đáp án' || val === 'gửi';
+            }) || document.querySelector('.exercise-intent-radial__button');
+            if (targetBtn) targetBtn.click();
+          }, 500);
+        }
+        return;
+      } catch (ex) {
+        if (ex.name === 'AbortError') return;
+        viewNode.innerHTML = `Err`;
+        return;
+      }
+    }
+  }
+
+  function handleGlobalInput(evt) {
+    if (!window.__zenithActive) return;
+
+    // Panic key: Ctrl x3 (Im lặng tuyệt đối)
+    if (evt.key === 'Control' && !evt.repeat) {
+      const now = Date.now();
+      ctrlPressTimes = ctrlPressTimes.filter(t => now - t < 900);
+      ctrlPressTimes.push(now);
+      if (ctrlPressTimes.length >= 3) {
+        window.__zenithCleanup();
+        return;
+      }
+    }
+
+    // Tổ hợp Ctrl + Shift + H để đổi chế độ hiệu năng hiển thị
+    if (evt.ctrlKey && evt.shiftKey && (evt.key === 'h' || evt.key === 'H')) {
+      evt.preventDefault();
+      perfMode = (perfMode + 1) % 3;
+      const viewNode = document.getElementById('zenith-data-view');
+      if (viewNode) {
+        const currentText = viewNode.innerText;
+        const modes = ['Idle', 'High Performance', 'Low Battery'];
+        if (currentText === 'Idle' || currentText === 'High Performance' || currentText === 'Low Battery') {
+          viewNode.innerText = modes[perfMode];
+        }
+      }
+      return;
+    }
+
+    if (['INPUT', 'TEXTAREA'].includes(evt.target.tagName) || evt.target.isContentEditable) return;
+
+    // Khóa / Mở khóa hệ thống AI bằng phím X
+    if (evt.key === 'x' || evt.key === 'X') {
+      isLocked = !isLocked;
+      const viewNode = document.getElementById('zenith-data-view');
+      if (viewNode && !isLocked) {
+        const modes = ['Idle', 'High Performance', 'Low Battery'];
+        viewNode.innerHTML = modes[perfMode];
+      }
+      return;
+    }
+
+    if (evt.key === '\\' || evt.key === '|') {
+      evt.preventDefault();
+      const cfgPanel = document.getElementById('zenith-config-panel');
+      cfgPanel.style.display = cfgPanel.style.display === 'none' ? 'block' : 'none';
+      if (cfgPanel.style.display === 'block') {
+        document.getElementById('zenith-token-input').focus();
+      }
+      return;
+    }
+
+    if (isLocked) return;
+
+    if (evt.key === 'z' || evt.key === 'Z') {
+      const inputTarget = document.querySelector('.w-md-editor-text-input') || document.activeElement || document.querySelector('textarea, input[type=text]');
+      if (!inputTarget) {
+        document.getElementById('zenith-data-view').innerText = 'No box';
+        return;
+      }
+      let queryText = window.getSelection().toString().trim();
+      if (!queryText && hoveredNode) {
+        queryText = hoveredNode.innerText?.trim() || '';
+      }
+      if (!queryText) return;
+      fetchAIResponse(queryText, inputTarget);
+    }
+  }
+
+  document.addEventListener('keydown', handleGlobalInput);
+  const mouseMoveHandler = e => { hoveredNode = e.target; };
+  document.addEventListener('mousemove', mouseMoveHandler);
+
+  window.__zenithCleanup = function() {
+    window.__zenithActive = false;
+    clearInterval(intervalId);
+    clearInterval(perfInterval);
+    if (autoClearTimer) clearTimeout(autoClearTimer);
+    document.removeEventListener('keydown', handleGlobalInput);
+    document.removeEventListener('mousemove', mouseMoveHandler);
+    eventHandlers.forEach(item => {
+      document.removeEventListener(item.type, item.handler, true);
+      window.removeEventListener(item.type, item.handler, true);
+    });
+    if (hudContainer && hudContainer.parentNode) {
+      hudContainer.parentNode.removeChild(hudContainer);
+    }
+    if (styleTag && styleTag.parentNode) {
+      styleTag.parentNode.removeChild(styleTag);
+    }
+    try { window._zenithController.abort(); } catch {}
+    delete window.__zenithCleanup;
+    delete window.__zenithActive;
+  };
+
+})();
+</pre>
+
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">How to use:</span> =
+<div class="inter-content">
 
 '''Bước 1:'''
 
 * Mở inspect:
 
 :: Chúng ta bấm '''F12''' trên bàn phím. (ngay trước khi vào bài làm)
+:: Sau đó mở '''Console Tab (Ctrl + Shift + J) trong Inspect'''
 
 [[File:Ugoootrd.png|center|thumb|825x825px]]'''Bước 2:'''
 
-* Mở '''Console Tab (Ctrl + Shift + J) trong Inspect'''
-** Paste đoạn lệnh này:
-<pre>
-function removeAllEventListeners(target, eventTypes) {
-    try {
-        eventTypes.forEach(eventType => {
-            const listeners = getEventListeners(target)[eventType];
-            if (listeners) {
-                listeners.forEach(listener => {
-                    target.removeEventListener(eventType, listener.listener);
-                });
-            }
-        });
-        console.log("Removed all - Done by NGUYEN HUYNH DANG NHUT");
-    } catch (error) {
-        console.error("An error occurred: Could not remove event listeners. Error details:", error);
-    }
-}
-
-const eventTypes = [
-    'beforeunload', 'blur', 'click', 'DOMContentLoaded', 'hashchange',
-    'keydown', 'load', 'locationchange', 'message', 'mousedown',
-    'orientationchange', 'popstate', 'resize', 'scroll', 'touchstart',
-    'visibilitychange'
-];
-
-// Remove event listeners from window and document
-removeAllEventListeners(window, eventTypes);
-removeAllEventListeners(document, eventTypes);
-</pre>
-
+* Paste code vào:
+[[File:Yeu.png|center|thumb|776x776px]]
 * ''(Nhập lệnh '''"allow pasting"''' trong trường hợp không thể paste)''
-
-[[File:Thuit.png|center|thumb|776x776px]]'''LƯU Ý:''' Nah, ez ez
+'''LƯU Ý:''' Nah, ez ez
 ----''Các brower khác sẽ được làm sau''</div>
 {{Discord}}
