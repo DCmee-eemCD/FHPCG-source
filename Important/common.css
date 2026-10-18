@@ -25,7 +25,8 @@
    18. Main page (hero, navigation, lưu ý, canon, nút lớn)
    19. Trang Characters
    20. Right rail
-   21. Responsive (mobile)
+   21. Code Box (gập 10 dòng, Show all, tô màu cú pháp)
+   22. Responsive (mobile)
    ========================================================================== */
 
 /* ==========================================================================
@@ -78,7 +79,7 @@
 .fandom-community-header__title a,
 .fandom-community-header__community-name-wrapper a {
     font-family: var(--font-jjk) !important;
-    font-weight: medium;
+    font-weight: 500;
     font-size: 40px !important;
     letter-spacing: 1px !important;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.67);
@@ -100,7 +101,7 @@
 }
 
 h1,
-h2 .firstHeading {
+.firstHeading {
     font-family: var(--font-jjk) !important;
 }
 
@@ -114,7 +115,7 @@ h2 .firstHeading {
 
 /* Đẩy chữ ruby text lên trên  */
 ruby rt {
-    display: inline-block; !important
+    display: inline-block !important;
 }
 
 /* ==========================================================================
@@ -327,56 +328,13 @@ ruby rt {
    10. GALLERY
    ========================================================================== */
 
-/* --- 10.0 Gallery chung (class fhp-custom-gallery): phóng to + đổ bóng + bay lên --- */
+/* --- 10.0 Gallery chung: .fhp-custom-gallery (đổ bóng) và .fhp-gallery-3x4 (viền sáng, lưới 3 cột) --- */
 .fhp-custom-gallery,
 .fhp-custom-gallery ul.gallery,
 .fhp-custom-gallery .gallerybox,
 .fhp-custom-gallery .wikia-gallery-item,
 .fhp-custom-gallery .gallerybox > div,
-.fhp-custom-gallery .thumb {
-    overflow: visible !important;
-}
-
-.fhp-custom-gallery .wikia-gallery-item,
-.fhp-custom-gallery .gallerybox {
-    transition: transform 0.25s var(--ease-pop) !important;
-}
-
-.fhp-custom-gallery .wikia-gallery-item:hover,
-.fhp-custom-gallery .gallerybox:hover {
-    transform: translateY(-4px) !important;
-    z-index: 99 !important;
-}
-
 .fhp-custom-gallery .thumb,
-.fhp-custom-gallery .thumbinner,
-.fhp-custom-gallery .gallerybox .thumb {
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    box-shadow: none !important;
-}
-
-.fhp-custom-gallery .thumb img,
-.fhp-custom-gallery .wikia-gallery-item .thumb img {
-    width: 125px !important;
-    height: 125px !important;
-    object-fit: contain;
-    border-radius: var(--radius) !important;
-    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.3)) !important;
-    display: block;
-    margin: 10px auto !important;
-    transition: transform 0.25s var(--ease-pop), filter 0.25s ease !important;
-}
-
-.fhp-custom-gallery .wikia-gallery-item:hover .thumb img,
-.fhp-custom-gallery .gallerybox:hover .thumb img {
-    transform: scale(1.14) !important;
-    filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.35)) !important;
-}
-
-/* --- 10.1 Gallery 3x4: lưới 3 cột, viền sáng thay drop-shadow --- */
 .fhp-gallery-3x4,
 .fhp-gallery-3x4 ul.gallery,
 .fhp-gallery-3x4 .gallerybox,
@@ -386,23 +344,24 @@ ruby rt {
     overflow: visible !important;
 }
 
-.fhp-gallery-3x4 ul.gallery {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 14px !important;
-}
-
+.fhp-custom-gallery .wikia-gallery-item,
+.fhp-custom-gallery .gallerybox,
 .fhp-gallery-3x4 .wikia-gallery-item,
 .fhp-gallery-3x4 .gallerybox {
     transition: transform 0.25s var(--ease-pop) !important;
 }
 
+.fhp-custom-gallery .wikia-gallery-item:hover,
+.fhp-custom-gallery .gallerybox:hover,
 .fhp-gallery-3x4 .wikia-gallery-item:hover,
 .fhp-gallery-3x4 .gallerybox:hover {
     transform: translateY(-4px) !important;
     z-index: 99 !important;
 }
 
+.fhp-custom-gallery .thumb,
+.fhp-custom-gallery .thumbinner,
+.fhp-custom-gallery .gallerybox .thumb,
 .fhp-gallery-3x4 .thumb,
 .fhp-gallery-3x4 .thumbinner,
 .fhp-gallery-3x4 .gallerybox .thumb {
@@ -413,22 +372,52 @@ ruby rt {
     box-shadow: none !important;
 }
 
+.fhp-custom-gallery .thumb img,
+.fhp-custom-gallery .wikia-gallery-item .thumb img,
 .fhp-gallery-3x4 .thumb img,
 .fhp-gallery-3x4 .wikia-gallery-item .thumb img {
     width: 125px !important;
     height: 125px !important;
     object-fit: contain;
     border-radius: var(--radius) !important;
-    border: 3px solid var(--border) !important;
-    filter: none !important;
     display: block;
     margin: 10px auto !important;
+}
+
+.fhp-custom-gallery .wikia-gallery-item:hover .thumb img,
+.fhp-custom-gallery .gallerybox:hover .thumb img,
+.fhp-gallery-3x4 .wikia-gallery-item:hover .thumb img,
+.fhp-gallery-3x4 .gallerybox:hover .thumb img {
+    transform: scale(1.14) !important;
+}
+
+/* khác nhau: custom = đổ bóng, 3x4 = viền */
+.fhp-custom-gallery .thumb img,
+.fhp-custom-gallery .wikia-gallery-item .thumb img {
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.3)) !important;
+    transition: transform 0.25s var(--ease-pop), filter 0.25s ease !important;
+}
+
+.fhp-custom-gallery .wikia-gallery-item:hover .thumb img,
+.fhp-custom-gallery .gallerybox:hover .thumb img {
+    filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.35)) !important;
+}
+
+.fhp-gallery-3x4 ul.gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+}
+
+.fhp-gallery-3x4 .thumb img,
+.fhp-gallery-3x4 .wikia-gallery-item .thumb img {
+    border: 3px solid var(--border) !important;
+    filter: none !important;
     transition: transform 0.25s var(--ease-pop), border-color 0.25s ease !important;
 }
 
 .fhp-gallery-3x4 .wikia-gallery-item:hover .thumb img,
 .fhp-gallery-3x4 .gallerybox:hover .thumb img {
-    transform: scale(1.14) !important;
     border-color: var(--accent) !important;
 }
 
@@ -1224,7 +1213,161 @@ ruby rt {
 }
 
 /* ==========================================================================
-   21. RESPONSIVE (mobile) — gom hết vào đây, đặt cuối file để thắng rule gốc
+   21. CODE BOX
+   Dùng: <div class="mw-collapsible mw-collapsed fhp-codebox"> + <pre class="fhp-code"> hoặc <syntaxhighlight>
+   ========================================================================== */
+
+/* Chung: font + bấm 1 cái là chọn hết (pre đứng riêng và pre của syntaxhighlight) */
+.mw-parser-output pre.fhp-code,
+.mw-parser-output .fhp-codebox .mw-highlight pre {
+    padding: 12px 14px;
+    color: var(--text-main);
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: pre;
+    tab-size: 4;
+    cursor: copy;
+    -webkit-user-select: all;
+    user-select: all;
+}
+
+/* pre đứng riêng (không có khung): có viền riêng, cao ~10 dòng, cuộn trong khung */
+.mw-parser-output pre.fhp-code {
+    max-height: 15em;                 /* ~10 dòng; tăng/giảm để đổi số dòng hiện */
+    overflow: auto;
+    margin: 12px 0;
+    background: var(--bg-panel);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+}
+
+/* Khung chứa: gập ~10 dòng + nút Show all + chú thích */
+.mw-parser-output .fhp-codebox {
+    display: flex !important;
+    flex-direction: column;
+    margin: 14px 0;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-panel);
+    overflow: hidden;
+    float: none;
+}
+
+/* Bên trong khung: bỏ viền/nền của pre, khung đã có sẵn */
+.mw-parser-output .fhp-codebox pre.fhp-code,
+.mw-parser-output .fhp-codebox .mw-highlight,
+.mw-parser-output .fhp-codebox .mw-highlight pre {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent !important;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: visible;
+}
+
+/* chú thích phía trên */
+.fhp-code-hint {
+    order: 1;
+    padding: 6px 14px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--text-main);
+    opacity: 0.75;
+    border-bottom: 1px solid var(--border);
+}
+
+/* vùng code */
+.fhp-codebox > .mw-collapsible-content {
+    order: 2;
+    position: relative;
+}
+
+/* đang gập: chỉ hiện ~10 dòng, mờ dần ở đáy */
+.fhp-codebox.mw-collapsed > .mw-collapsible-content {
+    display: block !important;
+    max-height: 220px;                /* 8 dòng ≈ 180px, 10 dòng ≈ 220px */
+    overflow: hidden;
+}
+
+.fhp-codebox.mw-collapsed > .mw-collapsible-content::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--bg-panel));
+    pointer-events: none;
+}
+
+/* nút Show all / Show less (ghi đè mũi tên ở mục 14) */
+.fhp-codebox > .mw-collapsible-toggle {
+    order: 3;
+    float: none !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 0 !important;
+    border-top: 1px solid var(--border);
+    background: rgba(237, 55, 97, 0.12);
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    color: var(--accent) !important;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.fhp-codebox > .mw-collapsible-toggle a {
+    font-size: 14px !important;
+    color: var(--accent) !important;
+    text-decoration: none !important;
+}
+
+.fhp-codebox > .mw-collapsible-toggle::after {
+    display: none !important;
+}
+
+.fhp-codebox > .mw-collapsible-toggle:hover {
+    background: rgba(237, 55, 97, 0.25);
+}
+
+/* màu cú pháp (syntaxhighlight / Pygments) */
+.fhp-codebox .mw-highlight .c,
+.fhp-codebox .mw-highlight .c1,
+.fhp-codebox .mw-highlight .cm,
+.fhp-codebox .mw-highlight .cs  { color: #7f8a96 !important; font-style: italic; }   /* comment: xám */
+.fhp-codebox .mw-highlight .k,
+.fhp-codebox .mw-highlight .kd,
+.fhp-codebox .mw-highlight .kc,
+.fhp-codebox .mw-highlight .kr,
+.fhp-codebox .mw-highlight .kt,
+.fhp-codebox .mw-highlight .kn,
+.fhp-codebox .mw-highlight .ow  { color: #ff5075 !important; }                       /* từ khoá: hồng đỏ */
+.fhp-codebox .mw-highlight .s,
+.fhp-codebox .mw-highlight .s1,
+.fhp-codebox .mw-highlight .s2,
+.fhp-codebox .mw-highlight .sa,
+.fhp-codebox .mw-highlight .sb,
+.fhp-codebox .mw-highlight .se  { color: #a8e08a !important; }                       /* chuỗi: xanh lá */
+.fhp-codebox .mw-highlight .m,
+.fhp-codebox .mw-highlight .mi,
+.fhp-codebox .mw-highlight .mf,
+.fhp-codebox .mw-highlight .mh,
+.fhp-codebox .mw-highlight .il  { color: #f2b366 !important; }                       /* số: cam */
+.fhp-codebox .mw-highlight .nf,
+.fhp-codebox .mw-highlight .fm,
+.fhp-codebox .mw-highlight .nb,
+.fhp-codebox .mw-highlight .bp  { color: #6cc4ff !important; }                       /* hàm / built-in: xanh dương */
+.fhp-codebox .mw-highlight .nc,
+.fhp-codebox .mw-highlight .nn,
+.fhp-codebox .mw-highlight .nt,
+.fhp-codebox .mw-highlight .na  { color: #e0a8ff !important; }                       /* class / tag / thuộc tính: tím */
+.fhp-codebox .mw-highlight .o,
+.fhp-codebox .mw-highlight .p   { color: #c9c8be !important; }                       /* toán tử, dấu câu */
+
+/* ==========================================================================
+   22. RESPONSIVE (mobile) — gom hết vào đây, đặt cuối file để thắng rule gốc
    ========================================================================== */
 @media (max-width: 700px) {
     /* Main page */
@@ -1239,6 +1382,9 @@ ruby rt {
     .fhp-row > .fhp-note,
     .fhp-row > .fhp-links { grid-column: 1; grid-row: auto; }
 
+    /* Bảng Update: xếp dọc (cần !important vì rule gốc dùng !important) */
+    .fhp-logrow { grid-template-columns: 1fr !important; }
+
     /* Trang Characters: 2 nút/hàng (lưới dùng flex nên chỉnh flex-basis, không dùng grid-template-columns) */
     .fhp-cat-grid { --gap-x: 30px; }
     .fhp-cat-grid > .fhp-char { flex-basis: calc((100% - var(--gap-x)) / 2); }
@@ -1249,5 +1395,3 @@ ruby rt {
     .fhp-char:hover + .fhp-char:not(:nth-child(2n+1)) { transform: translateX(10px); }
     .fhp-char:not(:nth-child(2n)):has(+ .fhp-char:hover) { transform: translateX(-10px); }
 }
-
-    .fhp-logrow { grid-template-columns: 1fr; }
