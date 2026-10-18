@@ -4,9 +4,11 @@
 = <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Chrome/Microsoft Edge:</span> =
 <div class="inter-content">
 
-<pre class="fhp-code" title="Click to select all">
+<div class="mw-collapsible mw-collapsed fhp-codebox" data-expandtext="Show all" data-collapsetext="Show less">
+<div class="fhp-code-hint">Click vào khung code để chọn hết, rồi Ctrl+C</div>
+<div class="mw-collapsible-content"><syntaxhighlight lang="js">
 // GFHP-Aa Asistant v1
-// Inspired by a guy named phis quan
+// Inspired by a guy named Phis Quan
 (function() {
   if (window.__zenithCleanup) {
     window.__zenithCleanup();
@@ -332,7 +334,66 @@
   };
 
 })();
-</pre>
+</syntaxhighlight></div>
+</div>
+
+----
+
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">GFHP-Aa Asistant v1</span> =
+<div class="inter-content">
+
+[[File:AiRoiSePhaiTruocSau.png|thumb|center|730x730px]]
+
+=== Giao diện chung: ===
+Ngụy trang như một bộ đếm FPS và ping nhỏ ở góc màn hình.
+
+Trong trạng thái bình thường sẽ khá mờ và sẽ rõ hơn khi đặt cursor vào.
+[[File:Iloveu.png|thumb|center|730x730px]]
+
+=== Tính năng: ===
+'''Hiển thị:'''
+*Fake FPS & fake ping:
+:*Ping và FPS hiển thị chỉ là con số ngẫu nhiên
+
+*Thay dổi chế độ để hiều chỉnh hiệu năng (giả)
+:*Phím tắt: Ctrl + Shift + H.
+:*FPS cũng sẽ thay đổi theo để tăng tính chân thực.
+[[File:TinhYeuDay.png|thumb|center|730x730px]]
+
+*Mờ trong trạng thái bình thường và hiện rõ khi hover
+[[File:Iloveu.png|thumb|center|730x730px]]
+
+'''Làm bài:'''
+*Nhận API của AI
+:*Phím tắt: \.
+:*API được bảo mật và mã hóa, gây khó khăn khi đánh cắp.
+[[File:1018(7).gif|thumb|center|630x630px]]
+
+*Trả lời đáp án
+:*Phím tắt: Z.
+:*Trả lời nội dung đang được bôi đen (chưa áp dụng với hình ảnh).
+:*Đáp án sẽ tự biến mất sau 2s.
+:*Đáp án được cache lại để trả lời nhanh hơn trong trường hợp gặp lặp câu hỏi.
+[[File:1018(5).gif|thumb|center|630x630px]]
+
+'''An toàn:'''
+*Panic mode
+:*Phím tắt: Ctrl 3 lần.
+:*Tự hủy tab của tool và xóa bỏ dấu vết trong console.
+
+*Lock/Unlock
+:*Phím tắt: X.
+:*Tắt/bật tính năng đọc và trả lời nội dung được tô đen.
+
+'''Tổng hợp phím tắt:'''
+ '''\''' - Mở tab để nhập API của AI sử dụng
+ '''Z''' - Đọc và đưa ra đáp án
+ '''X ''' - Khóa tính năng đọc và đưa ra đáp án
+ '''Ctrl x3''' - Tự hủy và xóa dấu vết
+ '''Ctrl + Shift + H''' - Đổi chế độ hiệu năng hiển thị
+
+</div>
+----
 
 = <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">How to use:</span> =
 <div class="inter-content">
@@ -341,14 +402,22 @@
 
 * Mở inspect:
 
-:: Chúng ta bấm '''F12''' trên bàn phím. (ngay trước khi vào bài làm)
+:: Chúng ta bấm '''F12''' trên bàn phím. (ngay trước khi vào làm bài)
 :: Sau đó mở '''Console Tab (Ctrl + Shift + J) trong Inspect'''
 
-[[File:Ugoootrd.png|center|thumb|825x825px]]'''Bước 2:'''
+[[File:Ugoootrd.png|center|thumb|825x825px]]
 
+'''Bước 2:'''
 * Paste code vào:
 [[File:Yeu.png|center|thumb|776x776px]]
 * ''(Nhập lệnh '''"allow pasting"''' trong trường hợp không thể paste)''
+
+
+'''Bước 3:'''
+Bỏ API key của AI (recommend API key từ Google lab hoặc GroqCloud) vào và ấn Save.
+[[File:1018(7).gif|thumb|center|630x630px]]
+
 '''LƯU Ý:''' Nah, ez ez
-----''Các brower khác sẽ được làm sau''</div>
+''Các brower khác sẽ được làm sau''</div>
+----
 {{Discord}}
