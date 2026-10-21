@@ -16,12 +16,10 @@
 <gallery position="center" captionalign="center" navigation="true" captiontextcolor="#121214" bordercolor="transparent" captionposition="below" orientation="none" widths="170">
 MrL.png|'''Chú Thuật Sư'''|link=Chú Thuật Sư
 Fuhkunah.png|'''Chú Nguyền Sư'''|link=Chú Nguyền Sư
-Monkejaku.png|'''Incidents'''|link=Incidents
 JoGOAT.png|'''Barriers'''|link=Barriers
 TheHoSi.png|'''Chú Cụ'''|link=Chú Cụ
 Amen.gif|'''How to'''|link=The How To Page
 Scroll emoji.png|'''Wiki rules'''|link=Wiki Rules
-Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY37
 </gallery>
 </div>
 </div>
@@ -37,9 +35,9 @@ Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY
 </div>
 <div class="fhp-block fhp-note fhp-links">
 <div class="fhp-note-title">Official links</div>
-* '''Facebook fanpage:''' 
-* '''Youtube channel:''' 
-* '''Discord server:''' 
+* '''Facebook fanpage''' 
+* '''Youtube channel''' 
+* '''[https://discord.gg/5AeqceAJu2 Discord server]''' 
 </div>
 
 </div>
@@ -86,7 +84,7 @@ Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế gi�
 </div>
 </div>
 
-<div class="fhp-bigbtn">[[Wiki's Languague|Don't understand? Read Wiki's Languague.]]</div>
+<div class="fhp-bigbtn">[[Wiki's Language|Don't understand? Read Wiki's Language.]]</div>
 
 <div class="fhp-logrow">
 <div class="fhp-block fhp-log">
