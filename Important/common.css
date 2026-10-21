@@ -736,9 +736,14 @@ ruby rt {
     -webkit-text-stroke: 0.5px #000000;
 }
 
-/* --- 18.4 Gallery trong khối Navigation: mỗi nút là 1 khuôn cố định 190px ---
-   Ảnh 150px + 20px mỗi bên cho shadow. Đổi cỡ nút thì giữ: khung = ảnh + 40px,
-   chiều cao khung = ảnh + 20px. */
+/* --- 18.4 Gallery trong khối Navigation: 2 nút/hàng ---
+   Chỉnh cỡ nút ở đây: --nav-img (ảnh), --nav-gap-y (khoảng cách dưới mỗi nút).
+   Khung = ảnh + 40px, chiều cao khung = ảnh + 20px. */
+.fhp-block-nav {
+    --nav-img: 150px;
+    --nav-gap-y: 32px;
+}
+
 .fhp-block-nav .wikia-gallery,
 .fhp-block-nav .wikia-gallery-row {
     border: none !important;
@@ -746,9 +751,15 @@ ruby rt {
     box-shadow: none !important;
 }
 
+/* chỉ cho vừa 2 khung/hàng, canh giữa */
+.fhp-block-nav .wikia-gallery {
+    max-width: calc(2 * (var(--nav-img) + 40px + 28px)) !important;
+    margin: 0 auto !important;
+}
+
 .fhp-block-nav .wikia-gallery-item {
-    width: 190px !important;
-    margin: 0 14px 32px 14px !important;   /* ngang 14px mỗi bên, dưới 32px */
+    width: calc(var(--nav-img) + 40px) !important;
+    margin: 0 14px var(--nav-gap-y) 14px !important;
     padding: 0 !important;
     overflow: visible !important;
     text-align: center !important;
@@ -760,10 +771,10 @@ ruby rt {
 .fhp-block-nav .wikia-gallery-item .gallery-image-wrapper a {
     display: block !important;
     position: relative !important;
-    top: 0 !important;                     /* chặn Fandom tự đẩy ảnh (gif bị tụt) */
+    top: 0 !important;
     bottom: auto !important;
-    width: 190px !important;
-    height: 170px !important;
+    width: calc(var(--nav-img) + 40px) !important;
+    height: calc(var(--nav-img) + 20px) !important;
     margin: 0 auto !important;
     padding: 0 !important;
     overflow: visible !important;
@@ -778,8 +789,8 @@ ruby rt {
     top: 0 !important;
     transform: none !important;
     display: block !important;
-    width: 150px !important;
-    height: 150px !important;
+    width: var(--nav-img) !important;
+    height: var(--nav-img) !important;
     max-width: none !important;
     object-fit: contain;
     border: none !important;
@@ -790,12 +801,17 @@ ruby rt {
 
 .fhp-block-nav .wikia-gallery-item .lightbox-caption {
     display: block !important;
-    width: 190px !important;
+    width: calc(var(--nav-img) + 40px) !important;
     margin: 0 auto !important;
     padding: 0 !important;
     text-align: center !important;
     font-size: 26px !important;
     line-height: 1.2 !important;
+}
+
+.fhp-block-nav {
+    --nav-img: 190px;      /* trước là 150px */
+    --nav-gap-y: 28px;     /* trước là 32px */
 }
 
 /* --- 18.5 Hàng: Navigation 2/3 bên trái, Lưu ý + Official links chồng dọc 1/3 bên phải --- */
