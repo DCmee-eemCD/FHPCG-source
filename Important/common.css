@@ -317,6 +317,22 @@ ruby rt {
     fill: var(--text-strong) !important;
 }
 
+/* bỏ ô trắng của nút Save / Edit, chỉ giữ chữ và icon */
+.page-header__actions .wds-button,
+.page-header__actions .wds-button.wds-is-secondary,
+.page-header__actions .wds-button.wds-is-text,
+.page-header__action-button {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* hover: nền mờ nhẹ cho biết đang trỏ vào nút */
+.page-header__actions .wds-button:hover,
+.page-header__action-button:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
 /* ==========================================================================
    9. ẨN CATEGORIES Ở CUỐI TRANG
    ========================================================================== */
