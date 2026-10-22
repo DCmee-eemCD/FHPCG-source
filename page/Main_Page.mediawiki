@@ -1,38 +1,123 @@
-<div style="position: absolute; color: #000000; top: 175px; right: 32px; font-size: 15px; font-family: Finger paint; font-weight: bold; text-align: center; transform: rotate(8.5deg);">'''</div>
+<div class="fhp-block">
+<div class="fhp-block-bg">[[File:Fhpc_pic 2.png.png|link=|alt=]]</div>
+<div class="fhp-block-content">
+<div class="fhp-hero-title">Welcome To FHP Colony Guide!</div>
+<div class="fhp-hero-version">Wiki version: Rel-0.1.0 • Discord Server: update 20</div>
+<div class="fhp-hero-tagline">A guide for sorcerers in FHP Colony, made by '''F Colony Guider™'''!</div>
+<div class="fhp-hero-stats">We got {{NUMBEROFEDITS}} edits, {{NUMBEROFARTICLES}} articles, and {{NUMBEROFFILES}} files</div>
+<div class="fhp-hero-note">For mobile user: ts looks MUCH MUCH MUCH better on PC!</div>
+</div>
+</div>
+<div class="fhp-row">
 
-{|style="background: #fffffa; box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.2); text-align: center; border-radius: 3px 3px 3px 3px; border: 20px solid #ffffff; padding: 20px; color: black;" width="100%" align="center"
-|
-
-= <center><span style="text-align: center; font-weight: light bold; font-size: 200%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: black;">Welcome To FHP Colony Guide!</span></center> =
-<center><center>
-<center> Wiki: version Alp-0.8.0 • Discord Server: update 20</center>
-''A guide for sorcerers in FHP Colony, made by '''F Colony Guider™'''!''
-
-[[File:Fhpc_pic 2.png.png|775px|center]]</span>
-
-
-'''We got {{NUMBEROFEDITS}} edits, {{NUMBEROFARTICLES}} articles, and {{NUMBEROFFILES}} files'''
-
-The wiki's design got inspired by [https://jujutsu-shenanigans.fandom.com/ JJS's wiki] btw.
-''For mobile user: ts looks MUCH MUCH MUCH better on PC!''</center>
-
-<br>
-{|style="background: #ffffffc; box-shadow: inset 0px 0px 8px 5px rgba(0, 0, 0, 0.1); text-align: center; border-radius: 2px 2px 2px 2px; border: 2px solid #000000; font-weight: bold; padding: 12px; color: black; " width="100%" align="center"
-|<big>Navigation</big>
-|}
-
+<div class="fhp-block fhp-block-nav">
+<div class="fhp-nav-title">Navigation</div>
 <div class="fhp-custom-gallery">
-<gallery position="center" captionalign="center" navigation="true" captiontextcolor="#121214" bordercolor="transparent" captionposition="below" orientation="none" widths="220">
+<gallery position="center" captionalign="center" navigation="true" captiontextcolor="#121214" bordercolor="transparent" captionposition="below" orientation="none" widths="300">
 MrL.png|'''Chú Thuật Sư'''|link=Chú Thuật Sư
 Fuhkunah.png|'''Chú Nguyền Sư'''|link=Chú Nguyền Sư
-Monkejaku.png|'''Incidents'''|link=Incidents
 JoGOAT.png|'''Barriers'''|link=Barriers
 TheHoSi.png|'''Chú Cụ'''|link=Chú Cụ
 Amen.gif|'''How to'''|link=The How To Page
 Scroll emoji.png|'''Wiki rules'''|link=Wiki Rules
-Real gray disc.webp|'''Offical Discord Server'''|link=https://discord.gg/wCAVKHY37
 </gallery>
-------------
-Don't understand? Read [[Wiki's Language]].
+</div>
+</div>
 
-|}
+<div class="inter-content">
+<div class="fhp-block fhp-note">
+<div class="fhp-note-title">LƯU Ý</div>
+* Tutor của wiki '''chỉ là tài liệu kĩ thuật''', làm theo với mục đích khai thác, trục lợi hay gian lận thì '''wiki sẽ không chịu trách nhiệm'''.
+* Mọi nhân vật, sự kiện và địa điểm trong wiki là '''hư cấu''', nếu có sự tương đồng, đó có thể chỉ là '''trùng hợp''' hoặc '''lấy cảm hứng'''.
+* Wiki chỉ là một dự án của '''F Colony Guider™''' với mục đích '''giải trí''' và toàn bộ nội dung chỉ ở '''vũ trụ giả tưởng riêng''', '''không đại diện''' cho bất kỳ '''nhóm hay tổ chức nào'''.
+* Mọi nội dung đều được viết với góc nhìn '''khách quan''', không thể hiện quan điểm, phán xét hay bôi nhọ bất kỳ cá nhân hay tổ chức nào, nếu thấy có vấn đề/bị ảnh hưởng, hãy '''gửi ticket trong server Discord chính thức''' hoặc liên hệ '''fanpage Facebook chính thức''' của wiki.
+</div>
+</div>
+<div class="fhp-block fhp-note fhp-links">
+<div class="fhp-note-title">Official links</div>
+* <i class="bi bi-facebook"></i>'''[https://web.facebook.com/FHPCGpeak Facebook fanpage]'''
+* <i class="bi bi-youtube"></i>'''[https://www.youtube.com/@FHPBCG Youtube channel]'''
+* <i class="bi bi-discord"></i>'''[https://discord.gg/5AeqceAJu2 Discord server]''' 
+</div>
+
+</div>
+<div class="inter-content">
+<div class="fhp-block fhp-block-canon">
+<div class="fhp-nav-title">Canon</div>
+
+<div class="fhp-card">
+<div class="fhp-card-bg">[[File:cCard-1.png|link=Canon Characters|alt=Canon Characters]]</div>
+<div class="fhp-card-title">[[Canon Characters|Characters]]</div>
+<div class="fhp-card-desc">Những nhân vật hiện có trong '''lore (cannon) của wiki''', bao gồm đủ '''Chú Thuật Sư, Chú Nguyền Sư, Nguyền Hồn, ...''' (không bao gồm quần chúng).
+
+Tất cả những nhân vật có tài liệu tại đây đều có '''đóng góp/liên quan''' đến cốt truyện thuộc canon của wiki.
+</div>
+</div>
+
+<div class="fhp-card">
+<div class="fhp-card-bg">[[File:Banner_4_peak.png|link=Jujutsu|alt=]]</div>
+<div class="fhp-card-title">[[Jujutsu|Jujutsu]]</div>
+<div class="fhp-card-desc">'''"Chú thuật"''' là một cụm từ dùng chung bao gồm tất cả các '''kỹ thuật ma pháp''' liên quan đến '''lời nguyền''' (như thuật thức, thức thần, chú vật, chú cụ, ...). Nó cũng thường được sử dụng làm tiền tố cho phần lớn các thuật ngữ trong xã hội chú thuật.
+
+Những người sử dụng được chú thuật gọi là '''"Chú thuật sư"''' (hay '''"Thuật sư"'''). Mỗi chú thuật sư đều có các thuật thức đặc trưng theo bản thân người sử dụng.
+</div>
+</div>
+
+<div class="fhp-card">
+<div class="fhp-card-bg">[[File:Banner 5 saf.png|link=Story Arcs|alt=]]</div>
+<div class="fhp-card-title">[[Story Arcs|Story Arcs]]</div>
+<div class="fhp-card-desc">'''Các '''sự kiện/sự cố lớn''' diễn ra tại '''FHP Colony''' gây '''chấn động''' hoặc '''ảnh hưởng lớn''' vô cùng.
+
+Đây là '''những gì xảy ra''', sẽ là sân khấu của''' các nhân vật, thế lực và phe phái.'''
+</div>
+</div>
+
+<div class="fhp-card">
+<div class="fhp-card-bg">[[File:Banner 6.png|link=Lores|alt=]]</div>
+<div class="fhp-card-title">[[Lores|Lores]]</div>
+<div class="fhp-card-desc">'''Lịch sử và bối cảnh''' của '''vũ trụ FHP Colony''' như '''lịch sử hình thành, thế giới hiện tại, ...'''
+
+Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế giới này'''.
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="fhp-bigbtn">[[Wiki's Language|Don't understand? Read Wiki's Language.]]</div>
+
+<div class="fhp-logrow">
+<div class="fhp-block fhp-log">
+<div class="fhp-log-title">Wiki Update</div>
+
+== '''Rel 0.1.0'''  ==
+22/10/2026
+ '''Visual:'''
+ Updated:
+ *Mainpage GUI
+
+ '''Content:'''
+ Added new page:
+ - Characters
+ - Jujutsu
+ - Story Arcs
+ - Lores
+
+ New documents:
+ - TRA-003
+ - Ryomen Sukuna
+ - Chú Ngôn (WIP)
+
+ Removed page:
+ - Incidents
+</div>
+<div class="fhp-block fhp-log">
+<div class="fhp-log-title">Server Update</div>
+
+== '''Update 21''' ==
+22/10/2026
+ '''Nội dung:'''
+ - Thay tên guidelines phù hợp cho các channel trong Wiki things
+ - Thêm hệ thống support ticket
+</div>
+</div>
