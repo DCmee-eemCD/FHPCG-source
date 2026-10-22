@@ -13,7 +13,7 @@
 <div class="fhp-block fhp-block-nav">
 <div class="fhp-nav-title">Navigation</div>
 <div class="fhp-custom-gallery">
-<gallery position="center" captionalign="center" navigation="true" captiontextcolor="#121214" bordercolor="transparent" captionposition="below" orientation="none" widths="170">
+<gallery position="center" captionalign="center" navigation="true" captiontextcolor="#121214" bordercolor="transparent" captionposition="below" orientation="none" widths="300">
 MrL.png|'''Chú Thuật Sư'''|link=Chú Thuật Sư
 Fuhkunah.png|'''Chú Nguyền Sư'''|link=Chú Nguyền Sư
 JoGOAT.png|'''Barriers'''|link=Barriers
@@ -35,9 +35,9 @@ Scroll emoji.png|'''Wiki rules'''|link=Wiki Rules
 </div>
 <div class="fhp-block fhp-note fhp-links">
 <div class="fhp-note-title">Official links</div>
-* '''Facebook fanpage''' 
-* '''Youtube channel''' 
-* '''[https://discord.gg/5AeqceAJu2 Discord server]''' 
+* <i class="bi bi-facebook"></i>'''[https://web.facebook.com/FHPCGpeak Facebook fanpage]'''
+* <i class="bi bi-youtube"></i>'''[https://www.youtube.com/@FHPBCG Youtube channel]'''
+* <i class="bi bi-discord"></i>'''[https://discord.gg/5AeqceAJu2 Discord server]''' 
 </div>
 
 </div>
