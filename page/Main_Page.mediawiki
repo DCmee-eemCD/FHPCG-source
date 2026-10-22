@@ -118,6 +118,8 @@ Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế gi�
 22/10/2026
  '''Nội dung:'''
  - Thay tên guidelines phù hợp cho các channel trong Wiki things
+
+ - Tính năng:
  - Thêm hệ thống support ticket
 </div>
 </div>
