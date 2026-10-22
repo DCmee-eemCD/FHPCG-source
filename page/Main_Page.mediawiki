@@ -110,6 +110,9 @@ Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế gi�
 
  Removed page:
  - Incidents
+
+ '''Disclaimer:'''
+ - Edited disclaimer in The How To Page
 </div>
 <div class="fhp-block fhp-log">
 <div class="fhp-log-title">Server Update</div>
