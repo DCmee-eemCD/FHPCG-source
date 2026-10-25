@@ -7,7 +7,7 @@
 -------------------------------
 {{DocsList
 |dac-cap = 
-<div class="fhp-entry-btn">[[CSR-001|CSR-001 ⋅ Dũng Kiệt Nhân]]</div>
+<div class="fhp-entry-btn">[[CSR-001|CSR-001 ⋅ Văn Võ song toàn và LƯƠNG thiện]]</div>
 |cap-1 = 
 |tien-cap-1 = 
 |cap-2 = 
