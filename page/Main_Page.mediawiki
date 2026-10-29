@@ -2,7 +2,7 @@
 <div class="fhp-block-bg">[[File:Fhpc_pic 2.png.png|link=|alt=]]</div>
 <div class="fhp-block-content">
 <div class="fhp-hero-title">Welcome To FHP Colony Guide!</div>
-<div class="fhp-hero-version">Wiki version: Rel-0.1.0 • Discord Server: update 20</div>
+<div class="fhp-hero-version">Wiki version: Rel-0.1.1 • Discord Server: update 20</div>
 <div class="fhp-hero-tagline">A guide for sorcerers in FHP Colony, made by '''F Colony Guider™'''!</div>
 <div class="fhp-hero-stats">We got {{NUMBEROFEDITS}} edits, {{NUMBEROFARTICLES}} articles, and {{NUMBEROFFILES}} files</div>
 <div class="fhp-hero-note">For mobile user: ts looks MUCH MUCH MUCH better on PC!</div>
@@ -90,26 +90,11 @@ Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế gi�
 <div class="fhp-block fhp-log">
 <div class="fhp-log-title">Wiki Update</div>
 
-== '''Rel 0.1.0'''  ==
-22/10/2026
- '''Visual:'''
- Updated:
- *Mainpage GUI
-
+== '''Rel 0.1.1'''  ==
+24/10/2026
  '''Content:'''
- Added new page:
- - Characters
- - Jujutsu
- - Story Arcs
- - Lores
-
- New documents:
- - TRA-003
- - Ryomen Sukuna
- - Chú Ngôn (WIP)
-
- Removed page:
- - Incidents
+ Edited document:
+ - CSR-001 - Văn Võ song toàn và LƯƠNG THIỆN
 
  '''Disclaimer:'''
  - Edited disclaimer in The How To Page
@@ -119,6 +104,9 @@ Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế gi�
 
 == '''Update 21''' ==
 22/10/2026
+ '''Server:'''
+ - Đổi tên server thành '''FHPC Guide [OFFICAL RELEASE ERA]'''
+
  '''Nội dung:'''
  - Thay tên guidelines phù hợp cho các channel trong Wiki things
 
