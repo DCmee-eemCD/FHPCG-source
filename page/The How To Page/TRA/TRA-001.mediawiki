@@ -14,13 +14,13 @@
 
 {{Tabs|Lưu ý|Cách này có thể không ổn định, tùy nhà mạng và thời điểm.}}
 
-=== Bước 1: Tải AmneziaWG ===
+=== Bước 1: Tải và cài đặt AmneziaWG ===
 
 Chỉ tải từ repo chính thức trên GitHub để tránh bản giả mạo:
 
 : https://github.com/amnezia-vpn/amneziawg-windows-client/releases/tag/3.1.0
 
-[[File:Amneziawg.png|center|thumb|309x309px|Trang release của AmneziaWG]]
+[[File:Amneziawg.png|center|thumb|402x402px|Trang release của AmneziaWG]]
 
 Chọn file theo loại CPU của máy:
 
@@ -34,7 +34,10 @@ Chọn file theo loại CPU của máy:
 | Máy 32-bit (rất hiếm) || '''amneziawg-x86-3.1.0.msi'''
 |}
 
+
 Không chắc máy mình thuộc loại nào? Vào ''Settings → System → About'' và xem mục ''System type''.
+
+Sau đó chỉ cần cài đặt như bình thường và Run as Adminstrator (chạy với quyền quản trị viên).
 
 === Bước 2: Lấy file config WARP ===
 
@@ -42,7 +45,7 @@ Không chắc máy mình thuộc loại nào? Vào ''Settings → System → Abo
 # Bấm '''Generate'''.
 # Bấm '''Download config''' để tải file <code>.conf</code> về máy.
 
-[[File:76.png|center|thumb|326x326px|Trang tạo config WARP]]
+[[File:76.png|center|thumb|402x402px|Trang tạo config WARP]]
 
 '''Tại sao phải dùng config WARP?''' Config của Windscribe, Proton VPN hay dịch vụ khác thường không cho chỉnh sâu các thông số ngụy trang. WARP thì có, nên mới dùng được với AmneziaWG. Nếu bạn có dịch vụ khác cũng hỗ trợ chỉnh sâu tương tự thì vẫn có thể thử.
 
@@ -61,7 +64,9 @@ Không chắc máy mình thuộc loại nào? Vào ''Settings → System → Abo
 
 Mở phần chỉnh sửa tunnel (edit) và đảm bảo các giá trị đúng như sau, nếu không kết nối có thể thất bại:
 
-<pre>
+<div class="mw-collapsible mw-collapsed fhp-codebox" data-expandtext="Show all" data-collapsetext="Show less">
+<div class="fhp-code-hint">Click vào khung code để chọn hết, rồi Ctrl+C</div>
+<div class="mw-collapsible-content"><syntaxhighlight lang="js">
 Jc   = 8
 Jmin = 64
 Jmax = 96
@@ -69,9 +74,10 @@ H1   = 1
 H2   = 2
 H3   = 3
 H4   = 4
-</pre>
+</syntaxhighlight></div>
+</div>
 
-[[File:ThienTaiiiff.png|center|thumb|345x345px|Thông số chuẩn trong phần edit tunnel]]
+[[File:ThienTaiiiff.png|center|thumb|428x428px|Thông số chuẩn trong phần edit tunnel]]
 
 === Xử lý lỗi thường gặp ===
 
