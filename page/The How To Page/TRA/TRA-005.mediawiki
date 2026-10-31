@@ -1,0 +1,94 @@
+= Ultimate flipclassroom tools =
+
+== Ultimate RC Tool ==
+Tính năng:
+*Tự động chuyển đổi từ ảnh thành văn bản.
+*Chống anti-paste.
+
+----
+
+= Chrome/Microsoft Edge =
+
+== Chuẩn bị ==
+
+=== Cài đặt Tampermonkey ===
+Ta có thẻ cài extension từ link này:
+
+: https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=vi
+
+[[File:Monkeykid.png|center|thumb|799x799px]]
+
+== Tool's script ==
+<div class="mw-collapsible mw-collapsed fhp-codebox" data-expandtext="Show all" data-collapsetext="Show less">
+<div class="fhp-code-hint">Click vào khung code để chọn hết, rồi Ctrl+C</div>
+<div class="mw-collapsible-content"><syntaxhighlight lang="js">
+// ==UserScript==
+// @name         Ultimate RC Tool
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @match        https://fsc-edunext.fpt.edu.vn/*
+// @grant        GM_setClipboard
+// @require      https://cdn.jsdelivr.net/npm/tesseract.js@v5/dist/tesseract.min.js
+// @run-at       document-end
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    ['copy', 'cut', 'paste', 'contextmenu', 'selectstart', 'dragstart'].forEach(e => {
+        window.addEventListener(e, ev => ev.stopImmediatePropagation(), true);
+        document.addEventListener(e, ev => ev.stopImmediatePropagation(), true);
+    });
+
+    const processed = new WeakSet();
+
+    async function scan(img) {
+        if (processed.has(img) || !img.src) return;
+        processed.add(img);
+
+        try {
+            const worker = await Tesseract.createWorker('vie+eng');
+            const ret = await worker.recognize(img.src);
+            await worker.terminate();
+
+            const text = ret.data.text.trim();
+            if (text) {
+                GM_setClipboard(text);
+                console.log('%c[OCR Copied]:', 'color: #00ff00;', text);
+            }
+        } catch (e) {}
+    }
+
+    new MutationObserver(muts => {
+        muts.forEach(m => m.addedNodes.forEach(node => {
+            if (node.nodeType === 1) {
+                if (node.tagName === 'IMG') scan(node);
+                node.querySelectorAll?.('img').forEach(scan);
+            }
+        }));
+    }).observe(document.body, { childList: true, subtree: true });
+
+    document.querySelectorAll('img').forEach(scan);
+})();
+</syntaxhighlight></div>
+</div>
+
+
+== Cách add tool ==
+=== Bước 1: Tạo script ===
+Bấm "Create a new script trong minimize tab của Tampermonkey"
+
+[[File:Image3124.png|center|thumb|402x402px]]
+
+'''Ctrl + A '''và rồi '''Ctrl + V''' để copy mã vào.
+
+[[File:Uwwu.png|center|thumb|402x402px]]
+
+'''Ctrl + S''' để lưu mã và rồi bật mã lên trong dashboard.
+
+[[File:Because its u are my bae.png|center|thumb|370x370px]]
+
+=== Bước 2: Enable Tampermonkey===
+Đảm bảo nút Enable đã được tích ✓ xanh lá.
+
+[[File:Aoisjed.png|center|thumb|402x402px]]
