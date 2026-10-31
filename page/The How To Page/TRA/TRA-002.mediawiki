@@ -16,12 +16,15 @@
 * Mở '''Console Tab (Ctrl + Shift + J) trong Inspect'''
 ** Paste đoạn lệnh này:
 
-<pre>
+<div class="mw-collapsible mw-collapsed fhp-codebox" data-expandtext="Show all" data-collapsetext="Show less">
+<div class="fhp-code-hint">Click vào khung code để chọn hết, rồi Ctrl+C</div>
+<div class="mw-collapsible-content"><syntaxhighlight lang="js">
 ['copy', 'cut', 'paste', 'contextmenu', 'selectstart', 'dragstart'].forEach(e => {
 window.addEventListener(e, ev => ev.stopImmediatePropagation(), true);
 document.addEventListener(e, ev => ev.stopImmediatePropagation(), true);
 });
-</pre>
+</syntaxhighlight></div>
+</div>
 
 * ''(Nhập lệnh '''"allow pasting"''' trong trường hợp không thể paste)''
 
