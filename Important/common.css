@@ -1388,6 +1388,11 @@ ruby rt {
     text-decoration: none !important;
 }
 
+/* ẩn dấu [ ] mặc định quanh chữ Show all / Show less (Fandom vẽ bằng ::before và ::after) */
+.fhp-codebox > .mw-collapsible-toggle::before {
+    content: none !important;
+    display: none !important;
+}
 .fhp-codebox > .mw-collapsible-toggle::after {
     display: none !important;
 }
