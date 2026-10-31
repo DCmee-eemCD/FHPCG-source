@@ -18,7 +18,7 @@
 
 '''Mã tài liệu (cách đánh mã tài liệu của wiki):'''
 
-* '''Sorcerer:''' CRS-xxx
+* '''Sorcerer:''' CSR-xxx
 * '''Curse-user:''' CUS-xxx
 * '''Cursed Spirit:''' CPR-xxx
 * '''Shikigami:''' SKM-xxx
