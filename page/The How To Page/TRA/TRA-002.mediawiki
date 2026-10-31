@@ -3,7 +3,7 @@
 <center><center></center></center>
 ----
 
-= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Chrome:</span> =
+= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Chrome, Microsoft Edge:</span> =
 <div class="inter-content">
 '''Bước 1:'''
 
