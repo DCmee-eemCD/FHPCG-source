@@ -1,87 +1,98 @@
+= How to bypass firewall =
 
-= <span style="text-align: center; font-weight: light bold; font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">How to bypass firewall</span> =
-<center><center></center></center>
+<div style="border:2px solid #d9534f; border-radius:6px; padding:8px 12px; margin:8px 0;">
+'''⚠️ Thông báo:''' Bài hướng dẫn đang trong thời gian bảo trì đến hết tháng 11. Nội dung có thể thay đổi.
+</div>
 
+'''Hướng dẫn này giúp bạn:''' truy cập các trang/dịch vụ bị chặn bằng cách dùng config WARP kết hợp AmneziaWG (WireGuard có thêm lớp ngụy trang gói tin).
 
-= <span style="text-align: center; font-weight: light bold; font-size: 120%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: red;">DISCLAIMER: MAINTENANCE UNTIL NOVEMBER!!!</span> =
-<center><center></center></center>
+'''Phù hợp khi:''' WARP/VPN thông thường bị chặn, không handshake được, hoặc không mở được web.
+
 ----
 
-= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Cách 1: (Unstable)</span> =
-<center><center></center></center><div class="inter-content">
-'''Bước 1:'''
+== Cách 1: AmneziaWG + WARP config ==
 
-* Tải AmneziaWG:
+{{Tabs|Lưu ý|Cách này có thể không ổn định, tùy nhà mạng và thời điểm.}}
 
-:: Chúng ta nên tải qua repo chính thức trên github: https://github.com/amnezia-vpn/amneziawg-windows-client/releases/tag/3.1.0
+=== Bước 1: Tải AmneziaWG ===
 
-[[File:Amneziawg.png|center|thumb|309x309px]]
+Chỉ tải từ repo chính thức trên GitHub để tránh bản giả mạo:
 
-* Lưu ý:
-**Đối với máy sử dụng CPU Intel và AMD, ta tải '''amneziawg-amd64-3.1.0.msi'''
-**Đối với CPU M và SnapDragon, ta tải '''amneziawg-arm64-3.1.0.msi'''
-**'''amneziawg-x86-3.1.0.msi''' dành cho mấy thk somehow dùng x32 in big 26
+: https://github.com/amnezia-vpn/amneziawg-windows-client/releases/tag/3.1.0
 
-[[File:Concerning.png|center|thumb|309x309px]]
+[[File:Amneziawg.png|center|thumb|309x309px|Trang release của AmneziaWG]]
 
-'''Bước 2:'''
+Chọn file theo loại CPU của máy:
 
-* Lấy WARP config file:
-
-:: Vào trang https://warp-generator.vercel.app/ và bấm '''Generate'''.
-
-[[File:76.png|center|thumb|326x326px]]
-
-:: Sau khi đã generate xong thì bấm '''Download config''' để lấy file config.
-!
-p/s: Tại sao lại là config WARP? Config Windscribe, config Proton VPN, config blah blah blah được ko? '''KHÔNG!''' chỉ riêng config của WARP là hỗ trợ custom sâu (nếu bro có config nào khác custom sâu đc thì ok)
-
-
-'''Bước 3:'''
-
-* Import config file vào AmneziaWG:
-
-:: Mở AmneziaWG, click '''Import tunnel(s) from file''', chọn file .conf vừa lấy được để import.
-
-{| style="background:transparent; border-collapse:collapse;"
-| style="border:none;" |[[File:Ag.png|center|thumb|400x400px]]
-| style="border:none;" |[[File:Ag2.png|center|thumb|400x400px]]
+{| class="wikitable" style="margin:auto;"
+! Loại CPU !! File cần tải
+|-
+| Intel / AMD (đa số máy Windows) || '''amneziawg-amd64-3.1.0.msi'''
+|-
+| Apple M-series / Snapdragon (ARM) || '''amneziawg-arm64-3.1.0.msi'''
+|-
+| Máy 32-bit (rất hiếm) || '''amneziawg-x86-3.1.0.msi'''
 |}
 
-:: Bấm '''Active''' sau khi đã hoàn thành.
+Không chắc máy mình thuộc loại nào? Vào ''Settings → System → About'' và xem mục ''System type''.
 
-'''LƯU Ý:'''
+=== Bước 2: Lấy file config WARP ===
 
-* Trong phần tunnel edit phải đảm bảo Jc, Jmin, Jmax, H1, H2, H3 và H4 phải đúng như này:
+# Vào https://warp-generator.vercel.app/
+# Bấm '''Generate'''.
+# Bấm '''Download config''' để tải file <code>.conf</code> về máy.
 
-[[File:ThienTaiiiff.png|center|thumb|345x345px]]
+[[File:76.png|center|thumb|326x326px|Trang tạo config WARP]]
 
-* Cho ai chưa có chuẩn như ảnh:
+'''Tại sao phải dùng config WARP?''' Config của Windscribe, Proton VPN hay dịch vụ khác thường không cho chỉnh sâu các thông số ngụy trang. WARP thì có, nên mới dùng được với AmneziaWG. Nếu bạn có dịch vụ khác cũng hỗ trợ chỉnh sâu tương tự thì vẫn có thể thử.
+
+=== Bước 3: Import config vào AmneziaWG ===
+
+# Mở '''AmneziaWG'''.
+# Bấm '''Import tunnel(s) from file''' và chọn file <code>.conf</code> vừa tải.
+# Kiểm tra lại các thông số (xem bên dưới) rồi bấm '''Activate'''.
+
+{| style="background:transparent; border-collapse:collapse;"
+| style="border:none;" |[[File:Ag.png|center|thumb|400x400px|Import tunnel]]
+| style="border:none;" |[[File:Ag2.png|center|thumb|400x400px|Màn hình tunnel]]
+|}
+
+=== Bước 4: Kiểm tra thông số (quan trọng) ===
+
+Mở phần chỉnh sửa tunnel (edit) và đảm bảo các giá trị đúng như sau, nếu không kết nối có thể thất bại:
+
 <pre>
-Jc = 8
+Jc   = 8
 Jmin = 64
 Jmax = 96
-H1 = 1
-H2 = 2
-H3 = 3
-H4 = 4
+H1   = 1
+H2   = 2
+H3   = 3
+H4   = 4
 </pre>
 
+[[File:ThienTaiiiff.png|center|thumb|345x345px|Thông số chuẩn trong phần edit tunnel]]
+
+=== Xử lý lỗi thường gặp ===
+
+* '''Không kết nối được / không handshake:''' kiểm tra lại 7 thông số ở Bước 4, sau đó thử Generate config mới.
+* '''Đã kết nối nhưng không vào được web:''' thử tắt rồi bật lại tunnel, hoặc chuyển sang Cách 2.
+* '''Lưu ý bảo mật:''' file <code>.conf</code> chứa khóa riêng (private key), đừng gửi cho người khác.
+
 ----
 
-= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Cách 2:</span> =
-<center><center></center></center>Thật ra nếu ai dùng VPN khác ngoài WARP/1.1.1.1 thì cứ dùng Stealth protocol là đc (recommend port 443).
+== Cách 2: Dùng VPN có chế độ ngụy trang ==
 
-Recommend TorGuard, Astrill VPN, PrivateVPN / Surfshark.
+Dùng khi Cách 1 không handshake được ở mọi port.
 
-And btw ts can help when u cant open any website idk
-----
+* '''WSTunnel:''' thử các port '''443''', '''8080''', '''587''' hoặc '''8443'''.
+* '''Dịch vụ VPN gợi ý''' (nên chọn chế độ stealth/obfuscation nếu có):
+** TorGuard
+** Astrill VPN
+** PrivateVPN
+** Surfshark
+** Windscribe
 
-= <span style="text-align: center; font-weight: light bold; font-size: 100%; background: -webkit-linear-gradient(#FFFFFF, white); -webkit-background-clip: text;-webkit-text-fill-color: white;">Cách 3:</span> =
-<center><center></center></center>Trong trường hợp Stealth protocol ko thể handshake ở mọi port thì có thể sử dụng WSTunnel port 443, 8080, 587,  hoặc port 8443.
+Cách này cũng có thể giúp khi bạn không mở được bất kỳ trang web nào.
 
-Recommend TorGuard, Astrill VPN, PrivateVPN / Surfshark.
-
-And btw ts can help when u cant open any website idk
-</div>
 {{Discord}}
