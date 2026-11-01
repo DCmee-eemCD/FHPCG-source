@@ -3,7 +3,13 @@
 {{TheDocsWithNoGrp
 | t1 = <div class="fhp-entry-btn">[[TRA-001|TRA-001 ⋅ How to bypass firewall]]</div>
 | t2 = <div class="fhp-entry-btn">[[TRA-002|TRA-002 ⋅ How to paste texts on FlipClassroom]]</div>
+| t3 = <div class="fhp-entry-btn">[[TRA-003|TRA-003 ⋅ Azota cheat tool]]</div>
+| t4 = <div class="fhp-entry-btn">[[TRA-005|TRA-005 ⋅ Ultimate flipclassroom tool]]</div>
+| t5 = <div class="fhp-entry-btn">[[TRA-006|TRA-006 ⋅ TRA-001's patch]]</div>
 }}
 
 {{Discord}}
-*''Trang này được hỗ trợ bởi thầy Dũng IP (không phải Dũng IT)''
+Thông tin nhỏ:
+*Học hành chăm chỉ vì một tương lai tốt hơn.
+*Đây chỉ là tài liệu kỹ thuật, không được tạo ra với mục đích xúi dục hay yêu cầu làm theo, nếu làm theo và gây ra hậu quả, wiki sẽ không chịu trách nhiệm.
+*''Trang này được hỗ trợ bởi thầy Dũng IP (không phải Dũng IT).''
