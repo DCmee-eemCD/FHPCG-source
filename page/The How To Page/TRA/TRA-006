@@ -1,0 +1,50 @@
+=TRA-001's fix=
+
+Đây là trang sẽ giúp bạn giải quyết việc không thể handshake được khi dùng AmneziaWG theo TRA-001!
+
+Yêu cầu cấu hình:
+{| class="wikitable" style="margin:auto;"
+!  Phần cứng !! Tên 
+|-
+| Wifi card || '''AX200, RTL8821CE, MT7921, ... trở lên'''
+|-
+| CPU || '''Intel Skylake, AMD Ryzen 4000/5000 series trở lên'''
+|}
+
+== Bước 1: Forget mạng của colony ==
+Click '''chuột phải''' vào '''icon mạng''' trên '''taskbar''' hoặc ở quick '''setting menu'''.
+[[File:KeepLoopingTheBum.png|center|thumb|428x428px]]
+
+Chọn Wifi > Manage know networks và chọn forget mạng của colony.
+[[File:Dfsd.png|center|thumb|428x428px]]
+
+== Bước 2: Mở command với quyền admin ==
+Bấm '''Win + R''' và nhập '''cmd''', sau đó '''Ctrl + Shift + Enter''' và chọn '''Yes'''.
+
+[[File:Winrcmd.png|center|thumb|428x428px]]
+
+Bạn sẽ được một tab trông giống như thế này.
+
+[[File:ViTinhYeuTaDayRoi.png|center|thumb|428x428px]]
+
+== Bước 3: Nhập lệnh reset lại cấu hình ip, protocol và dns máy ==
+Paste đoạn lệnh dưới đây vào cmd và nhấn enter
+<div class="mw-collapsible mw-collapsed fhp-codebox" data-expandtext="Show all" data-collapsetext="Show less">
+<div class="fhp-code-hint">Click vào khung code để chọn hết, rồi Ctrl+C</div>
+<div class="mw-collapsible-content"><syntaxhighlight lang="dosbatch">
+ipconfig /flushdns && netsh winsock reset && netsh int ip reset && ipconfig /release && ipconfig /renew
+</syntaxhighlight></div>
+</div>
+
+Sau đó '''restart/reboot''' máy
+
+== Bước 5: Kết nối mạng và bật tính năng xáo ngẫu nhiên MAC ==
+Nhập mật khẩu và kết nối lại với mạng của colony.
+
+Click '''chuột phải''' vào '''icon mạng''' trên '''taskbar''' hoặc ở quick '''setting menu'''.
+[[File:KeepLoopingTheBum.png|center|thumb|428x428px]]
+
+Bật tính năng Random hardwere address.
+[[File:StopBeingSoDamnCold.png|center|thumb|428x428px]]
+
+{{Discord}}
