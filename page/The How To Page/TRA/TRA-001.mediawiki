@@ -66,7 +66,7 @@ Mở phần chỉnh sửa tunnel (edit) và đảm bảo các giá trị đúng 
 
 <div class="mw-collapsible mw-collapsed fhp-codebox" data-expandtext="Show all" data-collapsetext="Show less">
 <div class="fhp-code-hint">Click vào khung code để chọn hết, rồi Ctrl+C</div>
-<div class="mw-collapsible-content"><syntaxhighlight lang="js">
+<div class="mw-collapsible-content"><syntaxhighlight lang="ini">
 Jc   = 8
 Jmin = 64
 Jmax = 96
