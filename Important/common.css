@@ -1435,6 +1435,20 @@ ruby rt {
 .fhp-codebox .mw-highlight .o,
 .fhp-codebox .mw-highlight .p   { color: #c9c8be !important; }                       /* toán tử, dấu câu */
 
+/* code ngắn (JS đánh dấu fhp-codebox-short): bỏ nút Show all, hiện đủ nội dung */
+.fhp-codebox-short > .mw-collapsible-toggle {
+    display: none !important;
+}
+
+.fhp-codebox-short.mw-collapsed > .mw-collapsible-content {
+    max-height: none;
+    overflow: visible;
+}
+
+.fhp-codebox-short.mw-collapsed > .mw-collapsible-content::after {
+    display: none;
+}
+
 /* ==========================================================================
    22. RESPONSIVE (mobile) — gom hết vào đây, đặt cuối file để thắng rule gốc
    ========================================================================== */
