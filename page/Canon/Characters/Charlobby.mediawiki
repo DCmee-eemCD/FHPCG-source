@@ -36,4 +36,15 @@ Tất cả những nhân vật có tài liệu tại đây đều có '''đóng 
 </div>
 </div>
 
+<div class="fhp-block fhp-block-nav">
+<div class="fhp-nav-title">Nhân vật quần chúng</div>
+<div class="fhp-custom-gallery">
+<gallery position="center" captionalign="center" navigation="true" captiontextcolor="#121214" bordercolor="transparent" captionposition="below" orientation="none" widths="300">
+MrL.png|'''Chú Thuật Sư'''|link=Chú Thuật Sư
+Fuhkunah.png|'''Chú Nguyền Sư'''|link=Chú Nguyền Sư
+</gallery>
+</div>
+</div>
+
+
 {{Discord}}
