@@ -2,6 +2,8 @@
 <div class="inter-content">
 <div style="max-width: 80%; width: 100%; font-weight: bold">
 '''Chú Thuật Sư''' là những người quản lý/phục phụ  tại '''FHP Colony''', thường có thuật thức mạnh hơn các '''[[Chú Nguyền Sư]]'''. Họ có trách nghiệm hỗ trợ/trực tiếp đào tạo những Chú Nguyền Sư trong colony.
+
+'''Disclaimer:''' Đây là trang nhân vật quần chúng.
 </div>
 
 -------------------------------
