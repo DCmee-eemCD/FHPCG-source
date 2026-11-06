@@ -1,0 +1,25 @@
+{{Character2
+| title1 = Chú Ngôn
+| image1 = Chu Ngon.png
+}}
+<div class="inter-content">
+'''Chú Ngôn''' là một thuật thức cường hóa lời nói của người dùng bằng Chú lực, buộc người nghe phải hành động hoặc chịu hành động dựa theo những lời nói đó.
+</div><div class="inter-content">
+== Mô tả ==
+Tại colony, đa số các Chú Thuật Sư từ [[Grade|Semi-Grade 2]] trở lên đều sở hữu và được sử dụng thường xuyên để đảm bảo ổn định trật tự tại colony.
+
+Chú ngôn được kích hoạt khi người thi triển nói to các từ hoặc lệnh được cường hóa bằng chú lực. Hành động này buộc người nghe phải hành động hoặc chịu hành động như một mệnh lệnh. Ví dụ, một người dùng chú ngôn có thể ra lệnh cho mục tiêu của mình ngừng di chuyển, hoặc khiến đối phương bị thổi bay đi. Sức mạnh của sự cưỡng ép phụ thuộc vào trình độ kỹ năng của người dùng, vì các mệnh lệnh mạnh hơn yêu cầu kỹ năng cao hơn và có thể gây ra phản phệ mạnh hơn cho người dùng nếu họ kém kỹ năng hơn.
+
+==== Điểm mạnh ====
+Điểm mạnh chính của chú ngôn là tính linh hoạt to lớn của nó do vì dựa trên ngôn ngữ. Nó cũng có hiệu quả với bất kỳ mục tiêu nào, ảnh hưởng đến phần lớn các sinh vật sống. Bất kỳ ai không biết cách bảo vệ khỏi chú ngôn sẽ bất lực trước lời nói của người dùng.
+
+==== Điểm yếu ====
+Giống như hầu hết các thuật thức, việc lạm dụng chú ngôn sẽ gây tổn hại đến cơ thể của người dùng. Từ ngữ được sử dụng càng mạnh, thì tác dụng phụ càng tồi tệ hơn. Trong trường hợp xấu hơn, chú ngôn có thể phản tác dụng đối với người dùng và dẫn đến đau họng, ho ra máu và/hoặc mất khả năng nói. Nhiều triệu chứng này có thể được khắc phục bằng xi-rô ho hoặc thuốc ho.
+</div><div class="inter-content">
+== Mệnh lệnh ==
+*'''"Im lặng":''' Cưỡng chế mục tiêu im lặng.
+*'''"Đứng yên":''' Làm tê liệt tạm thời mục tiêu của người dùng.
+*'''"Ngủ đi":''' Ngay lập tức khiến mục tiêu rơi vào giấc ngủ.
+*'''"Về đi":''' Khiến mục tiêu rời khỏi khu vực.
+*'''"Dừng lại":''' đình chỉ chuyển động của mục tiêu.
+</div>
