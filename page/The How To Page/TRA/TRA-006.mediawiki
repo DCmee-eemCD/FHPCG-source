@@ -1,4 +1,4 @@
-=TRA-001's fix=
+=TRA-001's fix (80% success chance)=
 
 Đây là trang sẽ giúp bạn giải quyết việc không thể handshake được khi dùng AmneziaWG theo TRA-001!
 
