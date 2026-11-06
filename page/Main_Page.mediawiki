@@ -2,7 +2,7 @@
 <div class="fhp-block-bg">[[File:Fhpc_pic 2.png.png|link=|alt=]]</div>
 <div class="fhp-block-content">
 <div class="fhp-hero-title">Welcome To FHP Colony Guide!</div>
-<div class="fhp-hero-version">Wiki version: Rel-0.1.1 • Discord Server: update 20</div>
+<div class="fhp-hero-version">Wiki version: Rel-0.4.0 • Discord Server: update 21</div>
 <div class="fhp-hero-tagline">A guide for sorcerers in FHP Colony, made by '''F Colony Guider™'''!</div>
 <div class="fhp-hero-stats">We got {{NUMBEROFEDITS}} edits, {{NUMBEROFARTICLES}} articles, and {{NUMBEROFFILES}} files</div>
 <div class="fhp-hero-note">For mobile user: ts looks MUCH MUCH MUCH better on PC!</div>
@@ -90,14 +90,18 @@ Lore có thể giúp chúng ta tìm hiểu '''nhiều thứ''' về '''thế gi�
 <div class="fhp-block fhp-log">
 <div class="fhp-log-title">Wiki Update</div>
 
-== '''Rel 0.1.1'''  ==
-24/10/2026
+== '''Rel 0.4.0'''  ==
+6/11/2026
  '''Content:'''
- Edited document:
- - CSR-001 - Văn Võ song toàn và LƯƠNG THIỆN
+ Updated document:
+ - [[TRA-006|TRA-006 ⋅ TRA-001's patch]] 
 
- '''Disclaimer:'''
- - Edited disclaimer in The How To Page
+ New documents:
+ - [[Chú Ngôn]]
+
+ '''Visual:'''
+ - Updated Mainpage's layout
+ - Decrease the gap between page and righttail
 </div>
 <div class="fhp-block fhp-log">
 <div class="fhp-log-title">Server Update</div>
