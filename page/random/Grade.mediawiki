@@ -1,0 +1,21 @@
+<div class="inter-content">
+Một '''Grade''' đề cập đến hệ thống phân chia sức mạnh xếp hạng từ Grade 1 đến Grade 4 và Special Grade, nhằm phân loại sức mạnh của các Chú thuật sư, Chú linh, Chú vật và Chú cụ.
+
+== Mô tả ==
+FHPC Guide chỉ định cấp cho thuật sư của họ để đánh giá sức mạnh của họ tăng dần từ Cấp 4 đến Cấp 1. Chú thuật sư thường bắt đầu từ Cấp 4 khi nhập học, nhưng điều này còn phụ thuộc vào kinh nghiệm.
+
+[[Chú Nguyền Sư|Nguyền Hồn]] được xếp hạng trên một thang điểm tương tự nhưng không chính xác hoàn toàn. Thượng tầng có thể rất khắt khe khi xếp hạng Nguyền Hồn. Sự khác biệt rõ rệt giữa một Nguyền Hồn grade 2 và một Nguyền Hồn semi-grade 1 là liệu nó có khả năng sử dụng thuật thức hay không. Các thuật sư dự định sẽ được nhận các nhiệm vụ liên quan đến Nguyền Hồn cùng cấp độ với họ. Một thuật sư grade 2 sẽ có thể đánh bại Nguyền Hồn cấp 2 nhờ vào trình độ kỹ năng của họ tiệm cận với sức mạnh của Nguyền Hồn grade 1.
+
+[[Chú Cụ]] cũng được phân loại từ cấp 1 đến cấp 4 dựa trên sức mạnh và hiệu lực. Cấp càng cao, càng có lợi thế trong trận chiến. Tất cả Chú cụ Special Grade, đều được yểm sẵn một thuật thức.
+
+Các [[Chú Cụ|Chú Vật]] cũng được phân loại theo cấp độ của lời nguyền mà chúng chứa đựng. Tuy nhiên, khi một chú vật được sử dụng, cá nhân sử dụng đó không nhất thiết phải có cùng cấp độ với chú vật ban đầu.
+
+== Grade ==
+*'''Grade 1''': Dễ dàng đối phó, gần như không phải là một mối nguy.
+*'''Grade 3''': Không quá nguy hiểm nhưng cần cẩn thận. Nếu bạn có thái độ tốt, có thể yên tâm.
+*'''Semi-Grade 2''': ''Ở giữa '''Grade 3''' và '''Grade 2'''.''
+*'''Grade 2'''': Bắt đầu đáng chú ý, nên cẩn thận, có thể không dễ dàng đối phó.
+*'''Semi-Grade 1'''': ''Ở giữa '''Grade 2''' và '''Grade 1'''.''
+*'''Grade 1'''': Nguy hiểm, phải cẩn trọng, nên biết lượng sức. 
+*'''Special Grade'''': CỰC KỲ NGUY HIỂM, TUYỆT ĐỐI CẨN TRỌNG, không nên cố gắng đối phó nếu khả năng thành công dưới 90%.
+*''Wiki cũng sẽ có một số grade đặc biệt khác''
